@@ -1,0 +1,30 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "Architecture
+    url: /architecture/
+  - title: "Getting Started"
+    url: /getting-started/
+  - title: "Documentation"
+    url: /documentation/
+    children:
+      - title: "Get Involved"
+        url: /get-involved/
+  - title: "About"
+    url: /about/
+    children:
+      - title: "Get Involved"
+        url: /get-involved/
+
+about_nav:
+    - title: More Information
+      children:
+        - title: "About"
+          url: /about/
+        - title: "Get Involved"
+          url: /get-involved/
+ 
+  
+          
+
+ 
