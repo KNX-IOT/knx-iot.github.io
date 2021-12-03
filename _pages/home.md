@@ -17,7 +17,7 @@ feature_row:
   - alt: "Getting Started"
     title: "Getting Started"
     excerpt: "A quick step-by-step guide to get started with the code base today!"
-    url: "/getting-started/"
+    url: "/getting_started/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
   - alt: "Documentation"

@@ -2,7 +2,7 @@
 layout: single
 title: Getting Started
 overview: true
-permalink: /getting-started/
+permalink: /getting_started/
 
 sidebar:
   nav: "gs_nav"

@@ -4,17 +4,17 @@ main:
   - title: "Architecture
     url: /architecture/
   - title: "Getting Started"
-    url: /getting-started/
+    url: /getting_started/
   - title: "Documentation"
     url: /documentation/
     children:
       - title: "Get Involved"
-        url: /get-involved/
+        url: /get_involved/
   - title: "About"
     url: /about/
     children:
       - title: "Get Involved"
-        url: /get-involved/
+        url: /get_involved/
 
 about_nav:
     - title: More Information
@@ -22,9 +22,15 @@ about_nav:
         - title: "About"
           url: /about/
         - title: "Get Involved"
-          url: /get-involved/
- 
-  
+          url: /get_involved/
+
+gs_nav:
+    - title: More Information
+      children:
+        - title: "Getting Started"
+          url: /getting_started/
+        - title: "Building on: Windows"
+          url: /building_windows/
           
 
  
