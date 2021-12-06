@@ -31,6 +31,8 @@ gs_nav:
           url: /getting_started/
         - title: "Building on: Windows"
           url: /building_windows/
+        - title: "Building on: Linux"
+          url: /building_linux/
           
 
  
