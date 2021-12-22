@@ -13,9 +13,12 @@ toc_sticky : true
 
 ## Introduction
 
-This page describes Getting Started with KNX-IOT development on windows
+This page describes Getting Started with KNX-IOT development on windows.
+The build system enviroment is Cmake, so one can use:
+- visual studio
+- nmake (from the commandline)
 
-prerequisits:
+## prerequisits
 
 - windows (10) machine
 - installed:
@@ -31,7 +34,7 @@ prerequisits:
   git clone https://github.com/KNX-IOT/KNX-IOT-STACK.git
   ```
 
-1. build the code on windows
+1. build the code with visual studio
 
 - open visual studio
 - open cmake project by:
@@ -41,3 +44,11 @@ prerequisits:
 - select the CMakefile.txt from the working folder
 - wait until visual studio prepared the project
 - use visual studio to build & run the example applications
+
+
+## Cmake information
+
+more information on Cmake and Visual studio can be found at:
+
+https://docs.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170
+
