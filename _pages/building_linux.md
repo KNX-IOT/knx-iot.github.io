@@ -14,10 +14,11 @@ toc_sticky : true
 ## Introduction
 
 This page describes Getting Started with KNX-IOT development on Linux.
+The build system is CMake.
 
 Note this also applies to Raspberry Pi.
 
-prerequisits:
+### prerequisits:
 
 - Linux machine
 - installed:
@@ -26,26 +27,22 @@ prerequisits:
   - gcc
   - cmake environment
 
+## build steps
+
 1. build the code on Linux
 
 ```bash
-
 # Clone the Stack
 git clone https://github.com/KNX-IOT/KNX-IOT-STACK.git
-
 # go into the create repo
 cd KNX-IOT-STACK
-
 - # Make a working directory (named anything)
 mkdir build
 cd build 
-
-# Create a build directory for native build, and build the SDK
+# do the configur step, e.g. build the native make files
 cmake ..
+# build the sdk, the -j is the amount of processor the build will be using
 make -j12
-# Built for current system! To change configuration, the 'ccmake .' command can be used
-
 #Go back to working directory
 cd ..
-
 ```

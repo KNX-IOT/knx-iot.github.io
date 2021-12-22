@@ -18,13 +18,16 @@ The build system enviroment is Cmake, so one can use:
 - visual studio
 - nmake (from the commandline)
 
-## prerequisits
+### prerequisits
 
 - windows (10) machine
 - installed:
 
   - git
   - visual studio
+
+
+## build steps
 
 1. Getting the code
    clone the repo to a local folder
