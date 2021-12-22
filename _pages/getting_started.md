@@ -15,17 +15,37 @@ toc_sticky : true
 
 ## Getting Started
 
-Follow through these guides to quickly get productive with IoTivity.
+Follow through these guides to quickly get productive with the KNX Stack.
 
 ### The Getting started guide for Device Simulation.
+This getting started guide shows how to:
+- get the source code
+- compile the source code
+- create an LSAB and LSSB application
+- configure the installation
+
+#### requirements
+
+- Windows or Linux based PC
 
 ### The Getting started with Raspberry Pi
+This getting started guide shows how to:
+- get the source code
+- compile the source code
+- create an LSAB and LSSB application
+- configure the installation
+- use the configuration with an Pi-Hat as input/output control
+
+#### requirements
+
+- 2 raspberry Pis (3b or 4)
+- 2 Pi-hats
 
 
+### The Getting started with Thread
 
+### requirements
+- Thread based (hardware) kit
 
-### The Getting started with  Thread
-
-This guide requires to have a Thread based kit.
 
 
