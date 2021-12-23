@@ -46,14 +46,19 @@ Note: the clone is needed for the subprojects.
 
   - file -&gt; open -&gt; Cmake
 
+    ![VisualStudio](/assets/images/visualstudio-cmake.png)
+
 - select the CMakefile.txt from the working folder
 - wait until visual studio prepared the project
 - use visual studio to build & run the example applications
 
 
+## build architecture
+
+The build architecture (win32 or x86) is dependend on the visual studio installation.
+
+
 ## Cmake information
 
-more information on Cmake and Visual studio can be found at:
-
-https://docs.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170
+more information on Cmake and Visual studio can be found [here](https://docs.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170)
 
