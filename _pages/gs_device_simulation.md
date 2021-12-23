@@ -47,4 +47,3 @@ This Getting started guide does not need any specific hardware.
    
    The KNX devics is now running
 
-
