@@ -42,15 +42,26 @@ Note: the clone is needed for the subprojects.
 1. build the code with visual studio
 
 - open visual studio
-- open cmake project by:
+  - open cmake project by:
 
-  - file -&gt; open -&gt; Cmake
+  - menu -&gt; file -&gt; open -&gt; Cmake
 
     ![VisualStudio](/assets/images/visualstudio-cmake.png)
 
-- select the CMakefile.txt from the working folder
-- wait until visual studio prepared the project
-- use visual studio to build & run the example applications
+  - select the CMakefile.txt from the working folder
+   - wait until visual studio prepared the project
+1. use visual studio to build:
+  - menu -&gt; build -&gt; Build All (Ctrl+shift+B)
+2.- the executables are created in the project.
+    `\KNX-IOT-STACK\out\build\x64-Debug`
+    note that the actual path of the executables is dependend on the visual studio configuration.
+
+3. debug an application
+  - toolbar -&gt; Select Startup Item -&gt; down button 
+    - Select item (for example: LSSB_minimal_all.exe)
+    - press the debug symbol (or F5)
+    - an commandline window will appear with the logging of the KNX application
+
 
 
 ## build architecture
