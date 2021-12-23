@@ -37,6 +37,8 @@ The build system enviroment is Cmake, so one can use:
   git clone https://github.com/KNX-IOT/KNX-IOT-STACK.git
   ```
 
+Note: the clone is needed for the subprojects.
+
 1. build the code with visual studio
 
 - open visual studio
