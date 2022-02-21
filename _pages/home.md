@@ -9,7 +9,7 @@ excerpt: <small> KNX-IOT open source software framework.<br/>
 
 feature_row:
   - alt: "Architecture"
-    title: "OCF Secure IP Device Framework"
+    title: "KNX-IOT stack"
     excerpt: "blah blah architecture"
     url: "/architecture"
     btn_class: "btn--primary"
@@ -22,7 +22,7 @@ feature_row:
     btn_label: "Learn more"
   - alt: "Documentation"
     title: "Documentation"
-    excerpt: "Find API documentation, build instructions and other resources to aid in developing with or contributing to IoTivity."
+    excerpt: "Find API documentation, build instructions and other resources to aid in developing and contributing to the stack."
     url: "/documentation/"
     btn_class: "btn--primary"
     btn_label: "Learn more"

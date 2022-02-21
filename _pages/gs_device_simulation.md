@@ -17,6 +17,7 @@ toc_sticky : true
 ## Introduction
 
 The Getting started with Device Simulation guide shows how to:
+
 - get the source code
 - compile the source code
 - create an LSAB and LSSB application
@@ -24,7 +25,7 @@ The Getting started with Device Simulation guide shows how to:
 
 This Getting started guide does not need any specific hardware.
 
-#### requirements
+### requirements for Device Simulation
 
 - Windows or Linux based PC
 
@@ -44,6 +45,5 @@ This Getting started guide does not need any specific hardware.
    A Popup might appear to grant the device network access.
    ![windows defender](/assets/images/windows_defender.png)
    Accept the network work access.
-   
-   The KNX devics is now running
 
+   The KNX devics is now running

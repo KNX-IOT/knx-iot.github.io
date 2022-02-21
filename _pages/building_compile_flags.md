@@ -27,4 +27,3 @@ The compile flags
 | OC_DEBUG       | OC_DEBUG_ENABLED | exhaustive DEBUG info |
 | OC_PUBLISHER_TABLE | - | enable PUBLISHER table (optional feature) |
 | OC_GM_TABLE  | - | enable gm (gateway) table (optional feature) |
-

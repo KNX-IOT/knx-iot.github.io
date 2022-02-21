@@ -16,8 +16,6 @@ toc_sticky : true
 
 KNX-IOT stack is an open-source, reference implementation of the KNX-IOT specification.
 
-
-
 ## Stack Features
 
 ![Stack features](/assets/images/knxstack-v1.png)
@@ -32,6 +30,5 @@ KNX-IOT stack is an open-source, reference implementation of the KNX-IOT specifi
   Such an implementation constitutes a "port".
 
 ## Next steps
-
 
 Go to the [source](https://github.com/KNX-IOT/KNX-IOT-STACK)

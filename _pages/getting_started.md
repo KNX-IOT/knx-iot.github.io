@@ -17,35 +17,36 @@ toc_sticky : true
 
 Follow through these guides to quickly get productive with the KNX Stack.
 
-### The Getting started guide for Device Simulation.
+### The Getting started guide for Device Simulation
+
 This getting started guide shows how to:
+
 - get the source code
 - compile the source code
 - create an LSAB and LSSB application
 - configure the installation
 
-#### requirements
+#### requirements for Device Simulation
 
 - Windows or Linux based PC
 
 ### The Getting started with Raspberry Pi
+
 This getting started guide shows how to:
+
 - get the source code
 - compile the source code
 - create an LSAB and LSSB application
 - configure the installation
 - use the configuration with an Pi-Hat as input/output control
 
-#### requirements
+#### requirements for Raspberry Pi
 
 - 2 raspberry Pis (3b or 4)
 - 2 Pi-hats
 
-
 ### The Getting started with Thread
 
-### requirements
+### requirements for Thread
+
 - Thread based (hardware) kit
-
-
-

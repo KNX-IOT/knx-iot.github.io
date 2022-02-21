@@ -14,6 +14,4 @@ toc_sticky : true
 ---
 ## Introduction
 
-This [page](https://iotivity.github.io/iotivity-lite-doxygen/) links to API documentation.
-
-build instructions and other resources to aid in developing with or contributing to IoTivity.
+This [page](https://KNX-IOT.github.io/KNX-IOT-STACK-doxygen/) links to [doxygen](https://www.doxygen.nl/index.html) API documentation.

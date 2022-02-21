@@ -24,12 +24,12 @@ All code contributions to the  project must be submitted to its [Github](https:/
 
 Follow the links below to start participating in the project.
 Submit pull request or review submissions by others :
+
 - [pull](https://github.com/KNX-IOT/KNX-IOT-STACK/pulls) requests
 
 ## Other sources
 
 please follow (and like & share) content on:
-
 
 ## KNX resources
 
