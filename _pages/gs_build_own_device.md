@@ -1,8 +1,8 @@
 ---
 layout: single
-title: Build your own device
+title: Thread Network Setup
 overview: true
-permalink: /gs_build_own_device/
+permalink: /gs_thread_network_setup/
 
 sidebar:
   nav: "gs_nav"
@@ -16,42 +16,47 @@ toc_sticky : true
 
 ## Introduction
 
-The Build your own device guide shows how to:
+KNX-IOT is based on IPV6. Hence an IPV6 based network needs to be available to connect too.
+This introduction is how to commision the thread device on the thread network.
+This is needed before KNX-IOT commissioning start
 
-- get the source code :
-  - The stack
-  - Example application for development
-- compile the application
-- change the application to your needs
+### Prerequisites
 
-### What do you get
+- Thread Border router
+- Thread based device
+- android phone
+- Wifi connection
 
-- an development application that exist of:
-  - A main application
-  - an initial set of data points
-  - callbacks for:
-    - handling device restart
-    - handling device reset
-    - setting the hostname
-    - writing the sofware update data to file.
-- build environment based on CMake
-  - Capable of cross compiling
-  - implemented ports to windows and Linux
+### Essential information
 
-## Steps
+- Thread network information
+- Device information
+  - EUI64 & Joiner credential
+  - QR code (same information)
 
-### Get the development repo
+## Steps to commision a device on the network
 
-The development repo is outside of the KNX-IOT-STACK repo.
-This avoids changing the build environment of the KNX-IOT-STACK.
-The development repo is already setup that it builds the KNX-IOT-STACK automatically.
+1. Connect the Thread border router to the larger network, e.g. making sure there is wifi
 
-TODO
+1. Install the [thread application](https://play.google.com/store/apps/details?id=org.threadgroup.commissioner&hl=en&gl=US)
 
-### build the example
+1. open the thread application on the phone
+   - note that the phone needs to be connnected to the wifi network.
+     The same wifi network that is used with the Thread border router.
 
-TODO
+1. select a border router in the application.
 
-### start changing the application
+1. select adding a device
+   - select scan QR code, if you have an QR code
+     - wait until commisioning is finished
+   - select enter connect code
+     - enter EUI64 & joiner credential
+     - wait until commisioning is finished
 
-TODO
+Note the QR code of the commisioning app: example:
+v=1&&eui=0000b57fffe15d68&&cc=J01NU5
+
+## More information
+
+Thread topology explained:
+[Thread topology](https://www.threadgroup.org/BUILT-FOR-IOT/Commercial#NetworkTopology)
