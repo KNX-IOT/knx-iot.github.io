@@ -35,6 +35,10 @@ Each resource represents a datapoint belonging to a function block.
   The simplicity and boundedness of these interface definitions allow them to be rapidly implemented on any chosen OS/target.
   Such an implementation constitutes a "port". ![porting layer](/assets/images/porting.png)
 
+* message pump: All sending and received message are handled via a message pump.
+  This means that no threading, semaphores or critical sections are used in the code. The message pump is dependend on the OS.
+  The message pump is most of the time created in main. Examples of Windows and Linux are supplied.
+
 * Callbacks: When there is specific functionallity that needs a manufactorer implementation, Callbacks are implemented in the stack.
   Typical functionality that is manufactorer dependend:
 

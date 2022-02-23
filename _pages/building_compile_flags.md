@@ -13,8 +13,9 @@ toc_sticky : true
 
 ## Introduction
 
-This page describes the compile flags
-The build system is CMake.
+This page describes the compile flags.
+
+The build system is CMake and thus the compile flags can be used via Cmake switches.
 
 ## The compile flags
 

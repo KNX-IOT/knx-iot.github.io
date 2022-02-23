@@ -16,33 +16,42 @@ toc_sticky : true
 
 ## Introduction
 
-The Build your own device shows how to:
+The Build your own device guide shows how to:
 
-- get the source code
-- compile the source code
-- create your own device
+- get the source code :
+  - The stack
+  - Example application for development
+- compile the application
+- change the application to your needs
 
-This Getting started guide does not need any specific hardware.
+### What do you get
 
-### requirements for Device Simulation
-
-- Windows or Linux based PC
-- no specific hardware
-
-### what do you get as infrastructure
-
-- A main application
-- a set of data points
-- callbacks for:
-  - handling device restart
-  - handling device reset
-  - setting the hostname
-  - writing the sofware updata data to file.
+- an development application that exist of:
+  - A main application
+  - an initial set of data points
+  - callbacks for:
+    - handling device restart
+    - handling device reset
+    - setting the hostname
+    - writing the sofware update data to file.
+- build environment based on CMake
+  - Capable of cross compiling
+  - implemented ports to windows and Linux
 
 ## Steps
 
-### Get the example repo
+### Get the development repo
+
+The development repo is outside of the KNX-IOT-STACK repo.
+This avoids changing the build environment of the KNX-IOT-STACK.
+The development repo is already setup that it builds the KNX-IOT-STACK automatically.
+
+TODO
 
 ### build the example
 
+TODO
+
 ### start changing the application
+
+TODO

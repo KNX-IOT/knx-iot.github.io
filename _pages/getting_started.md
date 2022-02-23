@@ -26,7 +26,7 @@ This getting started guide shows how to:
 - create an LSAB and LSSB application
 - configure the installation
 
-#### requirements for Device Simulation
+#### Requirements for Device Simulation
 
 - Windows or Linux based PC
 
@@ -40,7 +40,7 @@ This getting started guide shows how to:
 - configure the installation
 - use the configuration with an Pi-Hat as input/output control
 
-#### requirements for Raspberry Pi
+#### Requirements for Raspberry Pi
 
 - 2 raspberry Pis (3b or 4)
 - 2 Pi-hats
