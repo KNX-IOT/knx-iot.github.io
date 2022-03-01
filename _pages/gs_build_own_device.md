@@ -16,9 +16,10 @@ toc_sticky : true
 
 ## Introduction
 
-KNX-IOT is based on IPV6. Hence an IPV6 based network needs to be available to connect too.
-This introduction is how to commision the thread device on the thread network.
-This is needed before KNX-IOT commissioning start
+KNX-IOT devices can be made with the KNX-IOT-STACK repo.
+However is not a good practice to create individual applications inside the same repo.
+To overcome that hurdle an example application repo is created.
+This getting started guide give some instructions on how to use the example application repo and what subsequent changes needs to be made to make a functional KNX-IOT application.
 
 ### Prerequisites
 
