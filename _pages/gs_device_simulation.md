@@ -33,7 +33,7 @@ This Getting started guide does not need any specific hardware.
 
 ### Get the source code and build on windows
 
-1. [Build on Windows](building_windows)
+1. [Build on Windows](/building_windows/)
 
    When everything is build then the executables will be available at folder:
    `\out\build\x64-Debug\apps`

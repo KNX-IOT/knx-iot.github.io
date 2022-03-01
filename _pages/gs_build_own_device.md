@@ -28,8 +28,8 @@ This is needed before KNX-IOT commissioning start
 
 - Linux or windows (build) PC:
 
-  - [See build on Linux](building_linux)
-  - [See build on Windows](building_windows)
+  - [See build on Linux](/building_linux)
+  - [See build on Windows](/building_windows)
 
 ## download the Example Application
 
