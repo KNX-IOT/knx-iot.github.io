@@ -29,11 +29,13 @@ arch_nav:
       children:
         - title: "Architecture"
           url: /architecture/
-        - title: "s-mode"
+        - title: "S-Mode Implementation"
           url: /architecture-smode/
+        - title: "Code Documentation"
+          url: /documentation/
         - title: "Building on Window"
           url: /building_windows/
-        - title: "building on Linux"
+        - title: "Building on Linux"
           url: /Building_linux/
         - title: "Compile flags"
           url: /building_compile_flags/
