@@ -1,8 +1,8 @@
 ---
 layout: single
-title: Getting Started
+title: Getting Started with Thread
 overview: true
-permalink: /getting_started/
+permalink: /getting_started_network/
 
 sidebar:
   nav: "gs_nav"
@@ -13,40 +13,50 @@ toc_icon: cog
 toc_sticky : true
 ---
 
-## Getting Started
 
-Follow through these guides to quickly get productive with the KNX Stack.
+## Introduction
 
-### The Getting started guide for Device Simulation
+KNX-IOT is based on IPV6. Hence an IPV6 based network needs to be available to connect too.
+This introduction is how to commision the thread device on the thread network.
+This is needed before KNX-IOT commissioning start
 
-This getting started guide shows how to:
+### Prerequisites
 
-- get the source code
-- compile the source code
-- create an LSAB and LSSB application
-- configure the installation
+- Thread Border router
+- Thread based device
+- android phone
+- Wifi connection
 
-#### Requirements for Device Simulation
+### Essential information
 
-- Windows or Linux based PC
+- Thread network information
+- Device information
+  - EUI64 & Joiner credential
+  - QR code (same information)
 
-### The Getting started with Raspberry Pi
+## Steps to commision a device on the network
 
-This getting started guide shows how to:
+1. Connect the Thread border router to the larger network, e.g. making sure there is wifi
 
-- get the source code
-- compile the source code
-- create an LSAB and LSSB application
-- configure the installation
-- use the configuration with an Pi-Hat as input/output control
+1. Install the [thread application](https://play.google.com/store/apps/details?id=org.threadgroup.commissioner&hl=en&gl=US)
 
-#### Requirements for Raspberry Pi
+1. open the thread application on the phone
+   - note that the phone needs to be connnected to the wifi network.
+     The same wifi network that is used with the Thread border router.
 
-- 2 raspberry Pis (3b or 4)
-- 2 Pi-hats
+1. select a border router in the application.
 
-### The Getting started with Thread
+1. select adding a device
+   - select scan QR code, if you have an QR code
+     - wait until commisioning is finished
+   - select enter connect code
+     - enter EUI64 & joiner credential
+     - wait until commisioning is finished
 
-### requirements for Thread
+Note the QR code of the commisioning app: example:
+v=1&&eui=0000b57fffe15d68&&cc=J01NU5
 
-- Thread based (hardware) kit
+## More information
+
+Thread topology explained:
+[Thread topology](https://www.threadgroup.org/BUILT-FOR-IOT/Commercial#NetworkTopology)

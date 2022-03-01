@@ -46,4 +46,4 @@ This Getting started guide does not need any specific hardware.
    ![windows defender](/assets/images/windows_defender.png)
    Accept the network work access.
 
-   The KNX device is now running
+   The KNX device is now running.

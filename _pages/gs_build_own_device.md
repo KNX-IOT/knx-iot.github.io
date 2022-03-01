@@ -1,8 +1,8 @@
 ---
 layout: single
-title: Thread Network Setup
+title: Build your own device
 overview: true
-permalink: /gs_thread_network_setup/
+permalink: /build_own_device/
 
 sidebar:
   nav: "gs_nav"
@@ -22,41 +22,87 @@ This is needed before KNX-IOT commissioning start
 
 ### Prerequisites
 
-- Thread Border router
-- Thread based device
-- android phone
-- Wifi connection
+- Linux or windows (build) PC:
 
 ### Essential information
 
-- Thread network information
-- Device information
-  - EUI64 & Joiner credential
-  - QR code (same information)
+- Linux or windows (build) PC:
 
-## Steps to commision a device on the network
+  - [See build on Linux](building_linux)
+  - [See build on Windows](building_windows)
 
-1. Connect the Thread border router to the larger network, e.g. making sure there is wifi
+## download the Example Application
 
-1. Install the [thread application](https://play.google.com/store/apps/details?id=org.threadgroup.commissioner&hl=en&gl=US)
+```bash
+# Clone the Stack
+git clone https://github.com/KNX-IOT/Example-application.git
+# go into the create repo
+cd Example-application
+# Make a working directory (named anything)
+mkdir build
+cd build 
+# do the configur step, e.g. build the native make files
+cmake ..
+# build the application (including sdk), the -j is the amount of processor the build will be using
+make -j12
+# Go back to working directory
+cd ..
+```
 
-1. open the thread application on the phone
-   - note that the phone needs to be connnected to the wifi network.
-     The same wifi network that is used with the Thread border router.
+## Changing the application
 
-1. select a border router in the application.
+The example application consist of a single datapoint, the data point for a push button. To change the behaviour:
 
-1. select adding a device
-   - select scan QR code, if you have an QR code
-     - wait until commisioning is finished
-   - select enter connect code
-     - enter EUI64 & joiner credential
-     - wait until commisioning is finished
+- resource type, e.g. what the resource exposes.
+- interfaces, what access control is wanted.
+- GET/POST callbacks: functionality of the resource
+- implements what needs to be exposed as data point (GET) and needs to be set as data point (POST)
 
-Note the QR code of the commisioning app: example:
-v=1&&eui=0000b57fffe15d68&&cc=J01NU5
+### Adding additional resources
 
-## More information
+Additional resources are setup in function `register_resources`.
+Each new resource will have:
 
-Thread topology explained:
-[Thread topology](https://www.threadgroup.org/BUILT-FOR-IOT/Commercial#NetworkTopology)
+1. Callbacks for handling GET and (optionally) POST
+2. Global varialbes: to handle data incomming and outgoing via the callbacks.
+3. Some logic that interacts with the underlaying hardware (out of scope of this document)
+4. Storing data as persistent data.
+
+### Data points types
+
+The KNX data points are mapped on resources.
+Hence the resource "rt" values are the data point types of KNX.
+examples:
+
+- urn:knx:dpa.421.61
+- DPT_Switch
+- :dpt.value2UCount
+
+### Data points and functional blocks
+
+The information of the data point types are used to map the data points into a function block. For example data point `urn:knx:dpa.421.61` will belong to functional block `urn:knx:fb.421`. Since it is allowed to have multiple instances of the same functional block/data point, one can set the instance id on a resource. Default is instance 0, so that for a single occurance of the data point this function does not have to be called.
+
+The data point types dictates what kind of data will be exposed by the GET/POST functions.
+
+Example of mapping of data points and c variables :
+
+|  KNX data type |  JSON type | C variable type |
+|----------------| -----------| --------------- |
+| B1             | boolean    | bool            |
+| U8             | integer    | int             |
+| F16            | number     | float/double    |
+| A8             | string     | oc_string_t     |
+
+see also section 2.5.122.5.13 Datatype Mapping of thE KNX-IOT specification.
+
+### Interfaces
+
+The data points have typically the interfaces to grant (security) access control.
+For data points the following interfaces are defined:
+
+- if.s (sensor interface)
+- if.a (actuator interface)
+
+Typical for data points only 1 interface type is defined.
+When the interface type if.s is implemented the GET callback function has to be implemented.
+When the interface type if.a is implemented the GET and POST callback functions have to be implemented.
