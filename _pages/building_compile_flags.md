@@ -4,6 +4,8 @@ title: Building Compile Flags
 overview: true
 permalink: /building_compile_flags/
 
+sidebar:
+  nav: "arch_nav"
 
 toc: true
 toc_label: Table of Contents

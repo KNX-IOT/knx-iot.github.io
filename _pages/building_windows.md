@@ -4,6 +4,8 @@ title: Building on Windows
 overview: true
 permalink: /building_windows/
 
+sidebar:
+  nav: "arch_nav"
 
 toc: true
 toc_label: Table of Contents

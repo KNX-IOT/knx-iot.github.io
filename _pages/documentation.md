@@ -1,11 +1,11 @@
 ---
 layout: single
-title: Documentation
+title: Code Documentation
 overview: true
 permalink: /documentation/
 
 sidebar:
-  nav: "doc_nav"
+  nav: "arch_nav"
 
 toc: true
 toc_label: "Table of Contents"

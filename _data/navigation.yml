@@ -31,6 +31,12 @@ arch_nav:
           url: /architecture/
         - title: "s-mode"
           url: /architecture-smode/
+        - title: "Building on Window"
+          url: /building_windows/
+        - title: "building on Linux"
+          url: /Building_linux/
+        - title: "Compile flags"
+          url: /building_compile_flags/
 
 gs_nav:
     - title: More Information
@@ -39,11 +45,10 @@ gs_nav:
           url: /getting_started/
         - title: "Getting Started with Device Simulation"
           url: /gs_device_simulation/
-        - title: "Building on Window"
-          url: /building_windows/
-        - title: "building on Linux"
-          url: /Building_linux/
-        - title: "building on Linux"
-          url: /building_linux/
+        - title: "Build your own device"
+          url: /build_own_device/
+       - title: "Getting started with Thread"
+          url: /getting_started_network/
+
 
  

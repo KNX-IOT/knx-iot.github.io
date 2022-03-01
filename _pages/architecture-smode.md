@@ -33,9 +33,9 @@ The routing of the s-mode messages outside the device is achieved via the Group 
 The device that implements as sensor (e.g. sending) will have to use specific function to s-mode messages and implement resources with GET.
 For sending an s-mode message, the url of the device resource is used. The logic will do an GET on that resource to fetch the value to be send in each s-mode message.
 
-![s-mode send]([https:](https://KNX-IOT.github.io/KNX-IOT-STACK/images/sequence_send_s-mode.png)
+![s-mode send](https://KNX-IOT.github.io/KNX-IOT-STACK/images/sequence_send_s-mode.png)
 
 The device that implements an actuator (e.g. receives) will have have to implement resources with POST to receive the value.
 For receiving the url is translated the local url on the device. On this url the POST command is called (similar as a regular CoAP POST) with the received value of the s-mode message.
 
-![s-mode receive]([https:](https://KNX-IOT.github.io/KNX-IOT-STACK/images/sequence_receive_s-mode.png)
+![s-mode receive](https://KNX-IOT.github.io/KNX-IOT-STACK/images/sequence_receive_s-mode.png)
