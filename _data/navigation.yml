@@ -24,15 +24,26 @@ about_nav:
         - title: "Get Involved"
           url: /get_involved/
 
+arch_nav:
+    - title: More Information
+      children:
+        - title: "Architecture"
+          url: /architecture/
+        - title: "s-mode"
+          url: /architecture-smode/
+
 gs_nav:
     - title: More Information
       children:
         - title: "Getting Started"
           url: /getting_started/
-        - title: "Building on: Windows"
+        - title: "Getting Started with Device Simulation"
+          url: /gs_device_simulation/
+        - title: "Building on Window"
           url: /building_windows/
-        - title: "Building on: Linux"
+        - title: "building on Linux"
+          url: /Building_linux/
+        - title: "building on Linux"
           url: /building_linux/
-          
 
  

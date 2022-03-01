@@ -4,6 +4,8 @@ title: Building on Linux
 overview: true
 permalink: /building_linux/
 
+sidebar:
+  nav: "gs_nav"
 
 toc: true
 toc_label: Table of Contents

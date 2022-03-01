@@ -5,7 +5,7 @@ overview: true
 permalink: /architecture/
 
 sidebar:
-  nav: "doc_nav"
+  nav: "arch_nav"
 
 toc: true
 toc_label: "Table of Contents"
