@@ -49,7 +49,7 @@ gs_nav:
           url: /gs_device_simulation/
         - title: "Build your own device"
           url: /build_own_device/
-       - title: "Getting started with Thread"
+        - title: "Getting started with Thread"
           url: /getting_started_network/
 
 
