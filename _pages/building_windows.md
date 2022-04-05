@@ -15,15 +15,15 @@ toc_sticky : true
 
 ## Introduction
 
-This page describes Getting Started with KNX-IOT development on windows.
+This page describes Getting Started with KNX-IOT Point API development on windows.
 The build system enviroment is Cmake, so one can use:
 
-- visual studio
+- Visual Studio
 - nmake (from the commandline)
 
 ### prerequisits
 
-- windows (10) machine
+- Windows (10) machine
 - installed:
 
   - git

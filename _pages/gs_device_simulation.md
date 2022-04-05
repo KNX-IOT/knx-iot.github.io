@@ -16,7 +16,7 @@ toc_sticky : true
 
 ## Introduction
 
-The Getting started with Device Simulation guide shows how to:
+The Getting started with KNX IoT Point API Device Simulation guide shows how to:
 
 - get the source code
 - compile the source code

@@ -15,7 +15,7 @@ toc_sticky : true
 
 ## Introduction
 
-KNX-IOT stack is an open source stack that implements the KNX-IOT standard.
+KNX-IOT Point API stack is an open source stack that implements the KNX-IOT Point API standard.
 
 ## Licence
 

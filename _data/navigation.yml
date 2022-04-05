@@ -31,6 +31,8 @@ arch_nav:
           url: /architecture/
         - title: "S-Mode Implementation"
           url: /architecture-smode/
+        - title: "DNS-Based Service Discovery"
+          url: /DNS/
         - title: "Code Documentation"
           url: /documentation/
         - title: "Building on Window"

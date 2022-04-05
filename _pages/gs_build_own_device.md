@@ -16,10 +16,10 @@ toc_sticky : true
 
 ## Introduction
 
-KNX-IOT devices can be made with the KNX-IOT-STACK repo.
+KNX IoT Point API devices can be made with the KNX-IOT-STACK repo.
 However is not a good practice to create individual applications inside the same repo.
 To overcome that hurdle an example application repo is created.
-This getting started guide give some instructions on how to use the example application repo and what subsequent changes needs to be made to make a functional KNX-IOT application.
+This getting started guide give some instructions on how to use the example application repo and what subsequent changes needs to be made to make a functional KNX IoT Point API application.
 
 ### Prerequisites
 
@@ -94,7 +94,7 @@ Example of mapping of data points and c variables :
 | F16            | number     | float/double    |
 | A8             | string     | oc_string_t     |
 
-see also section 2.5.122.5.13 Datatype Mapping of thE KNX-IOT specification.
+see also section 2.5.122.5.13 Datatype Mapping of the KNX IoT Point API specification.
 
 ### Interfaces
 

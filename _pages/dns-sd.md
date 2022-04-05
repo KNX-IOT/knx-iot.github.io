@@ -1,4 +1,19 @@
-# DNS-Based Service Discovery within KNX-IoT
+---
+layout: single
+title: DNS discovery
+overview: true
+permalink: /DNS/
+
+sidebar:
+  nav: "arch_nav"
+
+toc: true
+toc_label: Table of Contents
+toc_icon: cog
+toc_sticky : true
+---
+
+# DNS-Based Service Discovery within KNX IoT
 
 The KNX-IoT features Multicast DNS based Service Discovery. KNX servers
 advertise their KNX Serial Number, KNX Individual Address and KNX Installation

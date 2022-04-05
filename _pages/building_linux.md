@@ -15,7 +15,7 @@ toc_sticky : true
 
 ## Introduction
 
-This page describes Getting Started with KNX-IOT development on Linux.
+This page describes Getting Started with KNX IoT Point API development on Linux.
 
 The build system is CMake.
 

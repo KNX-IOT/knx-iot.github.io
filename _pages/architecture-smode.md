@@ -18,7 +18,7 @@ The run time operation of KNX is s-mode communication.
 An s-mode message is a group communication that contains info :
 
 - group number
-- the new value of the communication
+- the value of the communication
 - transport flags
 
 The s-mode messages are secured with OSCORE.

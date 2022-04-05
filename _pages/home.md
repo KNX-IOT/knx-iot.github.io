@@ -9,8 +9,8 @@ excerpt: <small> KNX-IOT open source software framework.<br/>
 
 feature_row:
   - alt: "Architecture"
-    title: "KNX-IOT stack"
-    excerpt: "blah blah architecture"
+    title: "KNX-IOT Point API stack"
+    excerpt: "The architecture of the stack"
     url: "/architecture"
     btn_class: "btn--primary"
     btn_label: "Learn more"      

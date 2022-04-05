@@ -15,16 +15,16 @@ toc_sticky : true
 
 ## Getting Started
 
-Follow through these guides to quickly get productive with the KNX Stack.
+Follow through these guides to quickly get productive with the KNX IoT Point API Stack.
 
 ### The Getting started guide for Device Simulation
 
 This getting started guide shows how to:
 
-- get the source code
-- compile the source code
-- create an LSAB and LSSB application
-- configure the installation
+- Get the source code
+- Compile the source code
+- Create an LSAB and LSSB (example) application
+- Configure the installation
 
 #### Requirements for Device Simulation
 
@@ -34,11 +34,11 @@ This getting started guide shows how to:
 
 This getting started guide shows how to:
 
-- get the source code
-- compile the source code
-- create an LSAB and LSSB application
-- configure the installation
-- use the configuration with an Pi-Hat as input/output control
+- Get the source code
+- Compile the source code
+- Create an LSAB and LSSB application
+- Configure the installation
+- Use the configuration with an Pi-Hat as input/output control
 
 #### Requirements for Raspberry Pi
 
