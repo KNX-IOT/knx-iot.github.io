@@ -15,7 +15,7 @@ toc_sticky : true
 
 ## Introduction
 
-This page describes Getting Started with KNX-IOT Point API development on windows.
+This page describes Getting Started with KNX IoT Point API development on windows.
 The build system enviroment is Cmake, so one can use:
 
 - Visual Studio
@@ -37,6 +37,8 @@ The build system enviroment is Cmake, so one can use:
    ```bash
    # do from your working folder
    git clone https://github.com/KNX-IOT/KNX-IOT-STACK.git
+   # update the dependencies
+   git submodule update --init --recursive
    ```
 
    Note: the clone is needed for the subprojects.
