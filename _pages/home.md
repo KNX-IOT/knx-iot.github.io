@@ -5,11 +5,11 @@ hidden: true
 header:
   overlay_color: "#5e616c"
 
-excerpt: <small> KNX-IOT open source software framework.<br/>
+excerpt: <small> KNX IoT Point API open source software framework.<br/>
 
 feature_row:
   - alt: "Architecture"
-    title: "KNX-IOT Point API stack"
+    title: "KNX IoT Point API stack"
     excerpt: "The architecture of the stack"
     url: "/architecture"
     btn_class: "btn--primary"
