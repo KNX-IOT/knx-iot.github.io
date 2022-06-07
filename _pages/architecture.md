@@ -23,6 +23,7 @@ This way the code that a manufactorer needs to write should be as small as possi
 Hence the stack has an API to create a device and add resources to the device.
 Each resource represents a datapoint belonging to a function block.
 A resource will have a GET (read) and a POST (write/update) handler.
+The resources will be used to send or receive s-mode messages and the pub/sub messages.
 
 ## Stack Features
 

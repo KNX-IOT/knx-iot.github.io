@@ -35,7 +35,7 @@ arch_nav:
           url: /DNS/
         - title: "Code Documentation"
           url: /documentation/
-        - title: "Building on Window"
+        - title: "Building on Windows"
           url: /building_windows/
         - title: "Building on Linux"
           url: /building_linux/
