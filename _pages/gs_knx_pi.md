@@ -33,8 +33,10 @@ This are 2 sample applications with GUI:
 Hence they can be configured as a small installation.
 Each device has 4 channels.
 
-The PB has 4 push buttons and 4 feedback leds 
+The PB has 4 push buttons and 4 feedback leds.
 The SA has 4 leds for acting as a light
+
+more info can be found on [GitHub](https://github.com/KNX-IOT/KNX-IOT-Virtual)
 
 ### Requirements for KNX IoT Virtual
 

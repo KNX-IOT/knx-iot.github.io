@@ -2,7 +2,7 @@
 layout: single
 title: Getting Involved
 overview: true
-permalink: /getting_involved/
+permalink: /get_involved/
 
 toc: true
 toc_label: Table of Contents
