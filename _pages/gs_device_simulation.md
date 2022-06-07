@@ -31,7 +31,7 @@ This Getting started guide does not need any specific hardware.
 
 ## Steps
 
-### Get the source code and build on windows
+### Get the source code and build on Windows
 
 1. [Build on Windows](/building_windows/)
 

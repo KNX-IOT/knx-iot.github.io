@@ -34,11 +34,10 @@ This getting started guide shows how to:
 
 This getting started guide shows how to:
 
-- Get the source code
+- Get the source code ([KNX-IOT_Virtual](https://github.com/KNX-IOT/KNX-IOT-Virtual))
 - Compile the source code
 - Create an LSAB and LSSB application
 - Configure the installation
-- Use the configuration with an Pi-Hat as input/output control
 
 #### Requirements for Raspberry Pi
 

@@ -23,7 +23,7 @@ This getting started guide give some instructions on how to use the example appl
 
 ### Prerequisites
 
-- Linux or windows (build) PC:
+- Linux or Windows (build) PC:
 
 ### Essential information
 
