@@ -20,8 +20,7 @@ The Getting started with KNX IoT Point API Device Simulation guide shows how to:
 
 - get the source code
 - compile the source code
-- create an LSAB and LSSB application
-- configure the installation
+   - compile an LSAB and LSSB commandline application
 
 This Getting started guide does not need any specific hardware.
 
