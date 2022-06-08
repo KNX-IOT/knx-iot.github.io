@@ -34,7 +34,7 @@ Each python script has the -h option to show the command line parameters.
 
 Note that the underlaying code is KNX.org owned.
 
-### downloading the python scripts
+### Downloading the python scripts
 
 The python scripts can be downloaded from the [release page of the KNX IoT Stack](https://github.com/KNX-IOT/KNX-IOT-STACK/releases)
 
@@ -121,7 +121,7 @@ python install_config.py -h
 python install_config.py -sn 000003 -ia 1 -file LSAB_config.json
 ```
 
-#### configuration file
+#### The configuration file
 
 The configuration file is a json formatted file.
 config data:
@@ -148,7 +148,7 @@ The content of the tables are the items in an array.
 The items have the json keys (e.g. "id" instead of 0)
 The application (in python) converts the json data in to data with integer keys and then convert the contents to cbor.
 
-##### group object table
+##### Group object table
 
 The group object table contains the array of json objects for an Group Object Table entry.
 
@@ -168,7 +168,7 @@ The group object table contains the array of json objects for an Group Object Ta
 }
 ```
 
-##### publisher table
+##### Publisher table
 
 The group object table contains the array of json objects for an Publisher entry.
 note that this table contains the info of the sending side.
@@ -198,7 +198,7 @@ if ia is defined and path is not there, the path will have the default value ".k
 }
 ```
 
-##### recipient table
+##### Recipient table
 
 The group object table contains the array of json objects for an Publisher entry.
 note that this table contains the info of the receiving side.
@@ -220,7 +220,7 @@ if ia is defined and path is not there, the path will have the default value ".k
 }
 ```
 
-##### access token table
+##### Access token table
 
 The access token table contains the array of json objects for an auth/at entry.
 
@@ -262,7 +262,7 @@ The access token table contains the array of json objects for an auth/at entry.
 }
 ```
 
-##### parameter
+##### Parameters
 
 The parameters can be set on /p.
 
@@ -296,7 +296,7 @@ The parameters can be set on /p.
 }
 ```
 
-### python versions
+### Python versions
 
 Please ensure that the version of Python you have installed matches the
 architecture for which the project is built - if you are building using the
