@@ -55,7 +55,7 @@ gs_nav:
           url: /gs_knx_pi/
         - title: "Build your own device"
           url: /build_own_device/
-        - title: "copnfiguring a device"
+        - title: "Configuring a KNX IoT device"
           url: /gs_knx_config/
         - title: "Getting started with Thread"
           url: /getting_started_network/
