@@ -36,12 +36,15 @@ Each device has 4 channels.
 The PB has 4 push buttons and 4 feedback leds.
 The SA has 4 leds for acting as a light
 
-more info can be found on [GitHub](https://github.com/KNX-IOT/KNX-IOT-Virtual)
+More info can be found on [GitHub](https://github.com/KNX-IOT/KNX-IOT-Virtual)
 
-### Requirements for KNX IoT Virtual
+### Requirements for KNX IoT Pi
 
 - Raspberry Pi 3b or 4
 - Pi Hat
+  - https://pinout.xyz/pinout/display_o_tron_hat
+
+To create a demonstrator: 2 Pi and 2 hats are needed.
 
 ## Steps
 
@@ -66,3 +69,8 @@ more info can be found on [GitHub](https://github.com/KNX-IOT/KNX-IOT-Virtual)
 3. go to folder \build\apps
    start an executable (files with no extention) by double clicking an executable.
    The KNX device is now running.
+
+## Note
+
+The actual code to talk to the HAT is in python.
+However the C code is made in such way that button presses are received from Python and that LEDS can be toggled.
