@@ -113,6 +113,9 @@ script to configuring a device, issuing:
   - configure parameters
 - retrieving the finger print
 
+The flow is depicted in the following diagram:
+![configuration steps](/assets/images/ets_sequence_setup.png)
+
 ```bash
 python install_config.py -h
 ```
