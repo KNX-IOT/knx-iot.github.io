@@ -28,6 +28,10 @@ The build system enviroment is Cmake, so one can use:
 
   - git
   - visual studio
+  - cmake
+    - python
+    - perl
+  - wxWidgets (for KNX IoT Virtual)
 
 ## build steps
 
@@ -76,6 +80,69 @@ The build system enviroment is Cmake, so one can use:
 
 The build architecture (win32 or x86) is dependend on the visual studio installation.
 
-## Cmake information
+## installing the dependencies
+
+### git
+
+git can be obtained from:
+
+https://git-scm.com/download/win
+
+- download the file
+- install the software
+
+one should now have explorer integration to:
+
+- Git Gui Here (to push data)
+- Git Bash Here (a bash shell for commandline git)
+
+#### perl
+
+Building (e.g. configuring wxWidgets with Cmake) requires perl
+If perl is not installed then install it via a Windows installer available at:
+
+https://www.perl.org/get.html
+
+To check if perl is installed:
+
+```bash
+# do in a bash window
+which perl
+# result should be
+# /usr/bin/perl
+```
+
+#### python
+
+Building (e.g. configuring wxWidgets with CMake) requires python
+
+If python is not installed then install it via a Windows installer available at:
+
+https://www.python.org/downloads/
+
+To check if python is installed:
+
+```bash
+# do in a bash window
+which python
+# result should be
+# <some path>/python
+```
+
+#### installing wxWidgets on Windows
+
+download wxwidgets from (installer source code):
+https://www.wxwidgets.org/downloads/
+
+- install the contents on the recommended folder (e.g. c:\wxWidgets-3.1.5)
+- build wxwidgets with visual studio:
+  
+  - open c:\wxWidgets-3.1.5\build\msw\wx_vc16.sln (or take the highest number available)
+  - accept convert solution suggestion: convert solution to newer version studio
+  - build the solution :
+    - static Win32 library for Debug & Release
+    - static x64 library for Debug & Release
+
+### Cmake information
 
 more information on Cmake and Visual studio can be found [here](https://docs.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170)
