@@ -17,12 +17,10 @@ toc_sticky : true
 ## Introduction
 
 When the KNX devices are running, they are running without a configuration.
+Hence python scripts are provided that can configure the devices.
+The scripts are using the serial number (of the device) to find the device on the network and talk to the device.
 
-## ETS application
-
-TBD
-
-## python scripts
+## Python scripts
 
 The python scripts are a set of applications that can perform tasks that ETS can do.
 for example:
@@ -31,6 +29,23 @@ for example:
 - issuing s-mode messages
 - listening to s-mode messages
 - configuring a device
+
+Each python script has the -h option to show the command line parameters.
+
+Note that the underlaying code is KNX.org owned.
+
+### downloading the python scripts
+
+The python scripts can be downloaded from the [release page of the KNX IoT Stack](https://github.com/KNX-IOT/KNX-IOT-STACK/releases)
+
+The files to download and unzip are:
+
+- python_release_no_security.zip
+  scripts with security disabled
+- python_release_security.zip
+  scripts with security enabled
+
+All scripts should be run from the folder `<install folder>\python_apps`.
 
 ### reset_device.py
 
