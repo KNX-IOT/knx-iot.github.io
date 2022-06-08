@@ -25,7 +25,8 @@ The compile flags
 
 | Flag         | Cmake switch   |  Description |
 | -------------- | -------------- |--------------|
-| OC_OSCOR       | OC_OSCORE_ENABLED | enable/disable OSCORE security |
+| OC_DNS_SD      | OC_DNS_SD_ENABLED | enable/disable DNS-SD |
+| OC_OSCORE      | OC_OSCORE_ENABLED | enable/disable OSCORE security |
 | OC_SPAKE       | OC_OSCORE_ENABLED | enable/disable SPAKE (master secret) handshake |
 | OC_DEBUG       | OC_DEBUG_ENABLED | exhaustive DEBUG info |
 | OC_PUBLISHER_TABLE | - | enable PUBLISHER table (optional feature) |
