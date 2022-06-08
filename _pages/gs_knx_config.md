@@ -136,6 +136,7 @@ config data:
 - parameter (table): Key = "memparameter"
 
 example config data for ia and idd
+
 ```bash
 {
   "ia": 7,

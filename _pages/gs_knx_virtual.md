@@ -33,8 +33,11 @@ This are 2 sample applications with GUI:
 Hence they can be configured as a small installation.
 Each device has 4 channels.
 
-The PB has 4 push button and 4 feedback widgets
+The PB has 4 push button and 4 feedback widgets.
+![push button application](/assets/images/knx-iot_virtual-PB.png)
+
 The SA has buttons to indicate if the light is turned on or off and a mechanism to introduce a fault.
+![switch actuator application](/assets/images/knx-iot_virtual-SA.png)
 
 ### Requirements for KNX IoT Virtual
 
@@ -45,7 +48,7 @@ The SA has buttons to indicate if the light is turned on or off and a mechanism 
 
 ### Get the source code and build on Windows
 
-1. [Get the code]([/building_windows/](https://github.com/KNX-IOT/KNX-IOT-Virtual))
+1. [Get the code](https://github.com/KNX-IOT/KNX-IOT-Virtual)
    Clone the code
 
    ```bash
