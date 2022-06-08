@@ -44,7 +44,10 @@ More info can be found on [GitHub](https://github.com/KNX-IOT/KNX-IOT-Virtual)
 - Pi Hat
   - https://pinout.xyz/pinout/display_o_tron_hat
 
-To create a demonstrator: 2 Pi and 2 hats are needed.
+To create a demonstrator 2 Pi and 2 hats are needed:
+one to act as a push button and the other one acting as a light:
+
+![demo setup](/assets/images/knx-demo-pi-hat.png)
 
 ## Steps
 
