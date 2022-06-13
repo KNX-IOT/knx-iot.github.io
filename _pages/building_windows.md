@@ -41,8 +41,6 @@ The build system enviroment is Cmake, so one can use:
    ```bash
    # do from your working folder
    git clone https://github.com/KNX-IOT/KNX-IOT-STACK.git
-   # update the dependencies
-   git submodule update --init --recursive
    ```
 
    Note: the clone is needed for the subprojects.
@@ -56,7 +54,7 @@ The build system enviroment is Cmake, so one can use:
 
        ![VisualStudio](/assets/images/visualstudio-cmake.png)
 
-     - select the CMakefile.txt from the working folder
+     - select the CMakefile.txt from the working folder `<working folder>\KNX-IOT_STACK`
      - wait until visual studio prepared the project
 
 1. use visual studio to build the executables:
