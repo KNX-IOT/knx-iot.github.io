@@ -41,8 +41,9 @@ More info can be found on [GitHub](https://github.com/KNX-IOT/KNX-IOT-Virtual)
 ### Requirements for KNX IoT Pi
 
 - Raspberry Pi 3b or 4
-- Pi Hat
+- Pi Hat info:
   - https://pinout.xyz/pinout/display_o_tron_hat
+  - https://github.com/pimoroni/displayotron
 
 To create a demonstrator 2 Pi and 2 hats are needed:
 one to act as a push button and the other one acting as a light:
