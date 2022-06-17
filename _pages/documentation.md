@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Code Documentation
+title: More Documentation
 overview: true
 permalink: /documentation/
 
@@ -14,4 +14,4 @@ toc_sticky : true
 ---
 ## Introduction
 
-This [page](https://KNX-IOT.github.io/KNX-IOT-STACK-doxygen/) links to [doxygen](https://www.doxygen.nl/index.html) API documentation.
+The KNX IoT Point API Stack is fully documented with [Doxygen](https://www.doxygen.nl/index.html). The C API documentation of the stack can be found [here](https://KNX-IOT.github.io/KNX-IOT-STACK-doxygen/).
