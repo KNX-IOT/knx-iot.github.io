@@ -24,14 +24,15 @@ The build system enviroment is Cmake, so one can use:
 ### prerequisits
 
 - Windows (10) machine
-- installed:
-
+- Installed software:
   - git
   - visual studio
   - cmake
     - python
     - perl
   - wxWidgets (for KNX IoT Virtual)
+  
+  If the software is not installed please follow the instructions [here](Installing-the-dependencies).
 
 ## Build steps
 
