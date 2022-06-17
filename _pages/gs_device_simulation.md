@@ -18,8 +18,8 @@ toc_sticky : true
 
 The Getting started with KNX IoT Point API Device Simulation guide shows how to:
 
-- get the source code
-- compile the source code
+- Get the source code
+- Compile the source code (stack examples)
   - compile a LSAB commandline application (actuator)
     called `lsab_minimal_all`.
   - compile a LSSB commandline application (sensor - push button)

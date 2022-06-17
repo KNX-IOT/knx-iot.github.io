@@ -33,7 +33,7 @@ The build system enviroment is Cmake, so one can use:
     - perl
   - wxWidgets (for KNX IoT Virtual)
 
-## build steps
+## Build steps
 
 1. Getting the code
    clone the repo to a local folder
@@ -43,10 +43,10 @@ The build system enviroment is Cmake, so one can use:
    git clone https://github.com/KNX-IOT/KNX-IOT-STACK.git
    ```
 
-1. build the code with visual studio
+1. Build the code with visual studio
 
-   - open visual studio
-     - open cmake project by:
+   - Open visual studio
+     - Open cmake project by:
 
      - menu -&gt; file -&gt; open -&gt; Cmake
 
@@ -55,28 +55,29 @@ The build system enviroment is Cmake, so one can use:
      - select the CMakefile.txt from the working folder `<working folder>\KNX-IOT_STACK`
      - wait until visual studio prepared the project
 
-1. use visual studio to build the executables:
+1. Use visual studio to build the executables:
 
    - menu -&gt; build -&gt; Build All (Ctrl+shift+B)
 
    - The executables are created in the project.
 
-     The executables can be found in folder:
-     `\KNX-IOT-STACK\out\build\x64-Debug`
-     note that the actual path of the executables is dependend on the visual studio configuration.
+    The executables can be found in folder:
+    `\KNX-IOT-STACK\out\build\x64-Debug`
 
-1. debug an application
+    Note: The actual path of the executables is dependend on the visual studio configuration.
+
+1. Debug an application
 
    - toolbar -&gt; Select Startup Item -&gt; down button
      - Select item (for example: LSSB_minimal_all.exe)
      - press the debug symbol (or F5)
      - A commandline window will appear with the logging of the KNX application
 
-## build architecture
+## Build architecture
 
-The build architecture (win32 or x86) is dependend on the visual studio installation.
+The Build architecture (win32 or x86) is dependend on the visual studio installation.
 
-## installing the dependencies
+## Installing the dependencies
 
 ### git
 
@@ -84,10 +85,12 @@ git can be obtained from:
 
 https://git-scm.com/download/win
 
-- download the file
-- install the software
+- Download the file that is appropriate for your machine
 
-one should now have explorer integration to:
+  example: `64-bit Git for Windows Setup`
+- Install the software (e.g. run the downloaded installer)
+
+one should now have windows explorer integration to:
 
 - Git Gui Here (to push data)
 - Git Bash Here (a bash shell for commandline git)
@@ -125,9 +128,9 @@ which python
 # <some path>/python
 ```
 
-#### installing wxWidgets on Windows
+#### Installing wxWidgets on Windows
 
-download wxwidgets from (installer source code):
+Download wxwidgets from (installer source code):
 https://www.wxwidgets.org/downloads/
 
 - install the contents on the recommended folder (e.g. c:\wxWidgets-3.1.5)
