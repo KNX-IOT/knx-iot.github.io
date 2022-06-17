@@ -134,15 +134,15 @@ which python
 Download wxwidgets from (installer source code):
 https://www.wxwidgets.org/downloads/
 
-- install the contents on the recommended folder (e.g. c:\wxWidgets-3.1.5)
-- build wxwidgets with visual studio:
+- Install the contents on the recommended folder (e.g. c:\wxWidgets-3.1.5)
+- Build wxwidgets with visual studio:
   
-  - open c:\wxWidgets-3.1.5\build\msw\wx_vc16.sln (or take the highest number available)
-  - accept convert solution suggestion: convert solution to newer version studio
-  - build the solution :
+  - Open c:\wxWidgets-3.1.5\build\msw\wx_vc16.sln (or take the highest number available)
+  - Accept convert solution suggestion: convert solution to newer version studio
+  - Build the solution for:
     - static Win32 library for Debug & Release
     - static x64 library for Debug & Release
 
 ### Cmake information
 
-more information on Cmake and Visual studio can be found [here](https://docs.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170)
+More information on Cmake and Visual studio can be found [here](https://docs.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170).
