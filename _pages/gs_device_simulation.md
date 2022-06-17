@@ -20,32 +20,38 @@ The Getting started with KNX IoT Point API Device Simulation guide shows how to:
 
 - get the source code
 - compile the source code
-   - compile a LSAB commandline application (actuator)
-     `lsab_minimal_all`
-   - compile a LSSB commandline application (sensor - push button)
-    `lssb_minimal_all`
+  - compile a LSAB commandline application (actuator)
+    called `lsab_minimal_all`.
+  - compile a LSSB commandline application (sensor - push button)
+    called `lssb_minimal_all`.
 
 This Getting started guide does not need any specific hardware.
 
-### requirements for Device Simulation
+### Requirements for Device Simulation
 
 - Windows or Linux based PC
 
 ## Steps
 
-### Get the source code and build on Windows
+### build the stack examples on Windows
 
 1. [Build on Windows](/building_windows/)
+
+   Build the stack by following the [Build on Windows](/building_windows/).
 
    When everything is build then the executables will be available at folder:
    `\out\build\x64-Debug\apps`
 
    Note that the folder might be different due to the visual studio configuration.
 
-2. go to folder \build\apps
-   start an executable (files with extention .exe) by double clicking an execuable.
-   A Popup might appear to grant the device network access.
-   ![windows defender](/assets/images/windows_defender.png)
-   Accept the network work access.
+1. Run the application from the command line
 
-   The KNX device is now running.
+   by doing the following steps:
+   1. Go to folder `\build\apps`
+   1. Start an executable (files with extention .exe) by double clicking an execuable.
+
+    A Popup might appear to grant the device network access.
+    ![windows defender](/assets/images/windows_defender.png)
+    Accept the network work access.
+
+    The KNX device is now running.
