@@ -18,7 +18,7 @@ toc_sticky : true
 
 KNX IoT Point API devices can be made with the KNX-IOT-STACK repo.
 However is not a good practice to create individual applications inside the same repo.
-To overcome that hurdle an example application repo is created.
+To overcome that hurdle a simple example application repo is created.
 This getting started guide give some instructions on how to use the example application repo and what subsequent changes needs to be made to make a functional KNX IoT Point API application.
 
 ### Prerequisites
@@ -32,7 +32,7 @@ This getting started guide give some instructions on how to use the example appl
   - [See build on Linux](/building_linux)
   - [See build on Windows](/building_windows)
 
-## download the Example Application
+## Download and Build the Example Application
 
 ```bash
 # Clone the Stack
@@ -44,7 +44,7 @@ mkdir build
 cd build 
 # do the configur step, e.g. build the native make files
 cmake ..
-# build the application (including sdk), the -j is the amount of processor the build will be using
+# build (Linux) the application (including sdk), the -j is the amount of processors the build will be using
 make -j12
 # Go back to working directory
 cd ..
@@ -101,8 +101,8 @@ see also section 2.5.122.5.13 Datatype Mapping of the KNX IoT Point API specific
 The data points have typically the interfaces to grant (security) access control.
 For data points the following interfaces are defined:
 
-- if.s (sensor interface)
-- if.a (actuator interface)
+- if.s (sensor interface) e.g. sending information
+- if.a (actuator interface) e.g. receiving information that has to be acted upon.
 
 Typical for data points only 1 interface type is defined.
 When the interface type if.s is implemented the GET callback function has to be implemented.
