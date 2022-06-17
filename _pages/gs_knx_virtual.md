@@ -18,8 +18,8 @@ toc_sticky : true
 
 The Getting started with KNX IoT Virtual guide shows how to:
 
-- get the source code
-- compile the source code
+- Get the source code
+- Compile the source code
 
 This Getting started guide does not need any specific hardware.
 
@@ -39,10 +39,13 @@ The PB has 4 push button and 4 feedback widgets.
 The SA has buttons to indicate if the light is turned on or off and a mechanism to introduce a fault.
 ![switch actuator application](/assets/images/knx-iot_virtual-SA.png)
 
+More info on the applications can be found in the [repo](https://github.com/KNX-IOT/KNX-IOT-Virtual).
+
 ### Requirements for KNX IoT Virtual
 
-- Windows (or Linux) based PC
-- install wxWidgets on the development machine
+- Linux or windows (build) PC:
+  - [See information about building on Linux](/building_linux)
+  - [See information build building on Windows](/building_windows)
 
 ## Steps
 
@@ -61,17 +64,18 @@ The SA has buttons to indicate if the light is turned on or off and a mechanism 
    mkdir build
    cd build
    cmake .. -DwxWidgets_ROOT_DIR=c:/wxWidgets-3.1.5
-   # open visual studion with the created knx-virtual.sln
+   # open Visual Studio with the created knx-virtual.sln
    # build the solution
    ```
 
    When everything is build then the executables will be available at folder:
    `\out\build\x64-Debug\apps`
 
-   Note that the folder might be different due to the visual studio configuration.
+   Note that the folder might be different due to the Visual 
+   Studio configuration.
 
-3. go to folder \build\apps
-   start an executable (files with extention .exe) by double clicking an execuable.
+3. Go to folder `\build\apps``
+   Start an executable (files with extention .exe) by double clicking an execuable.
    A Popup might appear to grant the device network access.
    ![windows defender](/assets/images/windows_defender.png)
    Accept the network work access.
