@@ -27,7 +27,7 @@ The resources will be used to send or receive s-mode messages and the pub/sub me
 
 ## Stack Features
 
-![Stack features](/assets/images/knxstack-v1.png)
+![Stack features](https://raw.githubusercontent.com/KNX-IOT/KNX-IOT-STACK/master/images/knxstack-v1.png)
 
 * OS agnostic: The stack and modules work cross-platform (pure C code) and execute in an event-driven style.
   The stack interacts with lower level OS/hardware platform-specific functionality through a set of abstract interfaces.
@@ -36,7 +36,7 @@ The resources will be used to send or receive s-mode messages and the pub/sub me
 * Porting layer: The platform abstraction is a set of generically defined interfaces which elicit a specific contract from implementations.
   The stack utilizes these interfaces to interact with the underlying OS/platform.
   The simplicity and boundedness of these interface definitions allow them to be rapidly implemented on any chosen OS/target.
-  Such an implementation constitutes a "port". ![porting layer](/assets/images/porting.png)
+  Such an implementation constitutes a "port". ![porting layer](https://raw.githubusercontent.com/KNX-IOT/KNX-IOT-STACK/master/images/porting.png)
 
 * message pump: All sending and received message are handled via a message pump.
   This means that no threading, semaphores or critical sections are used in the code. The message pump is dependend on the OS.
