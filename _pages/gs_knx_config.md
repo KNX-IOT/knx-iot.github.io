@@ -94,7 +94,7 @@ The script will issue the following commands:
 - Retrieve the finger print
 
 The flow is depicted in the following diagram:
-![configuration steps](https://raw.githubusercontent.com/KNX-IOT/KNX-IOT-STACK/master/images/ets_sequence_setup.png)
+![configuration steps](https://raw.githubusercontent.com/KNX-IOT/KNX-IOT-STACK/master/images/sequence_setup.png)
 
 To show all options:
 
