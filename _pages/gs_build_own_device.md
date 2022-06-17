@@ -23,14 +23,9 @@ This getting started guide give some instructions on how to use the example appl
 
 ### Prerequisites
 
-- Linux or Windows (build) PC:
-
-### Essential information
-
 - Linux or windows (build) PC:
-
-  - [See build on Linux](/building_linux)
-  - [See build on Windows](/building_windows)
+  - [See information about building on Linux](/building_linux)
+  - [See information build building on Windows](/building_windows)
 
 ## Download and Build the Example Application
 
