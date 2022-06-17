@@ -32,7 +32,7 @@ The build system enviroment is Cmake, so one can use:
     - perl
   - wxWidgets (for KNX IoT Virtual)
   
-  If the software is not installed please follow the instructions [here](#Installing-the-dependencies).
+  If the software is not installed please follow the instructions [here](#installing-the-dependencies).
 
 ## Build steps
 
