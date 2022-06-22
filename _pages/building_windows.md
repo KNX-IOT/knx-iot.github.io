@@ -39,39 +39,51 @@ The build system enviroment is Cmake, so one can use:
 1. Getting the code
    clone the repo to a local folder
 
+   From GitHub:
    ```bash
    # do from your working folder
    git clone https://github.com/KNX-IOT/KNX-IOT-STACK.git
+   # do cd into the created folder
+   cd KNX-IOT-STACK
    ```
 
-1. Build the code with visual studio
+   or from GitLab:
 
-   - Open visual studio
+   ```bash
+   # do from your working folder
+   git clone git clone --recursive https://gitlab.knx.org/shared-projects/knx-iot-point-api-public-stack.git
+      # do cd into the created folder
+   cd knx-iot-point-api-public-stack
+   ```
+
+1. Build the code with Visual Studio
+
+   - Open Visual Studio
      - Open cmake project by:
 
-     - menu -&gt; file -&gt; open -&gt; Cmake
+     - Menu -&gt; File -&gt; Open -&gt; Cmake
 
        ![VisualStudio](/assets/images/visualstudio-cmake.png)
 
-     - select the CMakefile.txt from the working folder `<working folder>\KNX-IOT_STACK`
-     - wait until visual studio prepared the project
+     - Select the CMakefile.txt from the working folder `<working folder>\KNX-IOT_STACK` or  `<working folder>\ knx-iot-point-api-public-stack`
+     - Wait until Visual Studio prepared the project
 
-1. Use visual studio to build the executables:
+1. Use Visual Studio to build the executables:
 
-   - menu -&gt; build -&gt; Build All (Ctrl+shift+B)
+   - Menu -&gt; Build -&gt; Build All (Ctrl+shift+B)
 
    - The executables are created in the project.
 
     The executables can be found in folder:
     `\KNX-IOT-STACK\out\build\x64-Debug`
 
-    Note: The actual path of the executables is dependend on the visual studio configuration.
+    Note: The actual path of the executables is dependend on the Visual Studio configuration.
 
 1. Debug an application
 
-   - toolbar -&gt; Select Startup Item -&gt; down button
+   - Toolbar -&gt; Select Startup Item -&gt; down button
      - Select item (for example: LSSB_minimal_all.exe)
-     - press the debug symbol (or F5)
+     - Press the debug symbol (or F5)
      - A commandline window will appear with the logging of the KNX application
 
 ## Build architecture
