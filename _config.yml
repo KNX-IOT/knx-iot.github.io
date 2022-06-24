@@ -66,7 +66,7 @@ footer:
       icon: "fab fa-fw fa-gitlab"
       url: "https://gitlab.knx.org/shared-projects/knx-iot-point-api-public-stack"
     - label: "doxygen api"
-      icon: "/assets/images/document_9_icon-icons.com_54619.ico"
+      icon: "fab fa-solid fa-file-lines"
       url: "https://knx-iot.github.io/KNX-IOT-STACK-doxygen/"
     - label: "Releases"
       icon: "fab fa-fw fa-github"
