@@ -17,40 +17,38 @@ toc_sticky : true
 ## Introduction
 
 When the KNX devices are running, they are running without a configuration.
-Hence python scripts are provided that can configure the devices.
-The scripts are using the serial number (of the device) to find the device on the network and talk to the device.
+Hence applications are provided that can configure the devices.
+The applications are using the serial number (of the device) to find the device on the network and talk to the device.
 
-## Python scripts
+## Tools
 
-The python scripts are a set of applications that can perform tasks to interact with an KNX IoT Point API Device.
+The Tools are a set of applications that can perform tasks to interact with an KNX IoT Point API Device.
 Typical interactions are:
 
-- [Searching for a device or multiple devices](#list_devices.py).
-- [Configuring a device](#list_devicespy)
-- [Issuing s-mode messages](#s-modepy)
-- [Listening to s-mode messages](#sniffer-s-modepy)
-- [Resetting a device](#reset_devicepy)
+- [Searching for a device or multiple devices](#list_devices).
+- [Configuring a device](#list_devices)
+- [Issuing s-mode messages](#s-mode)
+- [Listening to s-mode messages](#sniffer-s-mode)
+- [Resetting a device](#reset_device)
 
-Each python script has the -h option to show the command line parameters.
+Each application has the -h option to show the command line parameters.
 
-Typical all scripts require to indicate to which device the command is issued. e.g. use the option -sn the serial number of the device.
+Typical all applications require to indicate to which device the command is issued. e.g. use the option -sn the serial number of the device.
 
-### Downloading the python scripts
+### Downloading the Tools
 
-The python scripts can be downloaded from the [release page of the KNX IoT Stack](https://github.com/KNX-IOT/KNX-IOT-STACK/releases)
+The Tools can be downloaded from the [release page of the KNX IoT Stack](https://github.com/KNX-IOT/KNX-IOT-STACK/releases)
 
 The files to download and unzip are:
 
 - python_release_no_security.zip
-  (scripts with security disabled)
+  (applications with security disabled)
 - python_release_security.zip
-  (scripts with security enabled)
+  (applications with security enabled)
 
-The scripts should be run from the folder `<install folder>\python_apps`.
+### list_devices
 
-### list_devices.py
-
-Python script to list the device, issuing:
+Application to list the device, issuing:
 
 - Discovery of device with internal address using query : if=urn:knx:ia.[ia]
 - Discovery of device in programming mode using query : if=urn:knx:if.pm
@@ -59,27 +57,28 @@ Python script to list the device, issuing:
 - Discovery with query : rt=urn:knx:dpa.*
 
 To show all options:
+
 ```bash
-python list_devices.py -h
+list_devices -h
 ```
 
-### programming_mode.py
+### programming_mode
 
-Python script to issue set a specific device (via serial_number) in programming mode.
+Application to issue set a specific device (via serial_number) in programming mode.
 
 To show all options:
 
 ```bash
-python programming_mode.py -h
+programming_mode -h
 ```
 
-Note: to discover a device in programming mode, use [list_devices.py](#list_devicespy)
+Note: to discover a device in programming mode, use [list_devices](#list_devices)
 
-### install_config.py
+### install_config
 
-Python script to configuring a device.
+Application to configuring a device.
 
-The script will issue the following commands:
+The Application will issue the following commands:
 
 - Discovery a device with a specific sn
 - Performing device individualization by setting the:
@@ -99,7 +98,7 @@ The flow is depicted in the following diagram:
 To show all options:
 
 ```bash
-python install_config.py -h
+install_config -h
 ```
 
 Example to configure:
@@ -109,7 +108,7 @@ Example to configure:
 - Using the LSAB_config.json input file for all other configurations
   
 ```bash
-python install_config.py -sn 000003 -ia 1 -file LSAB_config.json
+install_config -sn 000003 -ia 1 -file LSAB_config.json
 ```
 
 #### The configuration file
@@ -138,7 +137,7 @@ Example config data for ia and idd:
 
 The content of the tables are the items in an array.
 The items have the json keys (e.g. "id" instead of 0)
-The application (in python) converts the json data in to data with integer keys and then convert the contents to cbor.
+The application converts the json data in to data with integer keys and then convert the contents to cbor.
 
 ##### Group object table
 
@@ -184,16 +183,16 @@ if ia is defined and path is not there, the path will have the default value ".k
 - "url" : the unicat url to send the command too
 
 | JSON Tag | CBOR tag |
-|----------| ------------|
-| "id"     | 0 |
-| "ia"   | 12 |
-| "iid"      | 26            |
-| "fid"      | 25            |
-| "grpid"    | 13            |
-| "path"     | 112           |
-| "url"      | 10            |
-| "ga"       | 7             |
-| "con"      | -             |
+|----------| ---------|
+| "id"     | 0        |
+| "ia"     | 12       |
+| "iid"    | 26       |
+| "fid"    | 25       |
+| "grpid"  | 13       |
+| "path"   | 112      |
+| "url"    | 10       |
+| "ga"     | 7        |
+| "con"    | -        |
 
 Example:
 
@@ -229,16 +228,16 @@ If ia is defined and path is not there, the path will have the default value ".k
 - "url" : the unicat url to send the command too
 
 | JSON Tag | CBOR tag |
-|----------| ------------|
-| "id"     | 0 |
-| "ia"   | 12 |
-| "iid"      | 26            |
-| "fid"      | 25            |
-| "grpid"    | 13            |
-| "path"     | 112           |
-| "url"      | 10            |
-| "ga"       | 7             |
-| "con"      | -             |
+|----------| ---------|
+| "id"     | 0        |
+| "ia"     | 12       |
+| "iid"    | 26       |
+| "fid"    | 25       |
+| "grpid"  | 13       |
+| "path"   | 112      |
+| "url"    | 10       |
+| "ga"     | 7        |
+| "con"    | -        |
 
 Example:
 
@@ -271,15 +270,15 @@ The oscore information is layered: cnf & osc as json objects:
 - "cnf":"osc":"ms" : the master secret (32 bytes)
 - "cnf":"osc":"contextId" : the OSCORE context id
 
-| JSON Tag  | CBOR tag |
-|-----------| ---------|
-| "id"      | 0        |
-| "profile" | 28       |
-| "scope"   | 26       |
-| "cnf"     | 8        |
-| "osc"     | 4        |
-| "ms"      | 2        |
-| "contextId"  | 6     |
+| JSON Tag    | CBOR tag |
+|-------------| ---------|
+| "id"        | 0        |
+| "profile"   | 28       |
+| "scope"     | 26       |
+| "cnf"       | 8        |
+| "osc"       | 4        |
+| "ms"        | 2        |
+| "contextId" | 6        |
 
 Example
 
@@ -359,34 +358,34 @@ Example:
 }
 ```
 
-### s-mode.py
+### s-mode
 
-Python script to issue an s-mode command.
+Application to issue an s-mode command.
 
 - has option to set the various values in the command.
 
 To show all options:
 
 ```bash
-python s-mode.py 
+s-mode -h
 ```
 
-### sniffer-s-mode.py
+### sniffer-s-mode
 
-Python script to listen to s-mode commands.
+Application to listen to s-mode commands.
 
 - has option to set iid and max group number
 
 To show all options:
 
 ```bash
-python sniffer-s-mode.py -h
+sniffer-s-mode -h
 ```
 
-### reset_device.py
+### reset_device
 
-Python script to reset the device.
-The script will issue the following commands:
+Application to reset the device.
+The Application will issue the following commands:
 
 - Discovery with a specific serial number
 - POST to /a/sen with the reset command
@@ -394,23 +393,5 @@ The script will issue the following commands:
 To show all options:
 
 ```bash
-python reset_device.py -h
+reset_device -h
 ```
-
-### Python versions
-
-Please ensure that the version of Python you have installed matches the
-architecture for which the project is built - if you are building using the
-amd64 architecture you must install the 64-bit version of Python, and make sure
-that it is available within your path. You can check your Python version using
-`python -VV`
-
-```powershell
-> python -VV
-Python 3.10.4 (tags/v3.10.4:9d38120, Mar 23 2022, 23:13:41) [MSC v.1929 64 bit (AMD64)]
-```
-
-If there is a mismatch, you will receive an error about the DLL not being a valid
-Win32 application. The error informs you that there is a _mismatch_, it does not
-mandate that you use 32-bit binaries. For instance, an AMD64 DLL can successfully
-be used alongside a 64-bit Python interpreter.
