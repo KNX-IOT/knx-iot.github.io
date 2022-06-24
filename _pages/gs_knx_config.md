@@ -37,14 +37,12 @@ Typical all applications require to indicate to which device the command is issu
 
 ### Downloading the Tools
 
-The Tools can be downloaded from the [release page of the KNX IoT Stack](https://github.com/KNX-IOT/KNX-IOT-STACK/releases)
+The Tools can be downloaded from the [GitLab release page of the KNX IoT Stack](https://gitlab.knx.org/shared-projects/knx-iot-point-api-public-stack/-/releases)
 
 The files to download and unzip are:
 
-- python_release_no_security.zip
+- app_release_no_security_win32.zip
   (applications with security disabled)
-- python_release_security.zip
-  (applications with security enabled)
 
 ### list_devices
 
@@ -103,12 +101,12 @@ install_config -h
 
 Example to configure:
 
-- Device with serial number 000003
+- Device with serial number `000003`
 - Setting the internal adress on 1
 - Using the LSAB_config.json input file for all other configurations
   
 ```bash
-install_config -sn 000003 -ia 1 -file LSAB_config.json
+.\install_config.exe -sn 000003 -ia 1 -file LSAB_config.json
 ```
 
 #### The configuration file
