@@ -78,3 +78,81 @@ one to act as a push button and the other one acting as a light:
 
 The actual code to talk to the HAT is in python.
 However the C code is made in such way that button presses are received from Python and that LEDS can be toggled.
+
+
+## Checking if the applications run correctly
+
+
+### check Pi-Hat drivers
+
+run the application `pi-hat`
+
+- LCD should turn on
+   - should show the IP address
+
+
+### check network connectivity
+
+Note that KNX IoT Point API is IPV6 based.
+
+#### send IPV6 ping to the other PI
+
+The command is `ping`
+
+if ping is success full then communication is possible
+
+#### send IPV6 ping from windows pc to Pi's
+
+if ping is success full then communication is possible
+
+#### disable virtual box (if running)
+
+check if your machine is running a virtual box
+if so:
+
+- shutdown the running virtual machine
+- disable the ethernet connection of the virtual box 
+
+
+#### virus scanner
+
+If your virus scanner is known to interfer with network traffic.
+Disable to avoid issue.
+
+
+#### send multicast from windows pc to Pi's
+
+if ping is success full then discovery of the KNX-IOT devices is possible
+
+
+### configure the devices (from a Windows Machine)
+
+- download the zip from GitLab
+- unzip the file in a folder
+- open the README.md file
+- follow the instructions about configuring the 2 devices.
+
+## Check networking connectivity on Thread
+
+The network interface is wpan0
+
+### check if wpan0 interfaces are up and running
+
+```bash
+ifconfig
+```
+should list IPV6 adresses for the WPAN0 interface.
+If no IPV6 adrss 
+
+### restart wpan0
+
+
+sudo systemctl restart wpantund.service
+
+### list system logs
+
+sudo journalctl
+
+
+
+
