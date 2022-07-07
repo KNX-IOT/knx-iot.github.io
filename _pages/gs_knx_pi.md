@@ -151,8 +151,17 @@ sudo systemctl restart wpantund.service
 
 ### list system logs
 
+```bash
 sudo journalctl
+```
 
+## Running apps on Thread only
+
+start the applications on the Pi:
+
+- Tmux 
+- start the application
+- pull the ethernet cable
 
 
 
