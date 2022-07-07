@@ -97,21 +97,27 @@ Note that KNX IoT Point API is IPV6 based.
 
 #### send IPV6 ping to the other PI
 
-The command is `ping`
+`ip address` - prints out all IP addresses on a RPi.
+You should be able to see IPv6 addresses for Ethernet & wpan interfaces.
 
-if ping is success full then communication is possible
+`ping` - can be used to test connectivity between two pis, over Ethernet and Thread.
+
+If ping is success full then communication is possible.
+
 
 #### send IPV6 ping from windows pc to Pi's
 
-if ping is success full then communication is possible
+use the same IPV6 address for communiation from windows to a RPi.
+
+If ping is success full then communication is possible.
 
 #### disable virtual box (if running)
 
-check if your machine is running a virtual box
+Check if your machine is running a virtual box
 if so:
 
-- shutdown the running virtual machine
-- disable the ethernet connection of the virtual box 
+- Shutdown the running virtual machine
+- Disable the ethernet connection of the virtual box 
 
 
 #### virus scanner
@@ -121,6 +127,8 @@ Disable to avoid issue.
 
 
 #### send multicast from windows pc to Pi's
+
+??
 
 if ping is success full then discovery of the KNX-IOT devices is possible
 
@@ -134,12 +142,20 @@ if ping is success full then discovery of the KNX-IOT devices is possible
 
 ## Check networking connectivity on Thread
 
-The network interface is wpan0
+The network interface is wpan0.
+
+`ip address` - prints out all IP addresses on a RPi.
+You should be able to see IPv6 addresses for Ethernet & wpan interfaces.
+so select the IPV6 address on wpan0, and use that for a ping from the other RPi.
+
+`ping` - can be used to test connectivity between two pis, over Ethernet and Thread.
+
+If ping is success full then communication is possible.
 
 ### check if wpan0 interfaces are up and running
 
 ```bash
-ifconfig
+config
 ```
 should list IPV6 adresses for the WPAN0 interface.
 If no IPV6 adrss 
