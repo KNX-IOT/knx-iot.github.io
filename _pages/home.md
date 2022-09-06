@@ -8,6 +8,12 @@ header:
 excerpt: <small> KNX IoT Point API open source software framework.<br/>
 
 feature_row:
+  - alt: "What is KNX IoT Point API"
+    title: "What is KNX IoT Point API"
+    excerpt: "Explanation of KNX IoT Point API."
+    url: "/knx_ipa/"
+    btn_class: "btn--primary"
+    btn_label: "Learn more"
   - alt: "Architecture"
     title: "KNX IoT Point API stack"
     excerpt: "The architecture of the stack"
