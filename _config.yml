@@ -32,7 +32,10 @@ description: >- # this means to ignore newlines until "baseurl:"
 #twitter_username: username
 #github_username: one-data-model
 minimal_mistakes_skin: default
-search: false
+search: true
+lunr:
+  search_within_pages: true
+  search_full_content: true
 
 # Build settings
 markdown: kramdown
