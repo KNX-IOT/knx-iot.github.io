@@ -14,7 +14,7 @@ toc_sticky : true
 ---
 
 
-## What is KNX IoT Point API
+## Introduction
 
 The KNX IoT Point API is an extention of the suite of KNX physical transmission medias.
 The KNX IoT Point API products can be used with existing KNX products in a single system. KNX IoT Point API is an evolution of the KNX system.
