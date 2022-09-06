@@ -28,9 +28,9 @@ e.g. 3_10_5 KNX IoT Point API.
 The specification describes:
 - A new transport layer based on IPV6, e.g. suitable for [Thread based networks](https://www.threadgroup.org/).
 - A new communication/message protocol using [CoAP](https://www.rfc-editor.org/rfc/rfc7252) and [CBOR](https://www.rfc-editor.org/rfc/rfc8949.html)
-- using the same functional blocks as the other KNX transport layers
-- using the same s-mode message semantics as the other KNX transport layers
-- same configuration data to configure which device is talking to which device 
+- Using the same functional blocks as the other KNX transport layers
+- Using the same s-mode message semantics as the other KNX transport layers
+- Using the Same configuration data to configure which device is talking to which device 
 
 Hence KNX Iot Point API conveyes the same semantic data on the transport layer as an KNX TP implementation.
 therefore the interworking between KNX IoT Point API and the other KNX technologies is garanteed.

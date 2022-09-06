@@ -26,12 +26,6 @@ feature_row:
     url: "/getting_started/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
-  - alt: "Documentation"
-    title: "Documentation"
-    excerpt: "Find API documentation, build instructions and other resources to aid in developing and contributing to the stack."
-    url: "/documentation/"
-    btn_class: "btn--primary"
-    btn_label: "Learn more"
 
 ---
 
