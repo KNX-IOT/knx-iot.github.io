@@ -78,3 +78,106 @@ one to act as a push button and the other one acting as a light:
 
 The actual code to talk to the HAT is in python.
 However the C code is made in such way that button presses are received from Python and that LEDS can be toggled.
+
+
+## Checking if the applications run correctly
+
+
+### check Pi-Hat drivers
+
+run the application `pi-hat`
+
+- LCD should turn on
+   - should show the IP address
+
+
+### check network connectivity
+
+Note that KNX IoT Point API is IPV6 based.
+
+#### send IPV6 ping to the other PI
+
+`ip address` - prints out all IP addresses on a RPi.
+You should be able to see IPv6 addresses for Ethernet & wpan interfaces.
+
+`ping` - can be used to test connectivity between two pis, over Ethernet and Thread.
+
+If ping is success full then communication is possible.
+
+
+#### send IPV6 ping from windows pc to Pi's
+
+use the same IPV6 address for communiation from windows to a RPi.
+
+If ping is success full then communication is possible.
+
+#### disable virtual box (if running)
+
+Check if your machine is running a virtual box
+if so:
+
+- Shutdown the running virtual machine
+- Disable the ethernet connection of the virtual box 
+
+
+#### virus scanner
+
+If your virus scanner is known to interfer with network traffic.
+Disable to avoid issue.
+
+
+#### send multicast from windows pc to Pi's
+
+using ping (with optin -6).
+
+if ping is success full then discovery of the KNX-IOT devices is possible
+
+
+### configure the devices (from a Windows Machine)
+
+- download the zip from GitLab
+- unzip the file in a folder
+- open the README.md file
+- follow the instructions about configuring the 2 devices.
+
+## Check networking connectivity on Thread
+
+The network interface is wpan0.
+
+`ip address` - prints out all IP addresses on a RPi.
+You should be able to see IPv6 addresses for Ethernet & wpan interfaces.
+so select the IPV6 address on wpan0, and use that for a ping from the other RPi.
+
+`ping` - can be used to test connectivity between two pis, over Ethernet and Thread.
+
+If ping is success full then communication is possible.
+
+### check if wpan0 interfaces are up and running
+
+```bash
+config
+```
+should list IPV6 adresses for the WPAN0 interface.
+If no IPV6 adrss 
+
+### restart wpan0
+
+
+sudo systemctl restart wpantund.service
+
+### list system logs
+
+```bash
+sudo journalctl
+```
+
+## Running apps on Thread only
+
+start the applications on the Pi:
+
+- Tmux 
+- start the application
+- pull the ethernet cable
+
+
+
