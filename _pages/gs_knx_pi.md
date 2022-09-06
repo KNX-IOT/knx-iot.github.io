@@ -128,7 +128,7 @@ Disable to avoid issue.
 
 #### send multicast from windows pc to Pi's
 
-??
+using ping (with optin -6).
 
 if ping is success full then discovery of the KNX-IOT devices is possible
 
