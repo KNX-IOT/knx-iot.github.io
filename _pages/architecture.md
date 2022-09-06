@@ -43,7 +43,29 @@ The resources will be used to send or receive s-mode messages and the pub/sub me
   The message pump is most of the time created in main. Examples of Windows and Linux main are supplied.
   Note that most of the examples are using compiler defines so that the examples can run on Linux and Windows.
 
-* Callbacks: When there is specific functionallity that needs a manufactorer implementation, Callbacks are implemented in the stack.
+* Implements generic KNX IoT Point API infrastructure
+  
+  * KNX config information
+    * installation id
+    * individual address
+    * serial number
+    * Tables:
+      * Group object Table
+      * Publisher Table
+      * Recipient Table
+      * Security (auth/at) Table
+
+  All configuration data is stored persistently.
+
+* Data point API
+
+    API to create a data point in a functional block
+
+    * GET callback
+    * POST callback (if needed)
+    * setting DPT and DPA
+
+* Application callbacks: When there is specific functionallity that needs a manufactorer implementation, Callbacks are implemented in the stack.
   Typical functionality that is manufactorer dependend:
 
   * device (application) configuration
@@ -56,4 +78,5 @@ The resources will be used to send or receive s-mode messages and the pub/sub me
 
 ## Next steps
 
-Go to the [source](https://github.com/KNX-IOT/KNX-IOT-STACK)
+1. Go to the [stack source](https://github.com/KNX-IOT/KNX-IOT-STACK)
+1. Go to the [simple example](https://github.com/KNX-IOT/Example-Application)
