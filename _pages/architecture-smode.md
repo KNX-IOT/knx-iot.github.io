@@ -17,9 +17,29 @@ toc_sticky : true
 The run time operation of KNX is s-mode communication.
 An s-mode message is a group communication message that contains the following info :
 
-- Group number
-- The value of the communication
-- Transport flags
+- Sender individual addres (sia)
+- Group number (ga)
+- The value of the communication (value): "r" | "w" | "rp"
+- Transport flags (st)
+
+There are 2 notations for s-mode messages in the specifications:
+
+- JSON notation
+- JSON notaion with integer keys
+
+```bash
+s-mode message in json notation
+
+{ "sia": <sia>, "s": { "st": <st>, "ga": <ga>, "value": <value> } }
+
+s-mode message in json notation with integer keys)
+
+{ 4: <sia>, 5: { 6: <st>, 7: <ga>, 1: <value> } }
+
+```
+
+Note: On the wire CBOR is used, with as input the JSON with integer keys.
+This means that the encoded content is small.
 
 The s-mode messages are secured with OSCORE.
 
