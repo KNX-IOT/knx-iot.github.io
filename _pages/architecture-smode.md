@@ -19,8 +19,11 @@ An s-mode message is a group communication message that contains the following i
 
 - Sender individual addres (sia)
 - Group number (ga)
-- The value of the communication (value): "r" | "w" | "rp"
+- The value of data point in the message (value)
 - Transport flags (st)
+  - "r" read
+  - "w" write
+  - "rp" response (on a read)
 
 There are 2 notations for s-mode messages in the specifications:
 
