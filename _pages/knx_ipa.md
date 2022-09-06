@@ -5,7 +5,7 @@ overview: true
 permalink: /knx_ipa/
 
 sidebar:
-  nav: "gs_nav"
+  nav: "arch_nav"
 
 toc: true
 toc_label: Table of Contents
