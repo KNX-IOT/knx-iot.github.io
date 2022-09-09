@@ -22,12 +22,17 @@ For example it can be combined with existing product on Twisted Pair (TP), KNXne
 KNX IoT Point API is an evolution of the KNX system and being IPV6 it can be used with various networking mechanisms.
 
 The most common usage of KNX is using the TP variant using cables.
-![Knx bus diagram ](/assets/images/OIP.jpg)
+
+| ![Knx bus diagram ](/assets/images/OIP.jpg) |
+|:--:|
+| <b>KNX bus diagram</b>|
 
 The most common usage of KNX is using the TP variant using cables.
 Resulting in using large cabinets to hook up all the devices.
 
-![Knx bus cabinet ](/assets/images/knx-cabinet.jpg)
+| ![Knx bus cabinet ](/assets/images/knx-cabinet.jpg) |
+|:--:|
+| <b>KNX cabinet</b>|
 
 The most interesting one is Thread, capable of creating a large area, wireless meshed IPV6 network.
 Using Thread based devices will reduce the typical KNX bus wiring.
@@ -64,7 +69,9 @@ Next to wired solutions, IPV6 can run over Wifi and [Thread based networks](http
 Since KNX IoT is semantic equivalent as another KNX transport layer, interworking between KNX IoT Point API and KNX TP is possible through an `iot router`.
 The `iot router` converts messages from TP (or IP) to KNX IoT Point API messages.
 
-![iot router ](/assets/images/iot-router.jpg)
+| ![Knx iot router ](/assets/images/iot-router.jpg) |
+|:--:|
+| <b>KNX IoT Router</b>|
 
 ### What are the advantages of KNX IoT Point API?
 
