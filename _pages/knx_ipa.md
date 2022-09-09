@@ -66,8 +66,8 @@ Next to wired solutions, IPV6 can run over Wifi and [Thread based networks](http
 
 ### How to combine KNX TP and KNX IoT Point API
 
-Since KNX IoT is semantic equivalent as another KNX transport layer, interworking between KNX IoT Point API and KNX TP is possible through an `iot router`.
-The `iot router` converts messages from TP (or IP) to KNX IoT Point API messages.
+Since KNX IoT is semantic equivalent as another KNX transport layer, interworking between KNX IoT Point API and KNX/TP and KNXnet/IP is possible through an `iot router`.
+The `iot router` converts messages from KNX/TP (or KNXnet/IP) to KNX IoT Point API messages.
 
 | ![Knx iot router ](/assets/images/iot-router.jpg) |
 |:--:|
@@ -75,9 +75,13 @@ The `iot router` converts messages from TP (or IP) to KNX IoT Point API messages
 
 ### What are the advantages of KNX IoT Point API?
 
-The advantages is that the new technology is IPV6 ready. So [Thread](https://www.threadgroup.org/) based devices can be made with KNX IoT Point API.
+The advantages of KNX IoT Point API is that the new technology is IPV6 ready and is using the latest (newest) IETF technologies in the specifications.
+The stack implementing the KNX IoT Point API therefore is quite small and can run on MCU devices with only 100kb of memory.
+Also due to the usage of the latest IETF technologies in the specification is secure by design.
+
+[Thread](https://www.threadgroup.org/) based devices can be made with KNX IoT Point API.
 Advantages of Thread are:
 
-- Meshed networking, e.g. covering a large area
-- Using the same radio across the world, e.g 1 product that can be used in all regions of the world
+- Meshed networking, e.g. covering a large area.
+- Using the same radio across the world, e.g 1 product that can be used/sold in all regions of the world.
 - Low power end devices, devices can go to sleep and reattach to the network when waking up.
