@@ -23,10 +23,8 @@ The C API documentation of the stack can be found [here](https://KNX-IOT.github.
 
 ### Introduction into KNX
 
-<object data="/assets/pdfs/29_KNX-Basics_en.pdf" type="application/pdf" width="700px" height="700px">
+<object data="/assets/pdfs/29_KNX-Basics_en.pdf" type="application/pdf" width="700px" height="900px">
     <embed src="/assets/pdfs/29_KNX-Basics_en.pdf">
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/assets/pdfs/29_KNX-Basics_en.pdf">Download PDF</a>.</p>
     </embed>
 </object>
-
-

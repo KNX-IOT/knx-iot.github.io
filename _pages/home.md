@@ -5,9 +5,7 @@ hidden: true
 header:
   overlay_color: "#5e616c"
 
-excerpt: <small> KNX IoT Point API open source software.
-The KNX IoT Point API is a new transport for KNX. 
-It is compatible with the existing KNX products.
+excerpt: <small> KNX IoT Point API open source software. The KNX IoT Point API is a new transport for KNX. It is compatible with the existing KNX products.
 <br/>
 
 feature_row:
