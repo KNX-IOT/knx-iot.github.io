@@ -69,7 +69,9 @@ Next to wired solutions, IPV6 can run over Wifi and [Thread based networks](http
 Since KNX IoT is semantic equivalent as another KNX transport layer, interworking between KNX IoT Point API and KNX TP is possible through an `iot router`.
 The `iot router` converts messages from TP (or IP) to KNX IoT Point API messages.
 
-![iot router ](/assets/images/iot-router.jpg)
+| ![Knx iot router ](/assets/images/iot-router.jpg) |
+|:--:|
+| <b>KNX IoT Router</b>|
 
 ### What are the advantages of KNX IoT Point API?
 
