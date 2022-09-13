@@ -15,7 +15,7 @@ toc_sticky : true
 
 ## Introduction
 
-The KNX IoT Point API is an extention of the suite of KNX physical transmission medias.
+The KNX IoT Point API is an extension of the suite of KNX physical transmission medias.
 The transmission media is IPv6 hence future proofing KNX and can be used on a variety of phyiscal transports.
 The KNX IoT Point API products can be used with existing KNX products in a single system.
 For example it can be combined with existing product on Twisted Pair (TP), KNXnet/IP using IPV4 and KNX-RF using radio transmission on 868 MHz.
