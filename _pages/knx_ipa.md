@@ -28,7 +28,6 @@ The most common usage of KNX is using the TP variant using cables.
 |:--:|
 | <b>KNX bus diagram</b>|
 
-The most common usage of KNX is using the TP variant using cables.
 Resulting in using large cabinets to hook up all the devices.
 
 | ![Knx bus cabinet ](/assets/images/knx-cabinet.jpg) |
