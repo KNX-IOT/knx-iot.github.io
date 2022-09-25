@@ -71,8 +71,6 @@ Hence the resource "rt" values are the data point types of KNX.
 examples:
 
 - urn:knx:dpa.421.61
-- DPT_Switch
-- :dpt.value2UCount
 
 ### Data points and functional blocks
 
