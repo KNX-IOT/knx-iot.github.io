@@ -101,12 +101,12 @@ install_config -h
 
 Example to configure:
 
-- Device with serial number `000003`
+- Device with serial number `00FA10010700`
 - Setting the internal adress on 1
 - Using the LSAB_config.json input file for all other configurations
   
 ```bash
-.\install_config.exe -sn 000003 -ia 1 -file LSAB_config.json
+.\install_config.exe -sn 00FA10010700 -ia 1 -file LSAB_config.json
 ```
 
 #### The configuration file

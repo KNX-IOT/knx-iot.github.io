@@ -48,15 +48,15 @@ by avahi-browse as folows:
 
 ```bash
 $ avahi-browse -rt _ia0._sub._knx._udp
-+ enp6s0 IPv6 000003                                        _knx._udp            local
-+ enp6s0 IPv4 000003                                        _knx._udp            local
-= enp6s0 IPv6 000003                                        _knx._udp            local
-   hostname = [000003.knx.local]
++ enp6s0 IPv6 00FA10010700                                        _knx._udp            local
++ enp6s0 IPv4 00FA10010700                                        _knx._udp            local
+= enp6s0 IPv6 00FA10010700                                        _knx._udp            local
+   hostname = [00FA10010700.knx.local]
    address = [2a00:23a8:89b:da00:ba27:ebff:fed5:c652]
    port = [5683]
    txt = []
-= enp6s0 IPv4 000003                                        _knx._udp            local
-   hostname = [000003.knx.local]
+= enp6s0 IPv4 00FA10010700                                        _knx._udp            local
+   hostname = [00FA10010700.knx.local]
    address = [192.168.202.161]
    port = [5683]
    txt = []
@@ -66,16 +66,16 @@ Devices can also be discovered based on their serial number. Note that the
 advertised service for the serial number is prefixed with an underscore.
 
 ```bash
-$ avahi-browse -rt _000003._sub._knx._udp
-+ enp6s0 IPv6 000003                                        _knx._udp            local
-+ enp6s0 IPv4 000003                                        _knx._udp            local
-= enp6s0 IPv6 000003                                        _knx._udp            local
-   hostname = [000003.knx.local]
+$ avahi-browse -rt _00FA10010700._sub._knx._udp
++ enp6s0 IPv6 00FA10010700                                        _knx._udp            local
++ enp6s0 IPv4 00FA10010700                                        _knx._udp            local
+= enp6s0 IPv6 00FA10010700                                        _knx._udp            local
+   hostname = [00FA10010700.knx.local]
    address = [2a00:23a8:89b:da00:ba27:ebff:fed5:c652]
    port = [5683]
    txt = []
-= enp6s0 IPv4 000003                                        _knx._udp            local
-   hostname = [000003.knx.local]
+= enp6s0 IPv4 00FA10010700                                        _knx._udp            local
+   hostname = [00FA10010700.knx.local]
    address = [192.168.202.161]
    port = [5683]
    txt = []
@@ -87,15 +87,15 @@ address of 1. Note that discovery using _ia0 is no longer successful.
 
 ```bash
 $ avahi-browse -rt _ia5-1._sub._knx._udp
-+ enp6s0 IPv6 000003                                        _knx._udp            local
-+ enp6s0 IPv4 000003                                        _knx._udp            local
-= enp6s0 IPv6 000003                                        _knx._udp            local
-   hostname = [000003.knx.local]
++ enp6s0 IPv6 00FA10010700                                        _knx._udp            local
++ enp6s0 IPv4 00FA10010700                                        _knx._udp            local
+= enp6s0 IPv6 00FA10010700                                        _knx._udp            local
+   hostname = [00FA10010700.knx.local]
    address = [2a00:23a8:89b:da00:ba27:ebff:fed5:c652]
    port = [5683]
    txt = []
-= enp6s0 IPv4 000003                                        _knx._udp            local
-   hostname = [000003.knx.local]
+= enp6s0 IPv4 00FA10010700                                        _knx._udp            local
+   hostname = [00FA10010700.knx.local]
    address = [192.168.202.161]
    port = [5683]
    txt = []
