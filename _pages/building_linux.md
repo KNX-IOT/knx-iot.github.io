@@ -52,7 +52,7 @@ cd ..
 
 Note: one can copy paste the contents above in a Linux terminal.
 
-## Build steps GitLub
+## Build steps GitLab
 
 ```bash
 # Clone the Stack
