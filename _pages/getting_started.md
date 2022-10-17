@@ -26,6 +26,9 @@ This getting started guide shows how to:
   - LSAB and LSSB (example) applications
 - Configure the installation
 
+Getting started instructions: [Windows][/building_windows/]
+Getting started instructions: [Linux][/building_linux/]
+
 #### Requirements for Device Simulation
 
 - Windows or Linux based PC
@@ -36,8 +39,12 @@ This getting started guide shows how to:
 
 - Get the source code
 - Compile the source code:
-  - LSAB and LSSB (example) applications
+  - LSAB (example) Application
+  - LSSB (example) Application
 - Configure the installation
+
+Getting started instructions: [Windows][/building_windows/]
+Getting started instructions: [Linux][/building_linux/]
 
 #### Requirements for KNX IoT Virtual
 
@@ -60,7 +67,7 @@ This getting started guide shows how to:
 
 ### The Getting started with Thread
 
-one can run the same Rasberry PI applications with Thread.
+One can run the same Rasberry PI applications with Thread.
 
 ### requirements for Thread
 

@@ -15,7 +15,7 @@ toc_sticky : true
 
 ## Introduction
 
-This page describes Getting Started with KNX IoT Point API development on windows.
+This page describes Getting Started with KNX IoT Point API development on Windows.
 The build system enviroment is Cmake, so one can use:
 
 - Visual Studio
@@ -26,7 +26,7 @@ The build system enviroment is Cmake, so one can use:
 - Windows (10) machine
 - Installed software:
   - git
-  - visual studio
+  - Visual Studio
   - cmake
     - python
     - perl
@@ -36,10 +36,16 @@ The build system enviroment is Cmake, so one can use:
 
 ## Build steps
 
-1. Getting the code
+1. Make sure you have the full environment installed
+   1. [git](#git)
+   2. [Visual studio with C++](#VisualStudio)
+   3. [CMake](#CMake)
+
+2. Getting the code
    clone the repo to a local folder
 
    From GitHub:
+
    ```bash
    # do from your working folder
    git clone https://github.com/KNX-IOT/KNX-IOT-STACK.git
@@ -56,7 +62,7 @@ The build system enviroment is Cmake, so one can use:
    cd knx-iot-point-api-public-stack
    ```
 
-1. Build the code with Visual Studio
+3. Build the code with Visual Studio
 
    - Open Visual Studio
      - Open cmake project by:
@@ -68,7 +74,7 @@ The build system enviroment is Cmake, so one can use:
      - Select the CMakefile.txt from the working folder `<working folder>\KNX-IOT_STACK` or  `<working folder>\ knx-iot-point-api-public-stack`
      - Wait until Visual Studio prepared the project
 
-1. Use Visual Studio to build the executables:
+4. Use Visual Studio to build the executables:
 
    - Menu -&gt; Build -&gt; Build All (Ctrl+shift+B)
 
@@ -79,7 +85,7 @@ The build system enviroment is Cmake, so one can use:
 
     Note: The actual path of the executables is dependend on the Visual Studio configuration.
 
-1. Debug an application
+5. Debug an application
 
    - Toolbar -&gt; Select Startup Item -&gt; down button
      - Select item (for example: LSSB_minimal_all.exe)
@@ -107,6 +113,13 @@ one should now have windows explorer integration to:
 
 - Git Gui Here (to push data)
 - Git Bash Here (a bash shell for commandline git)
+
+### CMake
+
+CMake has the following dependencies that needs to be installed:
+- perl
+- python
+- cmake itself
 
 #### perl
 
@@ -140,6 +153,14 @@ which python
 # result should be
 # <some path>/python
 ```
+
+### Visual Studio
+
+download Visual Studio from :
+
+https://visualstudio.microsoft.com/downloads/
+
+Install the package, including C++ (Desktop development with C++)
 
 #### Installing wxWidgets on Windows
 
