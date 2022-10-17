@@ -26,8 +26,8 @@ This getting started guide shows how to:
   - LSAB and LSSB (example) applications
 - Configure the installation
 
-Getting started instructions: [Windows][/building_windows/]
-Getting started instructions: [Linux][/building_linux/]
+Getting started instructions: [Windows](/building_windows/)
+Getting started instructions: [Linux](/building_linux/)
 
 #### Requirements for Device Simulation
 
@@ -43,8 +43,8 @@ This getting started guide shows how to:
   - LSSB (example) Application
 - Configure the installation
 
-Getting started instructions: [Windows][/building_windows/]
-Getting started instructions: [Linux][/building_linux/]
+Getting started instructions: [Windows](/building_windows/)
+Getting started instructions: [Linux](/building_linux/)
 
 #### Requirements for KNX IoT Virtual
 
