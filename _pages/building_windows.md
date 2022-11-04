@@ -21,18 +21,102 @@ The build system enviroment is Cmake, so one can use:
 - Visual Studio
 - nmake (from the commandline)
 
-### prerequisits
+### Prerequisites 
 
 - Windows (10) machine
 - Installed software:
   - git
   - Visual Studio
   - cmake
-    - python
-    - perl
+    - Python 
+    - Perl 
   - wxWidgets (for KNX IoT Virtual)
   
-  If the software is not installed please follow the instructions [here](#installing-the-dependencies).
+## Installing the dependencies
+
+You can skip this section if you already have all the dependencies.
+
+### git
+
+git can be obtained from:
+
+https://git-scm.com/download/win
+
+- Download the file that is appropriate for your machine
+
+  example: `64-bit Git for Windows Setup`
+- Install the software (e.g. run the downloaded installer)
+
+one should now have windows explorer integration to:
+
+- Git Gui Here (to push data)
+- Git Bash Here (a bash shell for commandline git)
+
+### CMake
+
+CMake has the following dependencies that needs to be installed:
+- Perl 
+- Python 
+- cmake itself
+
+#### perl
+
+Building (e.g. configuring wxWidgets with Cmake) requires Perl.
+If Perl is not installed then install it via a Windows installer available at:
+
+https://www.perl.org/get.html
+
+To check if Perl is installed:
+
+```bash
+# do in a bash window (e.g. Git bash)
+which perl
+# result should be
+# /usr/bin/perl
+```
+
+#### Python 
+
+Building (e.g. configuring wxWidgets with CMake) requires Python. 
+
+If Python is not installed then install it via a Windows installer available at:
+
+https://www.python.org/downloads/
+
+To check if Python is installed:
+
+```bash
+# do in a bash window (e.g. Git bash)
+which python
+# result should be
+# <some path>/python
+```
+
+### Visual Studio
+
+download Visual Studio from :
+
+https://visualstudio.microsoft.com/downloads/
+
+Install the package which includes C++ (Desktop development with C++).
+
+#### Installing wxWidgets on Windows
+
+Download wxwidgets from (installer source code):
+https://www.wxwidgets.org/downloads/
+
+- Install the contents on the recommended folder (e.g. c:\wxWidgets-3.1.5)
+- Build wxwidgets with visual studio:
+  
+  - Open c:\wxWidgets-3.1.5\build\msw\wx_vc16.sln (or take the highest number available)
+  - Accept convert solution suggestion: convert solution to newer version studio
+  - Build the solution for:
+    - static Win32 library for Debug & Release
+    - static x64 library for Debug & Release
+
+### Cmake information
+
+More information on Cmake and Visual studio can be found [here](https://docs.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170).
 
 ## Build steps
 
@@ -83,7 +167,7 @@ The build system enviroment is Cmake, so one can use:
     The executables can be found in folder:
     `\KNX-IOT-STACK\out\build\x64-Debug`
 
-    Note: The actual path of the executables is dependend on the Visual Studio configuration.
+    Note: The actual path of the executables is dependent on the Visual Studio configuration.
 
 5. Debug an application
 
@@ -94,88 +178,4 @@ The build system enviroment is Cmake, so one can use:
 
 ## Build architecture
 
-The Build architecture (win32 or x86) is dependend on the visual studio installation.
-
-## Installing the dependencies
-
-### git
-
-git can be obtained from:
-
-https://git-scm.com/download/win
-
-- Download the file that is appropriate for your machine
-
-  example: `64-bit Git for Windows Setup`
-- Install the software (e.g. run the downloaded installer)
-
-one should now have windows explorer integration to:
-
-- Git Gui Here (to push data)
-- Git Bash Here (a bash shell for commandline git)
-
-### CMake
-
-CMake has the following dependencies that needs to be installed:
-- perl
-- python
-- cmake itself
-
-#### perl
-
-Building (e.g. configuring wxWidgets with Cmake) requires perl
-If perl is not installed then install it via a Windows installer available at:
-
-https://www.perl.org/get.html
-
-To check if perl is installed:
-
-```bash
-# do in a bash window
-which perl
-# result should be
-# /usr/bin/perl
-```
-
-#### python
-
-Building (e.g. configuring wxWidgets with CMake) requires python
-
-If python is not installed then install it via a Windows installer available at:
-
-https://www.python.org/downloads/
-
-To check if python is installed:
-
-```bash
-# do in a bash window
-which python
-# result should be
-# <some path>/python
-```
-
-### Visual Studio
-
-download Visual Studio from :
-
-https://visualstudio.microsoft.com/downloads/
-
-Install the package, including C++ (Desktop development with C++)
-
-#### Installing wxWidgets on Windows
-
-Download wxwidgets from (installer source code):
-https://www.wxwidgets.org/downloads/
-
-- Install the contents on the recommended folder (e.g. c:\wxWidgets-3.1.5)
-- Build wxwidgets with visual studio:
-  
-  - Open c:\wxWidgets-3.1.5\build\msw\wx_vc16.sln (or take the highest number available)
-  - Accept convert solution suggestion: convert solution to newer version studio
-  - Build the solution for:
-    - static Win32 library for Debug & Release
-    - static x64 library for Debug & Release
-
-### Cmake information
-
-More information on Cmake and Visual studio can be found [here](https://docs.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170).
+The Build architecture (win32 or x86) is dependent on the visual studio installation.

@@ -93,9 +93,9 @@ run the application `pi-hat`
 
 ### check network connectivity
 
-Note that KNX IoT Point API is IPV6 based.
+Note that KNX IoT Point API is IPv6 based.
 
-#### send IPV6 ping to the other PI
+#### send IPv6 ping to the other PI
 
 `ip address` - prints out all IP addresses on a RPi.
 You should be able to see IPv6 addresses for Ethernet & wpan interfaces.
@@ -105,9 +105,9 @@ You should be able to see IPv6 addresses for Ethernet & wpan interfaces.
 If ping is success full then communication is possible.
 
 
-#### send IPV6 ping from windows pc to Pi's
+#### send IPv6 ping from windows pc to Pi's
 
-use the same IPV6 address for communiation from windows to a RPi.
+use the same IPv6 address for communiation from windows to a RPi.
 
 If ping is success full then communication is possible.
 
@@ -146,7 +146,7 @@ The network interface is wpan0.
 
 `ip address` - prints out all IP addresses on a RPi.
 You should be able to see IPv6 addresses for Ethernet & wpan interfaces.
-so select the IPV6 address on wpan0, and use that for a ping from the other RPi.
+so select the IPv6 address on wpan0, and use that for a ping from the other RPi.
 
 `ping` - can be used to test connectivity between two pis, over Ethernet and Thread.
 
@@ -157,8 +157,8 @@ If ping is success full then communication is possible.
 ```bash
 config
 ```
-should list IPV6 adresses for the WPAN0 interface.
-If no IPV6 adrss 
+should list IPv6 adresses for the WPAN0 interface.
+If no IPv6 adrss 
 
 ### restart wpan0
 

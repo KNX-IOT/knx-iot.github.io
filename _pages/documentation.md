@@ -14,7 +14,7 @@ toc_sticky : true
 ---
 ## Introduction
 
-This page contains some background information on the various topics
+This page contains some background information on various topics.
 
 ### Doxygen documentation 
 
