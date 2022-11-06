@@ -81,9 +81,7 @@ $ avahi-browse -rt _00FA10010700._sub._knx._udp
    txt = []
 ```
 
-After programming, devices can be discover based on their IA & IID. In the
-example below, the device lives on Installation ID 5, with an individual
-address of 1. Note that discovery using _ia0 is no longer successful.
+After programming, devices can be discover based on their IA (Individual Address) & IID (Installation ID). In the example below, the device lives on Installation ID 5, with an individual address of 1. Note that discovery using _ia0 is no longer successful.
 
 ```bash
 $ avahi-browse -rt _ia5-1._sub._knx._udp
