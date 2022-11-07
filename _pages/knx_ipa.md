@@ -64,6 +64,8 @@ An example of a functional block is Light Switching Sensor Basic (LSSB), which p
 Since the LSSB is a Sensor, it sends out the triggers to the Acutators FB Light Switching Actuator Basic (LSAB) or FB Light Dimming Actuator Basic (LDAB).
 Next to the data point that sends out these triggers, there is another data point that receives status feedback messages from light switching/dimming actuators.
 
+How the actual function of the system is configured across the devices is achieved by the configuration data.
+
 
 #### Configuration Data
 
@@ -80,6 +82,7 @@ For the actuator data points, the Management Client (MaC) needs to set up:
 - Which multicast address is being used to communicate
 - Whether the data is to be interpreted (acted upon) by the device
 - The data point is identified by the MaC by its url
+
 
 #### IPV6
 
