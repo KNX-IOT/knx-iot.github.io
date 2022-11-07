@@ -143,7 +143,7 @@ More information on Cmake and Visual studio can be found [here](https://docs.mic
 
    ```bash
    # do from your working folder
-   git clone https://github.com/KNX-IOT/KNX-IOT-STACK.git
+   git clone --recurse-submodules https://github.com/KNX-IOT/KNX-IOT-STACK.git
    # do cd into the created folder
    cd KNX-IOT-STACK
    ```
@@ -152,7 +152,7 @@ More information on Cmake and Visual studio can be found [here](https://docs.mic
 
    ```bash
    # do from your working folder
-   git clone git clone --recursive https://gitlab.knx.org/shared-projects/knx-iot-point-api-public-stack.git
+   git clone --recurse-submodules https://gitlab.knx.org/shared-projects/knx-iot-point-api-public-stack.git
       # do cd into the created folder
    cd knx-iot-point-api-public-stack
    ```
@@ -162,7 +162,7 @@ More information on Cmake and Visual studio can be found [here](https://docs.mic
    - Open Visual Studio
      - Open cmake project by:
 
-     - Menu -&gt; File -&gt; Open -&gt; Cmake
+     - File -&gt; Open -&gt; Cmake
 
        ![VisualStudio](/assets/images/visualstudio-cmake.png)
 
@@ -171,7 +171,7 @@ More information on Cmake and Visual studio can be found [here](https://docs.mic
 
 4. Use Visual Studio to build the executables:
 
-   - Menu -&gt; Build -&gt; Build All (Ctrl+shift+B)
+   - Build -&gt; Build All (Ctrl+shift+B)
 
    - The executables are created in the project.
 
@@ -182,9 +182,11 @@ More information on Cmake and Visual studio can be found [here](https://docs.mic
 
 5. Debug an application
 
-   - Toolbar -&gt; Select Startup Item -&gt; down button
+   - Select Startup Item -&gt; down button
      - Select item (for example: LSSB_minimal_all.exe)
-     - Press the debug symbol (or F5)
+      ![SelectItem](/assets/images/vs_select_startup.png)
+
+     - Press the debug symbol (green "play button"), or F5
      - A commandline window will appear with the logging of the KNX application
 
 ## Build architecture
