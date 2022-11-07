@@ -16,7 +16,7 @@ toc_sticky : true
 ## Introduction
 
 The KNX IoT Point API is an extension of the suite of KNX physical transmission medias.
-The KNX IoT Point API is part of [KNX IoTech](https://www.knx-iotech.org/) as part 3.0.
+The KNX IoT Point API is part of [KNX IoTech](https://www.knx-iotech.org/) as part 3.10.5.
 The transmission media is IPv6 hence future proofing KNX and can be used on a variety of phyiscal transports.
 The KNX IoT Point API products can be used with existing KNX products in a single system.
 For example it can be combined with existing product on Twisted Pair (TP), KNXnet/IP using IPV4 and KNX-RF using radio transmission on 868 MHz.
@@ -48,10 +48,38 @@ The specification describes:
 - A new communication/message protocol using [CoAP](https://www.rfc-editor.org/rfc/rfc7252) and [CBOR](https://www.rfc-editor.org/rfc/rfc8949.html).
 - Using the same functional blocks as the other KNX transport layers.
 - Using the same s-mode message semantics as the other KNX transport layers.
-- Using the Same configuration data to configure which device is talking to which device.
+- Using the same configuration data to configure which device is talking to which device.
 
-Hence KNX Iot Point API conveyes the same semantic data on the transport layer as an KNX TP implementation.
+Hence KNX IoT Point API conveyes the same semantic data on the transport layer as an KNX TP implementation.
 therefore the interworking between KNX IoT Point API and the other KNX technologies is garanteed.
+
+#### Functional Blocks / Data points
+
+The application domain in KNX is described by functional blocks. The Functional Blocks are a consistent set of data points that describe the domain.
+There can be mandatory and optional data points in a functional block.
+Functional Blocks are described in the KNX specification volume 7: Application descriptions.
+
+An example of a functional block is Light Switching Sensor Basic (LSSB), which provides hardwired inputs or local push-button/HMI functionality to trigger output messages to control the On/Off status
+
+Since the LSSB is a Sensor, it sends out the triggers to the Acutators FB Light Switching Actuator Basic (LSAB) or FB Light Dimming Actuator Basic (LDAB).
+Next to the data point that sends out these triggers, there is another data point that receives status feedback messages from light switching/dimming actuators.
+
+
+#### Configuration Data
+
+The KNX devices needs to be configered, e.g. for sensor data points, the Management Client (MaC) needs to set up in the Tables:
+
+- Which group address is being used to send the data
+- Which multicast address is being used to communicate
+- Whether it allowed to send the message
+- The data point is identified by the MaC by its url
+
+For the actuator data points, the Management Client (MaC) needs to set up:
+
+- Which group address is being used for receiving the data
+- Which multicast address is being used to communicate
+- Whether the data is to be interpreted (acted upon) by the device
+- The data point is identified by the MaC by its url
 
 #### IPV6
 
