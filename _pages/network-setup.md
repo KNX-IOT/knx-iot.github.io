@@ -16,7 +16,7 @@ toc_sticky : true
 
 ## Introduction
 
-KNX IoT Point API is based on IPV6. Hence an IPV6 based network needs to be available to connect too.
+KNX IoT Point API is based on IPv6. Hence an IPv6 based network needs to be available to connect too.
 This introduction is how to commision the thread device on the thread network.
 This is needed before KNX IoT Point API configuration starts (e.g. download tables and setup the security)
 

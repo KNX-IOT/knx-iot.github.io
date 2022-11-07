@@ -34,7 +34,7 @@ An s-mode message is a group communication message that contains the following i
 There are 2 notations for s-mode messages in the specifications:
 
 - JSON notation
-- JSON notaion with integer keys
+- JSON notation with integer keys
 
 ```bash
 s-mode message in json notation
@@ -47,8 +47,7 @@ s-mode message in json notation with integer keys)
 
 ```
 
-Note: On the wire CBOR is used, with as input the JSON with integer keys.
-This means that the encoded content is small.
+Note: On the wire, s-mode messages represented using JSON notation with integer keys are encoded using CBOR. This ensures that the messages are small.
 
 The s-mode messages are secured with OSCORE.
 
@@ -64,12 +63,12 @@ The device that implements a sensor will have to implement a resource (datapoint
 The stack supplies a function that will retrieve the data from the resource and send out the s-mode message with the value of the datapoint.
 Since the function to send an s-mode message is generic, one of the arguments of the function is the url of the datapoint.
 
-
 ![s-mode send](https://github.com/KNX-IOT/KNX-IOT-STACK/raw/master/images/sequence_send_s-mode.png)
 
 The device that implements an actuator (e.g. receives messages) will have have to implement the data point as resources with the function POST.
 The stack will translate the group address via the group object table to the url of the datapoint.
 The POST of the datapoint implementation is called with the actual value of the s-mode message. The implementation of the POST needs to do the actual actuation of the hardware (e.g. turn on/off a light).
+
 
 
 ![s-mode receive](https://github.com/KNX-IOT/KNX-IOT-STACK/raw/master/images/sequence_receive_s-mode.png)

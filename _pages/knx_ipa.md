@@ -20,7 +20,7 @@ The KNX IoT Point API is part of [KNX IoTech](https://www.knx-iotech.org/) as pa
 The transmission media is IPv6 hence future proofing KNX and can be used on a variety of phyiscal transports.
 The KNX IoT Point API products can be used with existing KNX products in a single system.
 For example it can be combined with existing product on Twisted Pair (TP), KNXnet/IP using IPV4 and KNX-RF using radio transmission on 868 MHz.
-KNX IoT Point API is an evolution of the KNX system and being IPV6 it can be used with various networking mechanisms.
+KNX IoT Point API is an evolution of the KNX system and being IPv6 it can be used with various networking mechanisms.
 
 The most common usage of KNX is using the TP variant using cables.
 
@@ -34,20 +34,19 @@ Resulting in using large cabinets to hook up all the devices.
 |:--:|
 | <b>KNX cabinet</b>|
 
-The most interesting one is Thread, capable of creating a large area, wireless meshed IPV6 network.
+The most interesting one is Thread, capable of creating a large area, wireless meshed IPv6 network.
 Using Thread based devices will reduce the typical KNX bus wiring.
 
 ### Technical Background
 
-KNX IoT Point API is a new specification in the KNX system specifications group.
-e.g. 3_10_5 KNX IoT Point API.
+KNX IoT Point API is a new specification in the KNX system specifications group (see 3_10_5 KNX IoT Point API.)
 
 The specification describes:
 
-- A new transport layer based on IPV6, e.g. suitable for [Thread based networks](https://www.threadgroup.org/).
+- A new transport layer based on IPv6, e.g. suitable for [Thread based networks](https://www.threadgroup.org/).
 - A new communication/message protocol using [CoAP](https://www.rfc-editor.org/rfc/rfc7252) and [CBOR](https://www.rfc-editor.org/rfc/rfc8949.html).
 - Using the same functional blocks as the other KNX transport layers.
-- Using the same s-mode message semantics as the other KNX transport layers.
+- Using the same [s-mode message](/_pages/architecture-smode.md) semantics as the other KNX transport layers.
 - Using the same configuration data to configure which device is talking to which device.
 
 Hence KNX IoT Point API conveyes the same semantic data on the transport layer as an KNX TP implementation.
@@ -86,9 +85,9 @@ For the actuator data points, the Management Client (MaC) needs to set up:
 
 #### IPV6
 
-IPV6 can run over different cables and can be used wireless.
-Ethernet cables like CAT6 can be used for wired networking, also an option to use PoE (Power over Ethernet) to power devices connected via Ethernet cables.
-Next to wired solutions, IPV6 can run over Wifi and [Thread based networks](https://www.threadgroup.org/).
+IPv6 can run over different cables and can be used wirelessly.
+Ethernet cables like CAT6 can be used for wired networking, and PoE (Power over Ethernet) can also be used to power devices connected via Ethernet cables.
+Next to wired solutions, IPv6 can run over Wifi and [Thread based networks](https://www.threadgroup.org/).
 
 #### What is new
 
@@ -97,7 +96,7 @@ Next to wired solutions, IPV6 can run over Wifi and [Thread based networks](http
 
 ### How to combine KNX TP and KNX IoT Point API
 
-Since KNX IoT is semantic equivalent as another KNX transport layer, interworking between KNX IoT Point API and KNX/TP and KNXnet/IP is possible through an `iot router`.
+Since KNX IoT is semantically equivalent to another KNX transport layer, interworking between KNX IoT Point API and KNX/TP and KNXnet/IP is possible through an `iot router`.
 The `iot router` converts messages from KNX/TP (or KNXnet/IP) to KNX IoT Point API messages.
 
 | ![Knx iot router ](/assets/images/iot-router.jpg) |
@@ -106,13 +105,13 @@ The `iot router` converts messages from KNX/TP (or KNXnet/IP) to KNX IoT Point A
 
 ### What are the advantages of KNX IoT Point API?
 
-The advantages of KNX IoT Point API is that the new technology is IPV6 ready and is using the latest (newest) IETF technologies in the specifications.
+The advantages of KNX IoT Point API is that the new technology is IPv6-ready and is using the latest (newest) IETF technologies in the specifications.
 The stack implementing the KNX IoT Point API therefore is quite small and can run on MCU devices with only 100kb of memory.
-Also due to the usage of the latest IETF technologies in the specification is secure by design.
+KNX IoT Point API is also secure by design, due to the usage of the latest IETF technologies in the specification.
 
 [Thread](https://www.threadgroup.org/) based devices can be made with KNX IoT Point API.
 Advantages of Thread are:
 
 - Meshed networking, e.g. covering a large area.
 - Using the same radio across the world, e.g 1 product that can be used/sold in all regions of the world.
-- Low power end devices, devices can go to sleep and reattach to the network when waking up.
+- Low power end devices, which can go to sleep and reattach to the network when waking up.
