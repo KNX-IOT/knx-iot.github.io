@@ -16,14 +16,15 @@ toc_sticky : true
 
 KNX IoT Point API stack is an open-source, reference implementation of the KNX IoT Point API specification.
 
-## Stack Assumptions
+## Stack tennants
 
-The assumptions of the stack is to abstract as much functionality as possible.
-This way the code that a manufacturer needs to write should be as small as possible.
+The stack implementation implements as much functionality as possible.
+This way the code that a manufactorer needs to write should be as small as possible.
 Hence the stack has an API to create a device and add resources to the device.
 Each resource represents a datapoint belonging to a function block.
 A resource will have a GET (read) and a POST (write/update) handler.
-The resources will be used to send or receive [s-mode messages](/_pages/architecture-smode.md) and the pub/sub messages.
+The resources will be used to send or receive s-mode messages and the unicast publish/subcribe messages.
+
 
 ## Stack Features
 
@@ -38,9 +39,11 @@ The resources will be used to send or receive [s-mode messages](/_pages/architec
   The simplicity and boundedness of these interface definitions allow them to be rapidly implemented on any chosen OS/target.
   Such an implementation constitutes a "port". ![porting layer](https://raw.githubusercontent.com/KNX-IOT/KNX-IOT-STACK/master/images/porting.png)
 
-* message pump: All sending and receiving of messages is handled via a message pump.
-  This means that no threading, semaphores or critical sections are used in the code. The message pump is dependent on the OS.
-  The message pump is most of the time created in main. Examples of Windows and Linux main are supplied.
+* message pump: All sending and received message are handled via a message pump.
+  This means that no threading, semaphores or critical sections are used in the code. The message pump is dependend on the OS.
+  The message pump is most of the time created in main function of the application.
+  Examples of Windows and Linux main functions are supplied.
+
   Note that most of the examples are using compiler defines so that the examples can run on Linux and Windows.
 
 * Implements generic KNX IoT Point API infrastructure

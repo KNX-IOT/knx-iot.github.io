@@ -14,7 +14,13 @@ toc_sticky : true
 ---
 ## Introduction
 
-The run-time operation of KNX is s-mode communication.
+The run time operation of KNX is (standard) s-mode communication.
+The s-mode messages are send by sensors and interpreted by actuators, according their configuration.
+The s-mode messages are send to 1 or a group of device, the sender does not know who is receiving the message.
+In that sense the sensor sending a s-mode message performing a publish (of the publish/subscribe paradign).
+The acuator is receiving the message without prior information on where the message is comming from, (e.g. implementing the subscribe of the publish/subcribe paradigm)
+Note that multiple sensor and actuators can be active (configured) in a KNX system.
+
 An s-mode message is a group communication message that contains the following info :
 
 - Sender individual addres (sia)
@@ -48,16 +54,21 @@ The s-mode messages are secured with OSCORE.
 ## Stack Features
 
 The stack supports sending and receiving of s-mode messages.
-The routing of these messages is implemented in the stack.
+The routing of the s-mode messages is implemented in the stack.
 
-The routing of the s-mode messages outside the device is achieved via the Group Object Table. The Group Object table translates between the Group Ids and the url to be used.
+The routing of the s-mode messages outside the device is achieved via the Group Object Table.
+The Group Object table translates between the Group Ids and the url to be used.
 
-The device that implements a sensor (i.e. sends data) will have to use specific function to s-mode messages and implement resources with GET.
-For sending an s-mode message, the url of the device resource is used. The logic will do a GET on that resource to fetch the value to be sent in each s-mode message.
+The device that implements a sensor will have to implement a resource (datapoint) with the GET function.
+The stack supplies a function that will retrieve the data from the resource and send out the s-mode message with the value of the datapoint.
+Since the function to send an s-mode message is generic, one of the arguments of the function is the url of the datapoint.
 
 ![s-mode send](https://github.com/KNX-IOT/KNX-IOT-STACK/raw/master/images/sequence_send_s-mode.png)
 
-The device that implements an actuator (i.e. receives data) will have have to implement resources with POST to receive the value.
-For receiving, the url is translated to the local url on the device. On this url the POST command is called (similar as a regular CoAP POST) with the received value of the s-mode message.
+The device that implements an actuator (e.g. receives messages) will have have to implement the data point as resources with the function POST.
+The stack will translate the group address via the group object table to the url of the datapoint.
+The POST of the datapoint implementation is called with the actual value of the s-mode message. The implementation of the POST needs to do the actual actuation of the hardware (e.g. turn on/off a light).
+
+
 
 ![s-mode receive](https://github.com/KNX-IOT/KNX-IOT-STACK/raw/master/images/sequence_receive_s-mode.png)
