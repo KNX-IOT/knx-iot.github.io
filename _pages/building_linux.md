@@ -15,15 +15,13 @@ toc_sticky : true
 
 ## Introduction
 
-This page describes Getting Started with KNX IoT Point API development on Linux.
+This page describes how to get started with KNX IoT Point API development on Linux.
 
 The build system is CMake.
 
-Note this description also applies to development on a Raspberry Pi.
+Note: this description also applies to development on a Raspberry Pi.
 
 ### Prerequisites 
-
-The prerequisites are:
 
 - Linux machine (or Pi)
 - installed:
@@ -36,7 +34,7 @@ The prerequisites are:
 
 ```bash
 # Clone the Stack
-git clone https://github.com/KNX-IOT/KNX-IOT-STACK.git
+git clone --recurse-submodules https://github.com/KNX-IOT/KNX-IOT-STACK.git
 # go into the create repo
 cd KNX-IOT-STACK
 - # Make a working directory (named anything)
@@ -56,7 +54,7 @@ Note: one can copy paste the contents above in a Linux terminal.
 
 ```bash
 # Clone the Stack
-git clone https://gitlab.knx.org/shared-projects/knx-iot-point-api-public-stack.git
+git clone --recurse-submodules https://gitlab.knx.org/shared-projects/knx-iot-point-api-public-stack.git
 # go into the create repo
 cd knx-iot-point-api-public-stack
 - # Make a working directory (named anything)
