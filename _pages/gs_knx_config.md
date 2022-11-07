@@ -22,7 +22,7 @@ The applications are using the serial number (of the device) to find the device 
 
 ## Tools
 
-The Tools are a set of applications that can perform tasks to interact with an KNX IoT Point API Device.
+The Tools are a set of applications that can perform tasks to interact with a KNX IoT Point API Device.
 Typical interactions are:
 
 - [Searching for a device or multiple devices](#list_devices).

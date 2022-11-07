@@ -14,12 +14,12 @@ toc_sticky : true
 ---
 ## Introduction
 
-The run time operation of KNX is (standard) s-mode communication.
-The s-mode messages are send by sensors and interpreted by actuators, according their configuration.
-The s-mode messages are send to 1 or a group of device, the sender does not know who is receiving the message.
-In that sense the sensor sending a s-mode message performing a publish (of the publish/subscribe paradign).
-The acuator is receiving the message without prior information on where the message is comming from, (e.g. implementing the subscribe of the publish/subcribe paradigm)
-Note that multiple sensor and actuators can be active (configured) in a KNX system.
+The run-time operation of KNX is (standard) s-mode communication.
+The s-mode messages are sent by sensors and interpreted by actuators, according to their configuration.
+The s-mode messages are sent to a single device or group of devices, the sender does not know who is receiving the message.
+In that sense, the sensor sending an s-mode message is performing a publish (of the publish/subscribe paradigm).
+The actuator is receiving the message without prior information on where the message is comming from, (i.e. implementing the subscribe of the publish/subscribe paradigm)
+Note that multiple sensors and actuators can be active (configured) in a KNX system.
 
 An s-mode message is a group communication message that contains the following info :
 
