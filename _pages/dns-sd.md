@@ -17,7 +17,7 @@ toc_sticky : true
 
 The KNX-IoT features Multicast DNS based Service Discovery. KNX servers
 advertise their KNX Serial Number, KNX Individual Address and KNX Installation
-IDs using [PTR Resource records](https://github.com/KNX-IOT/knx-iot.github.io),
+IDs using [PTR Resource records](https://datatracker.ietf.org/doc/html/rfc1035#section-3.3.12),
 which can be discovered using Multicast DNS. This enables KNX-IoT devices to
 be discoverable on the local network with essentially zero configuration.
 
