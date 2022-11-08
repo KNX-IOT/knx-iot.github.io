@@ -49,18 +49,18 @@ The specification describes:
 - Using the same [s-mode message](/_pages/architecture-smode.md) semantics as the other KNX transport layers.
 - Using the same configuration data to configure which device is talking to which device.
 
-Hence KNX IoT Point API conveyes the same semantic data on the transport layer as an KNX TP implementation.
+Hence KNX IoT Point API conveys the same semantic data on the transport layer as a KNX TP implementation.
 therefore the interworking between KNX IoT Point API and the other KNX technologies is garanteed.
 
 #### Functional Blocks / Data points
 
-The application domain in KNX is described by functional blocks. The Functional Blocks are a consistent set of data points that describe the domain.
+The application domain in KNX is described by functional blocks (FB). The Functional Blocks are a consistent set of data points that describe the domain.
 There can be mandatory and optional data points in a functional block.
 Functional Blocks are described in the KNX specification volume 7: Application descriptions.
 
-An example of a functional block is Light Switching Sensor Basic (LSSB), which provides hardwired inputs or local push-button/HMI functionality to trigger output messages to control the On/Off status
+An example of a functional block is Light Switching Sensor Basic (LSSB), which provides hardwired inputs or local push-button/HMI functionality to trigger output messages to control the On/Off status.
 
-Since the LSSB is a Sensor, it sends out the triggers to the Acutators FB Light Switching Actuator Basic (LSAB) or FB Light Dimming Actuator Basic (LDAB).
+Since the LSSB is a Sensor, it sends out the triggers to the Actuators FB Light Switching Actuator Basic (LSAB) or FB Light Dimming Actuator Basic (LDAB).
 Next to the data point that sends out these triggers, there is another data point that receives status feedback messages from light switching/dimming actuators.
 
 How the actual function of the system is configured across the devices is achieved by the configuration data.
@@ -68,11 +68,11 @@ How the actual function of the system is configured across the devices is achiev
 
 #### Configuration Data
 
-The KNX devices needs to be configered, e.g. for sensor data points, the Management Client (MaC) needs to set up in the Tables:
+The KNX devices need to be configured. For example, for sensor data points, the Management Client (MaC) needs to set up the following in the Group Object table:
 
 - Which group address is being used to send the data
 - Which multicast address is being used to communicate
-- Whether it allowed to send the message
+- Whether the device is allowed to send the message
 - The data point is identified by the MaC by its url
 
 For the actuator data points, the Management Client (MaC) needs to set up:
