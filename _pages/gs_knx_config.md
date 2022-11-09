@@ -16,28 +16,25 @@ toc_sticky : true
 
 ## Introduction
 
-When the KNX devices are running, they are running without a configuration.
-Hence applications are provided that can configure the devices.
-The applications are using the serial number (of the device) to find the device on the network and talk to the device.
+KNX devices are not configured by default. They need to actively be configured using the applications that are provided below. These applications use the serial number of the device to find it on the network and communicate with it.      
 
 ## Tools
 
-The Tools are a set of applications that can perform tasks to interact with a KNX IoT Point API Device.
-Typical interactions are:
+The tools listed below are a set of applications that can perform tasks to interact with a KNX IoT Point API Device. Typical interactions are:
 
 - [Searching for a device or multiple devices](#list_devices).
-- [Configuring a device](#list_devices)
-- [Issuing s-mode messages](#s-mode)
-- [Listening to s-mode messages](#sniffer-s-mode)
-- [Resetting a device](#reset_device)
+- [Configuring a device](#list_devices).
+- [Issuing s-mode messages](#s-mode).
+- [Listening to s-mode messages](#sniffer-s-mode).
+- [Resetting a device](#reset_device).
 
 Each application has the -h option to show the command line parameters.
 
-Typical all applications require to indicate to which device the command is issued. e.g. use the option -sn the serial number of the device.
+All applications typically require an argument indicating which device the command is issued to. This can be done using the `-sn` option, followed by the serial number of the device.
 
 ### Downloading the Tools
 
-The Tools can be downloaded from the [GitLab release page of the KNX IoT Stack](https://gitlab.knx.org/shared-projects/knx-iot-point-api-public-stack/-/releases)
+The tools can be downloaded from the [GitLab release page of the KNX IoT Stack](https://gitlab.knx.org/shared-projects/knx-iot-point-api-public-stack/-/releases)
 
 The files to download and unzip are:
 
@@ -46,7 +43,7 @@ The files to download and unzip are:
 
 ### list_devices
 
-Application to list the device, issuing:
+Application to list devices, issuing:
 
 - Discovery of device with internal address using query : if=urn:knx:ia.[ia]
 - Discovery of device in programming mode using query : if=urn:knx:if.pm
@@ -74,11 +71,11 @@ Note: to discover a device in programming mode, use [list_devices](#list_devices
 
 ### install_config
 
-Application to configuring a device.
+Application to configure devices.
 
-The Application will issue the following commands:
+The application will issue the following commands:
 
-- Discovery a device with a specific sn
+- Discover a device with a specific serial number 
 - Performing device individualization by setting the:
   - internal address (ia)
   - installation id (iid)
@@ -88,7 +85,7 @@ The Application will issue the following commands:
   - configure the Recipient Table
   - configure parameters
   - Set the device in `loaded` state
-- Retrieve the finger print
+- Retrieve the fingerprint
 
 The flow is depicted in the following diagram:
 ![configuration steps](https://raw.githubusercontent.com/KNX-IOT/KNX-IOT-STACK/master/images/sequence_setup.png)
@@ -106,16 +103,15 @@ Example to configure:
 - Using the LSAB_config.json input file for all other configurations
   
 ```bash
-.\install_config.exe -sn 00FA10010700 -ia 1 -file LSAB_config.json
+./install_config.exe -sn 00FA10010700 -ia 1 -file LSAB_config.json
 ```
 
 #### The configuration file
 
-The configuration file is a json formatted file.
-config data:
+The configuration file is a json formatted file containing the following configuration data:
 
-- installation id: key = "iid"
-- individual address: key = "ia"
+- installation id: Key = "iid"
+- individual address: Key = "ia"
 - group object table: Key = "groupobject"
 - parameter (table): Key = "memparameter"
 - recipient table: Key = "recipient"
@@ -133,15 +129,14 @@ Example config data for ia and idd:
 }
 ```
 
-The content of the tables are the items in an array.
-The items have the json keys (e.g. "id" instead of 0)
-The application converts the json data in to data with integer keys and then convert the contents to cbor.
+
+The contents of the tables are items in an array. The items have the json keys represented as strings (e.g. "id" instead of 0), which the application converts into integer keys. Then the contents are encoded with CBOR.
 
 ##### Group object table
 
 The group object table contains the array of json objects for an Group Object Table entry.
 
-The group object table contains the following json tags.
+The group object table contains the following json tags:
 
 - "id" : identifier in the group object table
 - "href" : the href of the point api url
@@ -170,15 +165,15 @@ Example :
 
 ##### Publisher table
 
-The Publisher table contains the array of json objects for an Publisher entry.
+The publisher table contains the array of json objects for an Publisher entry.
 Note that the ia (and path) needs to be defined or the url.
-if ia is defined and path is not there, the path will have the default value ".knx".
+If the ia is defined and the path is not there, the path will have the default value ".knx".
 
-- "id" : identifier in the group object table
-- "ia" : internal address of the target device
-- "ga" : the array of group addresses
-- "path" : the optional path to send the commands too.
-- "url" : the unicat url to send the command too
+- "id" : identifier in the group object table.
+- "ia" : internal address of the target device.
+- "ga" : the array of group addresses.
+- "path" : the optional path to send the commands to.
+- "url" : the unicat url to send the command to.
 
 | JSON Tag | CBOR tag |
 |----------| ---------|
@@ -215,15 +210,15 @@ Example:
 
 ##### Recipient table
 
-The Recipient table contains the array of json objects for an Recipeint entry.
+The recipient table contains the array of json objects for recipeint entries.
 Note that the ia (and path) needs to be defined or the url.
-If ia is defined and path is not there, the path will have the default value ".knx".
+If the ia is defined and the path is not there, the path will have the default value ".knx".
 
-- "id" : identifier in the group object table
-- "ia" : internal address of the target device
-- "ga" : the array of group addresses
-- "path" : the optional path to send the commands too.
-- "url" : the unicat url to send the command too
+- "id" : identifier in the group object table.
+- "ia" : internal address of the target device.
+- "ga" : the array of group addresses.
+- "path" : the optional path to send the commands to.
+- "url" : the unicat url to send the command to.
 
 | JSON Tag | CBOR tag |
 |----------| ---------|
@@ -256,7 +251,7 @@ Example:
 
 ##### Access token table
 
-The access token table contains the array of json objects for an auth/at entry.
+The access token table contains the array of json objects for auth/at entries.
 
 - "id" : identifier of the entry
 - "profile" : oscore (2)
@@ -316,7 +311,7 @@ The parameters can be set on /p.
 
 The parameter information:
 
-- "value": The value of the data (e.g. will be translated to CBOR)
+- "value": The value of the data (which will be CBOR-encoded)
 - "href": The href of the endpoint for the parameter
 
 | JSON Tag  | CBOR tag |
@@ -383,7 +378,7 @@ sniffer-s-mode -h
 ### reset_device
 
 Application to reset the device.
-The Application will issue the following commands:
+The application will issue the following commands:
 
 - Discovery with a specific serial number
 - POST to /a/sen with the reset command

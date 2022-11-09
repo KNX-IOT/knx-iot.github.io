@@ -106,7 +106,7 @@ Download wxwidgets from (installer source code):
 https://www.wxwidgets.org/downloads/
 
 - Install the contents on the recommended folder (e.g. c:\wxWidgets-3.1.5)
-- Build wxwidgets with visual studio:
+- Build wxwidgets with visual Studio:
   
   - Open c:\wxWidgets-3.1.5\build\msw\wx_vc16.sln (or take the highest number available)
   - Accept convert solution suggestion: convert solution to newer version studio
@@ -127,13 +127,13 @@ https://www.wxwidgets.org/downloads/
 
 ### Cmake information
 
-More information on Cmake and Visual studio can be found [here](https://docs.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170).
+More information on Cmake and Visual Studio can be found [here](https://docs.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170).
 
 ## Build steps
 
 1. Make sure you have the full environment installed
    1. [git](#git)
-   2. [Visual studio with C++](#VisualStudio)
+   2. [Visual Studio with C++](#VisualStudio)
    3. [CMake](#CMake)
 
 2. Getting the code
@@ -191,4 +191,4 @@ More information on Cmake and Visual studio can be found [here](https://docs.mic
 
 ## Build architecture
 
-The Build architecture (win32 or x86) is dependent on the visual studio installation.
+The Build architecture (win32 or x86) is dependent on the Visual Studio installation.

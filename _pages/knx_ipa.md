@@ -35,7 +35,7 @@ Resulting in using large cabinets to hook up all the devices.
 | <b>KNX cabinet</b>|
 
 The most interesting one is Thread, capable of creating a large area, wireless meshed IPv6 network.
-Using Thread based devices will reduce the typical KNX bus wiring.
+Using Thread-based devices will reduce the typical KNX bus wiring.
 
 ### Technical Background
 
@@ -43,7 +43,7 @@ KNX IoT Point API is a new specification in the KNX system specifications group 
 
 The specification describes:
 
-- A new transport layer based on IPv6, e.g. suitable for [Thread based networks](https://www.threadgroup.org/).
+- A new transport layer based on IPv6, e.g. suitable for [Thread-based networks](https://www.threadgroup.org/).
 - A new communication/message protocol using [CoAP](https://www.rfc-editor.org/rfc/rfc7252) and [CBOR](https://www.rfc-editor.org/rfc/rfc8949.html).
 - Using the same functional blocks as the other KNX transport layers.
 - Using the same [s-mode message](/_pages/architecture-smode.md) semantics as the other KNX transport layers.
@@ -87,7 +87,7 @@ For the actuator data points, the Management Client (MaC) needs to set up:
 
 IPv6 can run over different cables and can be used wirelessly.
 Ethernet cables like CAT6 can be used for wired networking, and PoE (Power over Ethernet) can also be used to power devices connected via Ethernet cables.
-Next to wired solutions, IPv6 can run over Wifi and [Thread based networks](https://www.threadgroup.org/).
+Next to wired solutions, IPv6 can run over Wi-Fi and [Thread-based networks](https://www.threadgroup.org/).
 
 #### What is new
 

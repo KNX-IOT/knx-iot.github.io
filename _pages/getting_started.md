@@ -13,11 +13,9 @@ toc_icon: cog
 toc_sticky : true
 ---
 
-## Getting Started
-
 Follow through these guides to quickly get productive with the KNX IoT Point API Stack.
 
-### The Getting started guide for Device Simulation (Commandline)
+### The getting started guide for Device Simulation (Commandline)
 
 This getting started guide shows how to:
 
@@ -34,7 +32,7 @@ Getting started instructions: [Linux](/building_linux/)
 
 - Windows or Linux based PC
 
-### The Getting started guide for KNX IoT Virtual (GUI)
+### The getting started guide for KNX IoT Virtual (GUI)
 
 This getting started guide shows how to:
 
@@ -63,6 +61,6 @@ This getting started guide shows how to:
   - LSAB and LSSB application
 - Configure the installation
 
-### requirements for Thread
+### Requirements for Thread
 
-- Thread based (hardware) kit (USB2Thread dongles)
+- Thread-based (hardware) kit (USB Thread dongles)
