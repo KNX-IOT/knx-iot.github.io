@@ -53,7 +53,8 @@ Getting started instructions: [Linux](/building_linux/)
 - Windows PC
   - WxWidgets installed
 
-### The Getting started with Raspberry Pi
+
+### The Getting started with Thread
 
 This getting started guide shows how to:
 
@@ -61,15 +62,6 @@ This getting started guide shows how to:
 - Compile the source code
   - LSAB and LSSB application
 - Configure the installation
-
-#### Requirements for Raspberry Pi
-
-- 2 raspberry Pis (3b or 4)
-- 2 Pi-hats
-
-### The Getting started with Thread
-
-One can run the same Rasberry PI applications with Thread.
 
 ### requirements for Thread
 
