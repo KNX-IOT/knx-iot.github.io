@@ -49,7 +49,7 @@ Getting started instructions: [Linux](/building_linux/)
 #### Requirements for KNX IoT Virtual
 
 - Windows PC
-  - WxWidgets installed
+  - WxWidgets-3.1.5 installed
 
 
 ### The Getting started with Thread
