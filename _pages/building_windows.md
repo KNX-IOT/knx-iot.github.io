@@ -21,7 +21,7 @@ The build system enviroment is Cmake, so one can use:
 - Visual Studio
 - nmake (from the commandline)
 
-### Prerequisites 
+## Prerequisites 
 
 - Windows (10) machine
 - Installed software:

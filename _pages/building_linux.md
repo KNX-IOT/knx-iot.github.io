@@ -21,7 +21,7 @@ The build system is CMake.
 
 Note: this description also applies to development on a Raspberry Pi.
 
-### Prerequisites 
+## Prerequisites 
 
 - Linux machine (or Pi)
 - installed:

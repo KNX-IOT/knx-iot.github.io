@@ -37,7 +37,7 @@ Resulting in using large cabinets to hook up all the devices.
 The most interesting one is Thread, capable of creating a large area, wireless meshed IPv6 network.
 Using Thread-based devices will reduce the typical KNX bus wiring.
 
-### Technical Background
+## Technical Background
 
 KNX IoT Point API is a new specification in the KNX system specifications group (see 3_10_5 KNX IoT Point API.)
 
@@ -52,7 +52,7 @@ The specification describes:
 Hence KNX IoT Point API conveys the same semantic data on the transport layer as a KNX TP implementation.
 therefore the interworking between KNX IoT Point API and the other KNX technologies is garanteed.
 
-#### Functional Blocks / Data points
+### Functional Blocks / Data points
 
 The application domain in KNX is described by functional blocks (FB). The Functional Blocks are a consistent set of data points that describe the domain.
 There can be mandatory and optional data points in a functional block.
@@ -66,7 +66,7 @@ Next to the data point that sends out these triggers, there is another data poin
 How the actual function of the system is configured across the devices is achieved by the configuration data.
 
 
-#### Configuration Data
+### Configuration Data
 
 The KNX devices need to be configured. For example, for sensor data points, the Management Client (MaC) needs to set up the following in the Group Object table:
 
@@ -83,18 +83,18 @@ For the actuator data points, the Management Client (MaC) needs to set up:
 - The data point is identified by the MaC by its url
 
 
-#### IPV6
+### IPV6
 
 IPv6 can run over different cables and can be used wirelessly.
 Ethernet cables like CAT6 can be used for wired networking, and PoE (Power over Ethernet) can also be used to power devices connected via Ethernet cables.
 Next to wired solutions, IPv6 can run over Wi-Fi and [Thread-based networks](https://www.threadgroup.org/).
 
-#### What is new
+### What is new
 
 - The KNX IoT Point API is secured (on Application layer) by default.
 - Mandatory software update mechanism included.
 
-### How to combine KNX TP and KNX IoT Point API
+## How to combine KNX TP and KNX IoT Point API
 
 Since KNX IoT is semantically equivalent to another KNX transport layer, interworking between KNX IoT Point API and KNX/TP and KNXnet/IP is possible through an `iot router`.
 The `iot router` converts messages from KNX/TP (or KNXnet/IP) to KNX IoT Point API messages.
@@ -103,7 +103,7 @@ The `iot router` converts messages from KNX/TP (or KNXnet/IP) to KNX IoT Point A
 |:--:|
 | <b>KNX IoT Router</b>|
 
-### What are the advantages of KNX IoT Point API?
+## What are the advantages of KNX IoT Point API?
 
 The advantages of KNX IoT Point API is that the new technology is IPv6-ready and is using the latest (newest) IETF technologies in the specifications.
 The stack implementing the KNX IoT Point API therefore is quite small and can run on MCU devices with only 100kb of memory.

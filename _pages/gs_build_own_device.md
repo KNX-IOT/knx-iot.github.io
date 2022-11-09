@@ -21,7 +21,7 @@ However, it is not good practice to create individual applications inside the sa
 To overcome that, hurdle a simple example application repo is created.
 This getting started guide provides instructions on how to use the example application repo and what subsequent changes need to be made to make a functional KNX IoT Point API application.
 
-### Prerequisites
+## Prerequisites
 
 - Linux or windows (build) PC:
   - [See information about building on Linux](/building_linux)

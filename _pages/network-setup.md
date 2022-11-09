@@ -20,14 +20,14 @@ KNX IoT Point API is based on IPv6. Hence an IPv6-based network needs to be avai
 This introduction is how to commision the Thread device on the Thread network.
 This is needed before KNX IoT Point API configuration starts (e.g. download tables and setup the security)
 
-### Prerequisites
+## Prerequisites
 
 - Thread Border router
 - Thread-based device
 - Android phone
 - Wi-Fi connection
 
-### Essential information
+## Essential information
 
 - Thread network information
 - Device information

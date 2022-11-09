@@ -23,7 +23,7 @@ KNX devices are not configured by default. They need to actively be configured u
 The tools listed below are a set of applications that can perform tasks to interact with a KNX IoT Point API Device. Typical interactions are:
 
 - [Searching for a device or multiple devices](#list_devices).
-- [Configuring a device](#list_devices).
+- [Configuring a device](#install_config).
 - [Issuing s-mode messages](#s-mode).
 - [Listening to s-mode messages](#sniffer-s-mode).
 - [Resetting a device](#reset_device).
@@ -34,7 +34,7 @@ All applications typically require an argument indicating which device the comma
 
 ### Downloading the Tools
 
-The tools can be downloaded from the [GitLab release page of the KNX IoT Stack](https://gitlab.knx.org/shared-projects/knx-iot-point-api-public-stack/-/releases)
+The tools can be downloaded from the [GitLab release page of the KNX IoT Stack](https://gitlab.knx.org/shared-projects/knx-iot-point-api-public-stack/-/releases). You will need to login using the username and password found [here](https://www.knx.org/knx-en/for-manufacturers/get-started/knx-iot-stack/).
 
 The files to download and unzip are:
 
@@ -144,7 +144,7 @@ The group object table contains the following json tags:
 - "cflags" : the communication flags (as strings),
   the cflags array will be converted into the bit flags.
 
-| JSON Tag | CBOR tag |
+| JSON string key | JSON integer key |
 |----------| ------------|
 | "id"     | 0 |
 | "href"   | 11 |
@@ -175,7 +175,7 @@ If the ia is defined and the path is not there, the path will have the default v
 - "path" : the optional path to send the commands to.
 - "url" : the unicat url to send the command to.
 
-| JSON Tag | CBOR tag |
+| JSON string key | JSON integer key |
 |----------| ---------|
 | "id"     | 0        |
 | "ia"     | 12       |
@@ -220,7 +220,7 @@ If the ia is defined and the path is not there, the path will have the default v
 - "path" : the optional path to send the commands to.
 - "url" : the unicat url to send the command to.
 
-| JSON Tag | CBOR tag |
+| JSON string key | JSON integer key |
 |----------| ---------|
 | "id"     | 0        |
 | "ia"     | 12       |
@@ -263,7 +263,7 @@ The oscore information is layered: cnf & osc as json objects:
 - "cnf":"osc":"ms" : the master secret (32 bytes)
 - "cnf":"osc":"contextId" : the OSCORE context id
 
-| JSON Tag    | CBOR tag |
+| JSON string key | JSON integer key |
 |-------------| ---------|
 | "id"        | 0        |
 | "profile"   | 28       |
@@ -307,14 +307,14 @@ Example
 
 ##### Parameters
 
-The parameters can be set on /p.
+The parameters can be via the resource uri /p.
 
 The parameter information:
 
 - "value": The value of the data (which will be CBOR-encoded)
 - "href": The href of the endpoint for the parameter
 
-| JSON Tag  | CBOR tag |
+| JSON string key | JSON integer key |
 |-----------| ---------|
 | "value"   | 1        |
 | "href"    | 11       |
