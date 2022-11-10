@@ -22,8 +22,13 @@ This is needed before KNX IoT Point API configuration starts (e.g. download tabl
 
 ## Prerequisites
 
-- Thread Border router
+- Thread Border Router
+  - [Cascoda Border Router](https://www.cascoda.com/products/border-router/)
+  - [Kirale Border Router](https://www.kirale.com/products/ktbrn1/)
 - Thread-based device
+  - [Cascoda Chili2D](https://www.cascoda.com/products/module/chili2/)
+  - [Kirale KTDG102](https://www.kirale.com/products/ktdg102/)
+  - [Nordic nRF52840](https://www.nordicsemi.com/Products/Development-hardware/nrf52840-dongle)
 - Android phone
 - Wi-Fi connection
 
