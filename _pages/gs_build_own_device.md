@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Build your own device
+title: Getting Started with building your own device
 overview: true
 permalink: /build_own_device/
 

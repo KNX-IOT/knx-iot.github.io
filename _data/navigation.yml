@@ -49,7 +49,7 @@ gs_nav:
           url: /getting_started/
         - title: "Getting Started with KNX IoT Virtual"
           url: /gs_knx_virtual/
-        - title: "Build your own device"
+        - title: "Getting Started with building your own device"
           url: /build_own_device/
         - title: "Configuring a KNX IoT device"
           url: /gs_knx_config/

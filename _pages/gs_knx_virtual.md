@@ -73,3 +73,7 @@ Windows PC: [see information about building on Windows](/_pages/building_windows
    Accept the network work access.
 
    The KNX device is now running.
+
+## More info
+
+For more information about KNX IoT Virtual, see the main [README file](https://github.com/KNX-IOT/KNX-IOT-Virtual#readme) of the KNX IoT Virtual repository.
