@@ -15,23 +15,6 @@ toc_sticky : true
 
 Follow through these guides to quickly get productive with the KNX IoT Point API Stack.
 
-### The getting started guide for Device Simulation (Commandline)
-
-This getting started guide shows how to:
-
-- Get the source code
-- Compile the source code:
-  - LSAB and LSSB (example) applications
-- Configure the installation
-
-Getting started instructions: [Windows](/building_windows/)
-
-Getting started instructions: [Linux](/building_linux/)
-
-#### Requirements for Device Simulation
-
-- Windows or Linux based PC
-
 ### The getting started guide for KNX IoT Virtual (GUI)
 
 This getting started guide shows how to:

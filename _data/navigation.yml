@@ -47,8 +47,6 @@ gs_nav:
       children:
         - title: "Getting Started"
           url: /getting_started/
-        - title: "Getting Started with Commandline apps"
-          url: /gs_device_simulation/
         - title: "Getting Started with KNX IoT Virtual"
           url: /gs_knx_virtual/
         - title: "Build your own device"

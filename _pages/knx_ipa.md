@@ -83,7 +83,7 @@ For the actuator data points, the Management Client (MaC) needs to set up:
 - The data point is identified by the MaC by its url
 
 
-### IPV6
+### IPv6
 
 IPv6 can run over different cables and can be used wirelessly.
 Ethernet cables like CAT6 can be used for wired networking, and PoE (Power over Ethernet) can also be used to power devices connected via Ethernet cables.
