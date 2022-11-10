@@ -17,11 +17,13 @@ toc_sticky : true
 
 This page describes the compile flags.
 
-The build system is CMake and thus the compile flags can be used via Cmake switches.
+The build system being used is CMake, and thus the compile flags are made available as CMake cache variables, which can be enabled or disabled using the CMake GUI on Windows, or by typing the command the following command in the build directory on Linux:
+
+```bash
+ccmake .
+```
 
 ## The compile flags
-
-The compile flags
 
 | Flag         | Cmake switch   |  Description |
 | -------------- | -------------- |--------------|

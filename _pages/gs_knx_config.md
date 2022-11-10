@@ -16,28 +16,25 @@ toc_sticky : true
 
 ## Introduction
 
-When the KNX devices are running, they are running without a configuration.
-Hence applications are provided that can configure the devices.
-The applications are using the serial number (of the device) to find the device on the network and talk to the device.
+KNX devices are not configured by default. They need to actively be configured using the applications that are provided below. These applications use the serial number of the device to find it on the network and communicate with it.      
 
 ## Tools
 
-The Tools are a set of applications that can perform tasks to interact with a KNX IoT Point API Device.
-Typical interactions are:
+The tools listed below are a set of applications that can perform tasks to interact with a KNX IoT Point API Device. Typical interactions are:
 
 - [Searching for a device or multiple devices](#list_devices).
-- [Configuring a device](#list_devices)
-- [Issuing s-mode messages](#s-mode)
-- [Listening to s-mode messages](#sniffer-s-mode)
-- [Resetting a device](#reset_device)
+- [Configuring a device](#install_config).
+- [Issuing s-mode messages](#s-mode).
+- [Listening to s-mode messages](#sniffer-s-mode).
+- [Resetting a device](#reset_device).
 
 Each application has the -h option to show the command line parameters.
 
-Typical all applications require to indicate to which device the command is issued. e.g. use the option -sn the serial number of the device.
+All applications typically require an argument indicating which device the command is issued to. This can be done using the `-sn` option, followed by the serial number of the device.
 
 ### Downloading the Tools
 
-The Tools can be downloaded from the [GitLab release page of the KNX IoT Stack](https://gitlab.knx.org/shared-projects/knx-iot-point-api-public-stack/-/releases)
+The tools can be downloaded from the [GitLab release page of the KNX IoT Stack](https://gitlab.knx.org/shared-projects/knx-iot-point-api-public-stack/-/releases). You will need to login using the username and password found [here](https://www.knx.org/knx-en/for-manufacturers/get-started/knx-iot-stack/).
 
 The files to download and unzip are:
 
@@ -46,7 +43,7 @@ The files to download and unzip are:
 
 ### list_devices
 
-Application to list the device, issuing:
+Application to list devices, issuing:
 
 - Discovery of device with internal address using query : if=urn:knx:ia.[ia]
 - Discovery of device in programming mode using query : if=urn:knx:if.pm
@@ -62,7 +59,7 @@ list_devices -h
 
 ### programming_mode
 
-Application to issue set a specific device (via serial_number) in programming mode.
+Application to put a specific device (via serial_number) in programming mode.
 
 To show all options:
 
@@ -70,15 +67,15 @@ To show all options:
 programming_mode -h
 ```
 
-Note: to discover a device in programming mode, use [list_devices](#list_devices)
+Note: to discover a device in programming mode, use [list_devices](#list_devices).
 
 ### install_config
 
-Application to configuring a device.
+Application to configure devices.
 
-The Application will issue the following commands:
+The application will issue the following commands:
 
-- Discovery a device with a specific sn
+- Discover a device with a specific serial number. 
 - Performing device individualization by setting the:
   - internal address (ia)
   - installation id (iid)
@@ -88,7 +85,7 @@ The Application will issue the following commands:
   - configure the Recipient Table
   - configure parameters
   - Set the device in `loaded` state
-- Retrieve the finger print
+- Retrieve the fingerprint
 
 The flow is depicted in the following diagram:
 ![configuration steps](https://raw.githubusercontent.com/KNX-IOT/KNX-IOT-STACK/master/images/sequence_setup.png)
@@ -106,16 +103,15 @@ Example to configure:
 - Using the LSAB_config.json input file for all other configurations
   
 ```bash
-.\install_config.exe -sn 00FA10010700 -ia 1 -file LSAB_config.json
+./install_config.exe -sn 00FA10010700 -ia 1 -file LSAB_config.json
 ```
 
 #### The configuration file
 
-The configuration file is a json formatted file.
-config data:
+The configuration file is a json formatted file containing the following configuration data:
 
-- installation id: key = "iid"
-- individual address: key = "ia"
+- installation id: Key = "iid"
+- individual address: Key = "ia"
 - group object table: Key = "groupobject"
 - parameter (table): Key = "memparameter"
 - recipient table: Key = "recipient"
@@ -133,15 +129,14 @@ Example config data for ia and idd:
 }
 ```
 
-The content of the tables are the items in an array.
-The items have the json keys (e.g. "id" instead of 0)
-The application converts the json data in to data with integer keys and then convert the contents to cbor.
+
+The contents of the tables are items in an array. The items have the json keys represented as strings (e.g. "id" instead of 0), which the application converts into integer keys. Then the contents are encoded with CBOR.
 
 ##### Group object table
 
-The group object table contains the array of json objects for an Group Object Table entry.
+The group object table contains the array of json objects for a Group Object Table entry.
 
-The group object table contains the following json tags.
+The group object table contains the following json tags:
 
 - "id" : identifier in the group object table
 - "href" : the href of the point api url
@@ -149,7 +144,7 @@ The group object table contains the following json tags.
 - "cflags" : the communication flags (as strings),
   the cflags array will be converted into the bit flags.
 
-| JSON Tag | CBOR tag |
+| JSON string key | JSON integer key |
 |----------| ------------|
 | "id"     | 0 |
 | "href"   | 11 |
@@ -162,35 +157,32 @@ Example :
 {
 ....
 "groupobject" : [ 
-    { "id": 1, "href": "p/push", "ga" :[1], "cflag" : ["w"] },
-    { "id": 1, "href": "p/push", "ga" :[1], "cflag" : ["r"] }] 
+    { "id": 1, "href": "p/o_1_1", "ga" :[1], "cflag" : ["w"] },
+    { "id": 1, "href": "p/o_1_1", "ga" :[1], "cflag" : ["r"] }] 
 ....
 }
 ```
 
 ##### Publisher table
 
-The Publisher table contains the array of json objects for an Publisher entry.
-Note that the ia (and path) needs to be defined or the url.
-if ia is defined and path is not there, the path will have the default value ".knx".
+The publisher table contains the array of json objects for a Publisher entry. This is the information of the sending side. Note that the ia (and path) need to be defined or the url.
+If the ia is defined and the path is not there, the path will have the default value ".knx".
 
-- "id" : identifier in the group object table
-- "ia" : internal address of the target device
+- "id": identifier in the publisher table
+- "ia" : internal address
 - "ga" : the array of group addresses
-- "path" : the optional path to send the commands too.
-- "url" : the unicat url to send the command too
+- "url" : the unicast url
+- "iid" : the installation id
+- "grpid": the (multicast) group id
 
-| JSON Tag | CBOR tag |
-|----------| ---------|
-| "id"     | 0        |
-| "ia"     | 12       |
-| "iid"    | 26       |
-| "fid"    | 25       |
-| "grpid"  | 13       |
-| "path"   | 112      |
-| "url"    | 10       |
-| "ga"     | 7        |
-| "con"    | -        |
+| JSON string key | JSON integer key |
+|-----------|-----------------|
+| "id"      | 0               |
+| "ia"      | 12              |
+| "ga"      | 7               |
+| "url"     | 11              |
+| "iid"     | 26              |
+| "grpid"   | 13              |
 
 Example:
 
@@ -205,6 +197,12 @@ Example:
          "path": ".knx",
      },
      {
+         "id": "1",
+         "iid": 5,
+         "grpid": 88,
+         "ga":[2305, 2401]
+     },
+     {
          "id": "2",
          "url": "coap://<IP multicast, unicast address or fqdn>/<path>",
          "ga": [2305, 2306, 2307, 2308]
@@ -213,29 +211,34 @@ Example:
 }
 ```
 
+The entry mentioning grpid is used for the s-mode communication.
+The entry describes which grpid in the multicast will be used for which groups.
+To simplify the installation, all group addresses can be mapped to a single grpid.
+Note that the publisher side is the side that creates the multicast address for receiving.
+
 ##### Recipient table
 
-The Recipient table contains the array of json objects for an Recipeint entry.
+The recipient table contains the array of json objects for recipeint entries.
 Note that the ia (and path) needs to be defined or the url.
-If ia is defined and path is not there, the path will have the default value ".knx".
+If the ia is defined and the path is not there, the path will have the default value ".knx".
 
-- "id" : identifier in the group object table
-- "ia" : internal address of the target device
+- "id": identifier in the publisher table
+- "ia" : internal address
 - "ga" : the array of group addresses
-- "path" : the optional path to send the commands too.
-- "url" : the unicat url to send the command too
+- "url" : the unicast url
+- "iid" : the installation id
+- "grpid": the (multicast) group id
 
-| JSON Tag | CBOR tag |
-|----------| ---------|
-| "id"     | 0        |
-| "ia"     | 12       |
-| "iid"    | 26       |
-| "fid"    | 25       |
-| "grpid"  | 13       |
-| "path"   | 112      |
-| "url"    | 10       |
-| "ga"     | 7        |
-| "con"    | -        |
+Note that the table entries are the same as for the publisher table.
+
+| JSON string key | JSON integer key |
+|-----------|-----------------|
+| "id"      | 0               |
+| "ia"      | 12              |
+| "ga"      | 7               |
+| "url"     | 11              |
+| "iid"     | 26              |
+| "grpid"   | 13              |
 
 Example:
 
@@ -249,14 +252,24 @@ Example:
     {
         "id": "2","url": "coap://<IP multicast, unicast address or fqdn>/<path>", 
         "ga": [2305, 2306, 2307, 2308]
-      }] 
+      }
+          {
+        "id": "1", ia": 5, "ga":[2305, 2401], "path": ".knx",
+    },
+    {
+         "id": "1",
+         "iid": 5,
+         "grpid": 88,
+         "ga":[1, 2, 3, 4, 5, 6, 7, 8]
+      }
+    ] 
 ....
 }
 ```
 
 ##### Access token table
 
-The access token table contains the array of json objects for an auth/at entry.
+The access token table contains the array of json objects for auth/at entries.
 
 - "id" : identifier of the entry
 - "profile" : oscore (2)
@@ -264,21 +277,22 @@ The access token table contains the array of json objects for an auth/at entry.
 
 The oscore information is layered: cnf & osc as json objects:
 
-- "cnf":"osc":"id": the oscore identifier
-- "cnf":"osc":"ms" : the master secret (32 bytes)
-- "cnf":"osc":"contextId" : the OSCORE context id
+- cnf(8):osc(4):id(0) : the oscore identifier
+- cnf(8):osc(4):ms(2) : the master secret (32 bytes)
+- cnf(8):osc(4):contextId(6) : the OSCORE context id
 
-| JSON Tag    | CBOR tag |
-|-------------| ---------|
-| "id"        | 0        |
-| "profile"   | 28       |
-| "scope"     | 26       |
-| "cnf"       | 8        |
-| "osc"       | 4        |
-| "ms"        | 2        |
-| "contextId" | 6        |
+| JSON string key | JSON integer key |
+|------------|-----------------|
+| "id"       | 0               |
+| "profile"  | 12              |
+| "scope"    | 9               |
+| "url"      | 11              |
+| "cnf"      | 8               |
+| "osc"      | 4               |
+| "ms"       | 2               |
+| "contextId"| 6               |
 
-Example
+Example:
 
 ```bash
 {
@@ -312,14 +326,14 @@ Example
 
 ##### Parameters
 
-The parameters can be set on /p.
+The parameters can be via the resource uri /p.
 
 The parameter information:
 
-- "value": The value of the data (e.g. will be translated to CBOR)
+- "value": The value of the data (which will be CBOR-encoded)
 - "href": The href of the endpoint for the parameter
 
-| JSON Tag  | CBOR tag |
+| JSON string key | JSON integer key |
 |-----------| ---------|
 | "value"   | 1        |
 | "href"    | 11       |
@@ -383,7 +397,7 @@ sniffer-s-mode -h
 ### reset_device
 
 Application to reset the device.
-The Application will issue the following commands:
+The application will issue the following commands:
 
 - Discovery with a specific serial number
 - POST to /a/sen with the reset command
@@ -393,3 +407,66 @@ To show all options:
 ```bash
 reset_device -h
 ```
+
+## Configuration of an installation
+
+### KNX IoT Virtual Installation
+
+There is an installation available for the following devices:
+
+- KNX virtual Switching Actuator (serial number 0004000)
+- KNX virtual Push Button (serial number 0003000)
+
+Note this can be the GUI or the PI versions of the apps
+
+The installation should be configured with:
+
+- config_0.0.1.json for the Switching actuator device with serial number 0004000
+- config_0.0.2.json for the Push Button device serial number 0003000
+
+These files contain contents for:
+
+- group object table
+- entry in auth/at table (but is not used)
+
+Installation is executed with the following commands:
+
+```bash
+# push button 
+./install_config.exe -sn 0003000 -file config_0.0.2.json -ia 5
+# switch actuator
+./install_config.exe -sn 0004000 -file config_0.0.1.json -ia 6
+```
+
+Note: both config files are manually created.
+
+### KNX IoT virtual installation with grpid
+
+The installation should be configured with:
+
+- config_0.0.1_grpid.json to the Switching actuator device with serial number 0004000
+- config_0.0.2_gripd.json to the Push Button device serial number 0003000
+
+These files contains contents for:
+
+- group object table
+- entry in auth/at table (but is not used)
+- publisher table
+- recipient table
+
+The publisher and recepient tables contain the information for the group addresses to grpid mapping.
+
+Installation is executed with the following commands:
+
+```bash
+# push button 
+./install_config.exe -sn 0003000 -file config_0.0.2_grpid.json -ia 5
+# switch actuator
+./install_config.exe -sn 0004000 -file config_0.0.1_gripid.json -ia 6
+```
+
+Note: both config files are manually created.
+
+### Test installation
+
+The file `test_server_config.json` can be used for the KNX-IOT-STACK/apps/test_server_all program.

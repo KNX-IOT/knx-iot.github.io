@@ -15,10 +15,10 @@ toc_sticky : true
 
 All code contributions to the  project must be submitted to its [GitHub](https://github.com/KNX-IOT/KNX-IOT-STACK) repository.
 
-Follow the links below to start participating in the project.
-Submit pull request or review submissions by others :
+Follow the link below to start participating in the project.
+Submit a pull request, or review submissions by others:
 
-- [pull](https://github.com/KNX-IOT/KNX-IOT-STACK/pulls) requests
+- [pull requests](https://github.com/KNX-IOT/KNX-IOT-STACK/pulls) 
 
 Note that all contributions to the GitHub Repo will be done based on the license agreement.
-There is an pull request check (action) if the SLA is agreed by the contributor.
+There is a pull request check (action) if the SLA is agreed by the contributor.

@@ -21,7 +21,7 @@ The build system enviroment is Cmake, so one can use:
 - Visual Studio
 - nmake (from the commandline)
 
-### Prerequisites 
+## Prerequisites 
 
 - Windows (10) machine
 - Installed software:
@@ -30,7 +30,7 @@ The build system enviroment is Cmake, so one can use:
   - cmake
     - Python 
     - Perl 
-  - wxWidgets (for KNX IoT Virtual)
+  - wxWidgets-3.1.5 (for KNX IoT Virtual)
   
 ## Installing the dependencies
 
@@ -61,7 +61,7 @@ CMake has the following dependencies that needs to be installed:
 
 #### perl
 
-Building (e.g. configuring wxWidgets with Cmake) requires Perl.
+Building and configuring wxWidgets with Cmake requires Perl.
 If Perl is not installed then install it via a Windows installer available at:
 
 https://www.perl.org/get.html
@@ -77,7 +77,7 @@ which perl
 
 #### Python 
 
-Building (e.g. configuring wxWidgets with CMake) requires Python. 
+Building and configuring wxWidgets with CMake requires Python. 
 
 If Python is not installed then install it via a Windows installer available at:
 
@@ -100,13 +100,11 @@ https://visualstudio.microsoft.com/downloads/
 
 Install the package which includes C++ (Desktop development with C++).
 
-#### Installing wxWidgets on Windows
+#### Installing wxWidgets-3.1.5 on Windows
 
-Download wxwidgets from (installer source code):
-https://www.wxwidgets.org/downloads/
-
+- [Download wxWidgets-3.1.5 from source](https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.5/wxWidgets-3.1.5.zip).
 - Install the contents on the recommended folder (e.g. c:\wxWidgets-3.1.5)
-- Build wxwidgets with visual studio:
+- Build wxWidgets with Visual Studio:
   
   - Open c:\wxWidgets-3.1.5\build\msw\wx_vc16.sln (or take the highest number available)
   - Accept convert solution suggestion: convert solution to newer version studio
@@ -127,13 +125,13 @@ https://www.wxwidgets.org/downloads/
 
 ### Cmake information
 
-More information on Cmake and Visual studio can be found [here](https://docs.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170).
+More information on Cmake and Visual Studio can be found [here](https://docs.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-170).
 
 ## Build steps
 
 1. Make sure you have the full environment installed
    1. [git](#git)
-   2. [Visual studio with C++](#VisualStudio)
+   2. [Visual Studio with C++](#VisualStudio)
    3. [CMake](#CMake)
 
 2. Getting the code
@@ -191,4 +189,4 @@ More information on Cmake and Visual studio can be found [here](https://docs.mic
 
 ## Build architecture
 
-The Build architecture (win32 or x86) is dependent on the visual studio installation.
+The Build architecture (win32 or x86) is dependent on the Visual Studio installation.

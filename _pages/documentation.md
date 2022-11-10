@@ -16,12 +16,12 @@ toc_sticky : true
 
 This page contains some background information on various topics.
 
-### Doxygen documentation 
+## Doxygen documentation 
 
 The KNX IoT Point API Stack is fully documented with [Doxygen](https://www.doxygen.nl/index.html). 
 The C API documentation of the stack can be found [here](https://KNX-IOT.github.io/KNX-IOT-STACK-doxygen/).
 
-### Introduction into KNX
+## Introduction into KNX
 
 <object data="/assets/pdfs/29_KNX-Basics_en.pdf" type="application/pdf" width="700px" height="900px">
     <embed src="/assets/pdfs/29_KNX-Basics_en.pdf">

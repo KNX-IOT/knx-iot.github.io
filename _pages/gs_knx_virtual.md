@@ -16,46 +16,36 @@ toc_sticky : true
 
 ## Introduction
 
-The Getting started with KNX IoT Virtual guide shows how to:
+This guide will walk you through how to get the source code for a KNX IoT Virtual device, and how to build it. No special hardware is required to run KNX IoT Virtual devices.
 
-- Get the source code
-- Compile the source code
+## What is KNX IoT Virtual
 
-This Getting started guide does not need any specific hardware.
+KNX IoT Virtual is a GUI-enabled simulation of a KNX device. This consists of two sample applications with GUI, which can be configured as a small installation:
 
-### What is KNX IoT Virtual
+- LSAB: a simulated switch actuator (light)
+- LSSB: a simulated push button (light toggle)
 
-This are 2 sample applications with GUI:
+Each device has 4 channels. The Push Button application has 4 push buttons and 4 feedback widgets.
 
-- LSAB : a switch actuator (light)
-- LSSB : a push button (light toggle)
-
-Hence they can be configured as a small installation.
-Each device has 4 channels.
-
-The PB has 4 push button and 4 feedback widgets.
 ![push button application](/assets/images/knx-iot_virtual-PB.png)
 
-The SA has buttons to indicate if the light is turned on or off and a mechanism to introduce a fault.
+The Switch Actuator application has read-only buttons which indicate if the light is turned on or off, and a mechanism to introduce a fault.
+
 ![switch actuator application](/assets/images/knx-iot_virtual-SA.png)
 
-More info on the applications can be found in the [repo](https://github.com/KNX-IOT/KNX-IOT-Virtual).
+More info on the applications can be found in the [KNX IoT Virtual repository](https://github.com/KNX-IOT/KNX-IOT-Virtual).
 
-### Requirements for KNX IoT Virtual
+## Requirements for KNX IoT Virtual
 
-- Linux or windows (build) PC:
-  - [See information about building on Linux](/building_linux)
-  - [See information build building on Windows](/building_windows)
+Windows PC: [see information about building on Windows](/_pages/building_windows).
 
 ## Steps
 
-### Get the source code and build on Windows
-
-1. [Get the code](https://github.com/KNX-IOT/KNX-IOT-Virtual)
-   Clone the code
+1. [Clone the repository](https://github.com/KNX-IOT/KNX-IOT-Virtual)
 
    ```bash
    git clone https://github.com/KNX-IOT/KNX-IOT-Virtual.git
+   cd KNX-IOT-Virtual
    ```
 
 2. Build on Windows
@@ -64,20 +54,26 @@ More info on the applications can be found in the [repo](https://github.com/KNX-
    mkdir build
    cd build
    cmake .. -DwxWidgets_ROOT_DIR=c:/wxWidgets-3.1.5
-   # open Visual Studio with the created knx-virtual.sln
-   # build the solution
    ```
 
-   When everything is build then the executables will be available at folder:
-   `\out\build\x64-Debug\apps`
+3. Open Visual Studio with the created `knx-virtual.sln` located in the build directory.
+
+4. Build the solution
+
+   When everything is built, the executables will be available in the folder:
+   `build\Debug`.
 
    Note that the folder might be different due to the Visual 
    Studio configuration.
 
-3. Go to folder `\build\apps``
-   Start an executable (files with extention .exe) by double clicking an execuable.
+3. Go to the folder where the executables were built in the previous step. 
+   Start an executable (files with extension .exe) by double clicking it.
    A Popup might appear to grant the device network access.
    ![windows defender](/assets/images/windows_defender.png)
    Accept the network work access.
 
    The KNX device is now running.
+
+## More info
+
+For more information about KNX IoT Virtual, see the main [README file](https://github.com/KNX-IOT/KNX-IOT-Virtual#readme) of the KNX IoT Virtual repository.
