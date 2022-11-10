@@ -59,7 +59,7 @@ list_devices -h
 
 ### programming_mode
 
-Application to issue set a specific device (via serial_number) in programming mode.
+Application to put a specific device (via serial_number) in programming mode.
 
 To show all options:
 
@@ -67,7 +67,7 @@ To show all options:
 programming_mode -h
 ```
 
-Note: to discover a device in programming mode, use [list_devices](#list_devices)
+Note: to discover a device in programming mode, use [list_devices](#list_devices).
 
 ### install_config
 
@@ -75,7 +75,7 @@ Application to configure devices.
 
 The application will issue the following commands:
 
-- Discover a device with a specific serial number 
+- Discover a device with a specific serial number. 
 - Performing device individualization by setting the:
   - internal address (ia)
   - installation id (iid)
@@ -134,7 +134,7 @@ The contents of the tables are items in an array. The items have the json keys r
 
 ##### Group object table
 
-The group object table contains the array of json objects for an Group Object Table entry.
+The group object table contains the array of json objects for a Group Object Table entry.
 
 The group object table contains the following json tags:
 
@@ -157,35 +157,32 @@ Example :
 {
 ....
 "groupobject" : [ 
-    { "id": 1, "href": "p/push", "ga" :[1], "cflag" : ["w"] },
-    { "id": 1, "href": "p/push", "ga" :[1], "cflag" : ["r"] }] 
+    { "id": 1, "href": "p/o_1_1", "ga" :[1], "cflag" : ["w"] },
+    { "id": 1, "href": "p/o_1_1", "ga" :[1], "cflag" : ["r"] }] 
 ....
 }
 ```
 
 ##### Publisher table
 
-The publisher table contains the array of json objects for an Publisher entry.
-Note that the ia (and path) needs to be defined or the url.
+The publisher table contains the array of json objects for a Publisher entry. This is the information of the sending side. Note that the ia (and path) need to be defined or the url.
 If the ia is defined and the path is not there, the path will have the default value ".knx".
 
-- "id" : identifier in the group object table.
-- "ia" : internal address of the target device.
-- "ga" : the array of group addresses.
-- "path" : the optional path to send the commands to.
-- "url" : the unicat url to send the command to.
+- "id": identifier in the publisher table
+- "ia" : internal address
+- "ga" : the array of group addresses
+- "url" : the unicast url
+- "iid" : the installation id
+- "grpid": the (multicast) group id
 
 | JSON string key | JSON integer key |
-|----------| ---------|
-| "id"     | 0        |
-| "ia"     | 12       |
-| "iid"    | 26       |
-| "fid"    | 25       |
-| "grpid"  | 13       |
-| "path"   | 112      |
-| "url"    | 10       |
-| "ga"     | 7        |
-| "con"    | -        |
+|-----------|-----------------|
+| "id"      | 0               |
+| "ia"      | 12              |
+| "ga"      | 7               |
+| "url"     | 11              |
+| "iid"     | 26              |
+| "grpid"   | 13              |
 
 Example:
 
@@ -200,6 +197,12 @@ Example:
          "path": ".knx",
      },
      {
+         "id": "1",
+         "iid": 5,
+         "grpid": 88,
+         "ga":[2305, 2401]
+     },
+     {
          "id": "2",
          "url": "coap://<IP multicast, unicast address or fqdn>/<path>",
          "ga": [2305, 2306, 2307, 2308]
@@ -208,29 +211,34 @@ Example:
 }
 ```
 
+The entry mentioning grpid is used for the s-mode communication.
+The entry describes which grpid in the multicast will be used for which groups.
+To simplify the installation, all group addresses can be mapped to a single grpid.
+Note that the publisher side is the side that creates the multicast address for receiving.
+
 ##### Recipient table
 
 The recipient table contains the array of json objects for recipeint entries.
 Note that the ia (and path) needs to be defined or the url.
 If the ia is defined and the path is not there, the path will have the default value ".knx".
 
-- "id" : identifier in the group object table.
-- "ia" : internal address of the target device.
-- "ga" : the array of group addresses.
-- "path" : the optional path to send the commands to.
-- "url" : the unicat url to send the command to.
+- "id": identifier in the publisher table
+- "ia" : internal address
+- "ga" : the array of group addresses
+- "url" : the unicast url
+- "iid" : the installation id
+- "grpid": the (multicast) group id
+
+Note that the table entries are the same as for the publisher table.
 
 | JSON string key | JSON integer key |
-|----------| ---------|
-| "id"     | 0        |
-| "ia"     | 12       |
-| "iid"    | 26       |
-| "fid"    | 25       |
-| "grpid"  | 13       |
-| "path"   | 112      |
-| "url"    | 10       |
-| "ga"     | 7        |
-| "con"    | -        |
+|-----------|-----------------|
+| "id"      | 0               |
+| "ia"      | 12              |
+| "ga"      | 7               |
+| "url"     | 11              |
+| "iid"     | 26              |
+| "grpid"   | 13              |
 
 Example:
 
@@ -244,7 +252,17 @@ Example:
     {
         "id": "2","url": "coap://<IP multicast, unicast address or fqdn>/<path>", 
         "ga": [2305, 2306, 2307, 2308]
-      }] 
+      }
+          {
+        "id": "1", ia": 5, "ga":[2305, 2401], "path": ".knx",
+    },
+    {
+         "id": "1",
+         "iid": 5,
+         "grpid": 88,
+         "ga":[1, 2, 3, 4, 5, 6, 7, 8]
+      }
+    ] 
 ....
 }
 ```
@@ -259,21 +277,22 @@ The access token table contains the array of json objects for auth/at entries.
 
 The oscore information is layered: cnf & osc as json objects:
 
-- "cnf":"osc":"id": the oscore identifier
-- "cnf":"osc":"ms" : the master secret (32 bytes)
-- "cnf":"osc":"contextId" : the OSCORE context id
+- cnf(8):osc(4):id(0) : the oscore identifier
+- cnf(8):osc(4):ms(2) : the master secret (32 bytes)
+- cnf(8):osc(4):contextId(6) : the OSCORE context id
 
 | JSON string key | JSON integer key |
-|-------------| ---------|
-| "id"        | 0        |
-| "profile"   | 28       |
-| "scope"     | 26       |
-| "cnf"       | 8        |
-| "osc"       | 4        |
-| "ms"        | 2        |
-| "contextId" | 6        |
+|------------|-----------------|
+| "id"       | 0               |
+| "profile"  | 12              |
+| "scope"    | 9               |
+| "url"      | 11              |
+| "cnf"      | 8               |
+| "osc"      | 4               |
+| "ms"       | 2               |
+| "contextId"| 6               |
 
-Example
+Example:
 
 ```bash
 {
@@ -388,3 +407,66 @@ To show all options:
 ```bash
 reset_device -h
 ```
+
+## Configuration of an installation
+
+### KNX IoT Virtual Installation
+
+There is an installation available for the following devices:
+
+- KNX virtual Switching Actuator (serial number 0004000)
+- KNX virtual Push Button (serial number 0003000)
+
+Note this can be the GUI or the PI versions of the apps
+
+The installation should be configured with:
+
+- config_0.0.1.json for the Switching actuator device with serial number 0004000
+- config_0.0.2.json for the Push Button device serial number 0003000
+
+These files contain contents for:
+
+- group object table
+- entry in auth/at table (but is not used)
+
+Installation is executed with the following commands:
+
+```bash
+# push button 
+./install_config.exe -sn 0003000 -file config_0.0.2.json -ia 5
+# switch actuator
+./install_config.exe -sn 0004000 -file config_0.0.1.json -ia 6
+```
+
+Note: both config files are manually created.
+
+### KNX IoT virtual installation with grpid
+
+The installation should be configured with:
+
+- config_0.0.1_grpid.json to the Switching actuator device with serial number 0004000
+- config_0.0.2_gripd.json to the Push Button device serial number 0003000
+
+These files contains contents for:
+
+- group object table
+- entry in auth/at table (but is not used)
+- publisher table
+- recipient table
+
+The publisher and recepient tables contain the information for the group addresses to grpid mapping.
+
+Installation is executed with the following commands:
+
+```bash
+# push button 
+./install_config.exe -sn 0003000 -file config_0.0.2_grpid.json -ia 5
+# switch actuator
+./install_config.exe -sn 0004000 -file config_0.0.1_gripid.json -ia 6
+```
+
+Note: both config files are manually created.
+
+### Test installation
+
+The file `test_server_config.json` can be used for the KNX-IOT-STACK/apps/test_server_all program.
