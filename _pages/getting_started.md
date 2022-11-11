@@ -15,5 +15,5 @@ toc_sticky : true
 
 Follow through these guides to quickly get productive with the KNX IoT Point API Stack.
 
-- [Getting started guide for KNX IoT Virtual (GUI)](/_pages/gs_knx_virtual.md)
-- [Getting started with Thread](/_pages/network-setup.md)
+- [Getting started guide for KNX IoT Virtual (GUI)](_pages/gs_knx_virtual.md)
+- [Getting started with Thread](_pages/network-setup.md)

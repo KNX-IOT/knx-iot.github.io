@@ -46,7 +46,7 @@ The specification describes:
 - A new transport layer based on IPv6, e.g. suitable for [Thread-based networks](https://www.threadgroup.org/).
 - A new communication/message protocol using [CoAP](https://www.rfc-editor.org/rfc/rfc7252) and [CBOR](https://www.rfc-editor.org/rfc/rfc8949.html).
 - Using the same functional blocks as the other KNX transport layers.
-- Using the same [s-mode message](/_pages/architecture-smode.md) semantics as the other KNX transport layers.
+- Using the same [s-mode message](architecture-smode.md) semantics as the other KNX transport layers.
 - Using the same configuration data to configure which device is talking to which device.
 
 Hence KNX IoT Point API conveys the same semantic data on the transport layer as a KNX TP implementation.
