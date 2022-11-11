@@ -24,7 +24,7 @@ Note that multiple sensors and actuators can be active (configured) in a KNX sys
 An s-mode message is a group communication message that contains the following info :
 
 - Sender individual addres (sia)
-- Group number (ga)
+- Group address (ga)
 - The value of data point in the message (value)
 - Transport flags (st)
   - "r" read

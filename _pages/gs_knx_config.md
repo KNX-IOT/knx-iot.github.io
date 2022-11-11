@@ -386,7 +386,7 @@ s-mode -h
 
 Application to listen to s-mode commands.
 
-- has option to set iid and max group number
+- has option to set iid and max group address 
 
 To show all options:
 
