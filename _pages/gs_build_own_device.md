@@ -23,8 +23,8 @@ This getting started guide provides instructions on how to use the example appli
 ## Prerequisites
 
 - Linux or Windows PC. The full list of prerequisites is available in the links below.
-  - [See information about building on Linux](_pages/building_linux).
-  - [See information build building on Windows](_pages/building_windows).
+  - [See information about building on Linux](building_linux).
+  - [See information build building on Windows](building_windows).
 
 ## Download and Build the Example Application
 
