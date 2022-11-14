@@ -157,11 +157,19 @@ Example :
 {
 ....
 "groupobject" : [ 
-    { "id": 1, "href": "p/o_1_1", "ga" :[1], "cflag" : ["w"] },
-    { "id": 1, "href": "p/o_1_1", "ga" :[1], "cflag" : ["r"] }] 
+    { "id": 1, "href": "p/o_1_1", "ga" :[2305], "cflag" : ["w"] },
+    { "id": 1, "href": "p/o_1_1", "ga" :[2305], "cflag" : ["r"] },
+    { "id": 1, "href": "p/o_1_1", "ga" :[2305], "cflag" : ["t"] }
+    ] 
 ....
 }
 ```
+
+In the example above, there are three "cflag" values set for the same resource. The flags have the following meaning:
+
+- R-flag: The device will for this object react to a "read" s-mode message by sending a response s-mode message back.
+- W-flag: The device will for this object react to a "write" s-mode message by overwriting the object value. For a switch actuator this e.g. means that a relay representing this object will be opened or closed.
+- T-flag: The device will for this object transmit any updated object value, i.e. it will send a "write" s-mode message.
 
 ##### Publisher table
 
@@ -386,7 +394,7 @@ s-mode -h
 
 Application to listen to s-mode commands.
 
-- has option to set iid and max group number
+- has option to set iid and max group address 
 
 To show all options:
 
