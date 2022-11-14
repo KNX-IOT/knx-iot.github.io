@@ -26,6 +26,7 @@ KNX IoT Virtual is a GUI-enabled simulation of a KNX device. This consists of tw
 - LSSB: a simulated push button (light toggle)
 
 Each device has 4 channels. The Push Button application has 4 push buttons and 4 feedback widgets.
+_Note: In the context of KNX the word "channel" is synonymous with functional block instance. More about functional blocks [here](knx_ipa.md#functional-blocks--data-points)._
 
 ![push button application](/assets/images/knx-iot_virtual-PB.png)
 

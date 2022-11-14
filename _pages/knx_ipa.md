@@ -65,6 +65,8 @@ Next to the data point that sends out these triggers, there is another data poin
 
 How the actual function of the system is configured across the devices is achieved by the configuration data.
 
+_Note: You will come accross the term "resource" in this documentation. This word is used synonymously with "data point", so they are interchangeable in the context of KNX IoT._
+
 
 ### Configuration Data
 
