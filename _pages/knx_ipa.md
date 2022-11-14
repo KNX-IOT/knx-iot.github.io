@@ -65,23 +65,22 @@ Next to the data point that sends out these triggers, there is another data poin
 
 How the actual function of the system is configured across the devices is achieved by the configuration data.
 
+_Note: You will come accross the term "resource" in this documentation. This word is used synonymously with "data point", so they are interchangeable in the context of KNX IoT._
+
 
 ### Configuration Data
 
-The KNX devices need to be configured. For example, for sensor data points, the Management Client (MaC) needs to set up the following in the Group Object table:
+For sensor data points, the Management Client (MaC) needs to set up the following in the [Group Object table](gs_knx_config.md#group-object-table):
 
 - Which group address is being used to send the data
-- Which multicast address is being used to communicate
-- Whether the device is allowed to send the message
-- The data point is identified by the MaC by its url
+- The href, which identifies a data point
+- Whether the device is allowed to send the message (cflags, e.g. "t")
 
 For the actuator data points, the Management Client (MaC) needs to set up:
 
 - Which group address is being used for receiving the data
-- Which multicast address is being used to communicate
-- Whether the data is to be interpreted (acted upon) by the device
-- The data point is identified by the MaC by its url
-
+- The href, which identifies a data point
+- Whether the data is to be interpreted (acted upon) by the device (cflags, e.g. "w")
 
 ### IPv6
 

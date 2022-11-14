@@ -138,11 +138,10 @@ The group object table contains the array of json objects for a Group Object Tab
 
 The group object table contains the following json tags:
 
-- "id" : identifier in the group object table
+- "id" : identifier in the group object table (used internally for manipulation/parsing purposes)
 - "href" : the href of the point api url
 - "ga": the array of group addresses
-- "cflags" : the communication flags (as strings),
-  the cflags array will be converted into the bit flags.
+- "cflags" : the communication flags (as strings), the cflags array will be converted into the bit flags.
 
 | JSON string key | JSON integer key |
 |----------| ------------|
@@ -151,25 +150,75 @@ The group object table contains the following json tags:
 | "ga"   | 7 |
 | "cflags"   | 8 |
 
-Example :
+Let's consider the following simple two-device KNX IoT installation: 
+- An actuator device having two LEDs, which should have the ability to turn either LED On/Off individually or together, based on a received message from a sensor. 
+- A sensor which should be able to instruct the actuator to turn either LED On/Off individually or together.s
+
+In order to achieve the first requirement, the actuator has to:
+- Register two resources, one for each LED. In this example, the resources will be "href = p/o_1_1" and "href = p/o_1_2". 
+- Register three group addresses:
+  - One for turning on both LEDs at once, "ga = 2305"
+  - One for turning on LED1 by itself, "ga = 2306"
+  - One for turning on LED2 by itself, "ga = 2307"
+- Add the resources to the appropriate group addresses:
+  - Both "p/o_1_1" and "p/o_1_2" are added to group address 2305, so that both LEDs can be toggled together.
+  - "p/o_1_1" is added to group address 2306, so it can be toggled individually.
+  - "p/o_1_2" is added to group addresss 2307, so it can be toggled individually.
+- Indicate the method of interaction (read/write/transmit) with the resources:
+  - For the resources registered with group address 2305, we want to allow other devices (e.g. a sensor) to "write" to the resource. This is done with "cflag = w".
+  - For the resources registered with group address 2306 and 2307, we want to allow other devices (e.g. a sensor) to both "write" to and "read" the value from the resource. This is done by adding both "cflag = w" and "cflag = r".
+
+All this information is organized and stored in the group object table for the actuator, as shown below:
 
 ```bash
 {
 ....
 "groupobject" : [ 
     { "id": 1, "href": "p/o_1_1", "ga" :[2305], "cflag" : ["w"] },
-    { "id": 1, "href": "p/o_1_1", "ga" :[2305], "cflag" : ["r"] },
-    { "id": 1, "href": "p/o_1_1", "ga" :[2305], "cflag" : ["t"] }
+    { "id": 2, "href": "p/o_1_2", "ga" :[2305], "cflag" : ["w"] },
+    { "id": 3, "href": "p/o_1_1", "ga" :[2306], "cflag" : ["w", "r"] },
+    { "id": 4, "href": "p/o_1_2", "ga" :[2307], "cflag" : ["w", "r] }
     ] 
 ....
 }
 ```
 
-In the example above, there are three "cflag" values set for the same resource. The flags have the following meaning:
+To achieve the second requirement of the installation, the sensor has to:
+- Register three resources:
+  - One for turning on both LEDs together, "href = p/o_1_1".
+  - One for turning on LED1 by itself, "href = p/o_1_2".
+  - One for turning on LED2 by itself, "href = p/o_1_3".
+  - _Note: One point of possible confusion is that for the actuatory, resource "p/o\_1\_1" represents LED1, whereas for the sensor, it represents the action of turning on both LEDs. The confusion stems from the fact that the same "href" value is used to represent different things. In reality, those "href" values are not connected in any way, despite having the same value. The href values are only relevant within the scope of a single device. In fact, we could change the href value to something entirely different._
+- Add the resources to the appropriate group addresses:
+  - "p/o_1_1" is added to the group address which was registered in the actuator to turn on both LEDs at once. That is group address 2305.
+  - "p/o_1_2" is added to the group address which was registered in the actuator to turn on LED1 by itself. That is group address 2306.
+  - "p/o_1_3" is added to the group address which was registered in the actuator to turn on LED2 by itself. That is group address 2307.
+  - _Note: Unlike the href values which are device-specific, the group addresses need to match accross devices, because if a message is sent for a specific group address, then all the devices which receive the message will take some action on the resources that they have registered at that group address._
+- Indicate the method of interaction (read/write/transmit) with the resources:
+  - In this case, we want all the resources to be transmit-only, meaning that the sensor will transmit information about those resources. This is done with "cflag = t". The lack of flags "w" and "r" means that other devices cannot read from or write to the resources registered by the sensor device.
+  
+All this information is organized and stored in the group object table for the sensor, as shown below:
+
+```bash
+	....
+	"groupobject" : [ 
+		{ "id": 1, "href": "p/o_1_1", "ga" :[2305], "cflag" : ["t"] },
+		{ "id": 2, "href": "p/o_1_2", "ga" :[2306], "cflag" : ["t"] },
+		{ "id": 3, "href": "p/o_1_3", "ga" :[2307], "cflag" : ["t"] }
+    ]
+	....
+	}
+```
+
+Some more information about the "cflag"s:
 
 - R-flag: The device will for this object react to a "read" s-mode message by sending a response s-mode message back.
 - W-flag: The device will for this object react to a "write" s-mode message by overwriting the object value. For a switch actuator this e.g. means that a relay representing this object will be opened or closed.
 - T-flag: The device will for this object transmit any updated object value, i.e. it will send a "write" s-mode message.
+
+Example scenario based on installation explained above: If the sensor wants to make the actuator toggle both its LEDs at once, then it would send an "s-mode" message to the actuator on group address 2305, with the "w" flag (which automatically gets set in the s-mode message when the resource is registered with flag "t"). When the actuator receives the message, it checks its group object table for any resources registered with group address 2305, and finds that it has resources "p/o_1_1" and "p/o_1_2", corresponding to each LED. As a result, it toggles both LEDs at once.
+
+If the sensor had sent a message with group address 2306, then the actuator would turn on LED1 individually.
 
 ##### Publisher table
 

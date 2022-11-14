@@ -66,7 +66,7 @@ The resources will be used to send or receive s-mode messages and the unicast pu
 
     * GET callback
     * POST callback (if needed)
-    * Setting DPT and DPA
+    * Setting DPT (Data Point Type) and DPA (Data Point Annotation)
 
 * Application callbacks: When there is specific functionality that needs a manufacturer implementation, callbacks are implemented in the stack.
   Typical functionality that is manufacturer dependent:
