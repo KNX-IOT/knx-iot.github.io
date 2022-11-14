@@ -68,20 +68,17 @@ How the actual function of the system is configured across the devices is achiev
 
 ### Configuration Data
 
-The KNX devices need to be configured. For example, for sensor data points, the Management Client (MaC) needs to set up the following in the Group Object table:
+For sensor data points, the Management Client (MaC) needs to set up the following in the [Group Object table](gs_knx_config.md#group-object-table):
 
 - Which group address is being used to send the data
-- Which multicast address is being used to communicate
-- Whether the device is allowed to send the message
-- The data point is identified by the MaC by its url
+- The href, which identifies a data point
+- Whether the device is allowed to send the message (cflags, e.g. "t")
 
 For the actuator data points, the Management Client (MaC) needs to set up:
 
 - Which group address is being used for receiving the data
-- Which multicast address is being used to communicate
-- Whether the data is to be interpreted (acted upon) by the device
-- The data point is identified by the MaC by its url
-
+- The href, which identifies a data point
+- Whether the data is to be interpreted (acted upon) by the device (cflags, e.g. "w")
 
 ### IPv6
 
