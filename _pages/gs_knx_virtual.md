@@ -54,7 +54,9 @@ Windows PC: [see information about building on Windows](building_windows).
    ```bash
    mkdir build
    cd build
-   cmake .. -DwxWidgets_ROOT_DIR=c:/wxWidgets-3.1.5
+   cmake ..
+   # open Visual Studio with the created knx-virtual.sln
+   # build the solution
    ```
 
 3. Open Visual Studio with the created `knx-virtual.sln` located in the build directory.

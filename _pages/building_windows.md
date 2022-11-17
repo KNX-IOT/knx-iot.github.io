@@ -29,8 +29,6 @@ The build system enviroment is Cmake, so one can use:
   - Visual Studio
   - cmake
     - Python 
-    - Perl 
-  - wxWidgets-3.1.5 (for KNX IoT Virtual)
   
 ## Installing the dependencies
 
@@ -59,22 +57,6 @@ CMake has the following dependencies that needs to be installed:
 - Python 
 - cmake itself
 
-#### perl
-
-Building and configuring wxWidgets with Cmake requires Perl.
-If Perl is not installed then install it via a Windows installer available at:
-
-https://www.perl.org/get.html
-
-To check if Perl is installed:
-
-```bash
-# do in a bash window (e.g. Git bash)
-which perl
-# result should be
-# /usr/bin/perl
-```
-
 #### Python 
 
 Building and configuring wxWidgets with CMake requires Python. 
@@ -99,29 +81,6 @@ download Visual Studio from :
 https://visualstudio.microsoft.com/downloads/
 
 Install the package which includes C++ (Desktop development with C++).
-
-#### Installing wxWidgets-3.1.5 on Windows
-
-- [Download wxWidgets-3.1.5 from source](https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.5/wxWidgets-3.1.5.zip).
-- Install the contents on the recommended folder (e.g. c:\wxWidgets-3.1.5)
-- Build wxWidgets with Visual Studio:
-  
-  - Open c:\wxWidgets-3.1.5\build\msw\wx_vc16.sln (or take the highest number available)
-  - Accept convert solution suggestion: convert solution to newer version studio
-  - Build the solution for the four following combinations:
-    - static Win32 library, for Debug
-    - static Win32 library, for Release
-    - static x64 library, for Debug
-    - static x64 library, for Release
-
-    Select the build type (Debug/Release) as follows:
-    ![BuiltType](/assets/images/vs_build_type_selection.png)
-
-    Select the platform (Win32/x64) as follows:
-    ![PlatformSelection](/assets/images/vs_platform_selection.png)
-
-    Kickstart the build as follows:
-    ![PlatformSelection](/assets/images/vs_build.png)
 
 ### Cmake information
 
