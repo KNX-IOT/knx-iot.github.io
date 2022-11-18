@@ -53,7 +53,6 @@ one should now have windows explorer integration to:
 ### CMake
 
 CMake has the following dependencies that needs to be installed:
-- Perl 
 - Python 
 - cmake itself
 

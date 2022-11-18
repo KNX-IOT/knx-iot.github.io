@@ -55,8 +55,6 @@ Windows PC: [see information about building on Windows](building_windows).
    mkdir build
    cd build
    cmake ..
-   # open Visual Studio with the created knx-virtual.sln
-   # build the solution
    ```
 
 3. Open Visual Studio with the created `knx-virtual.sln` located in the build directory.
