@@ -471,15 +471,15 @@ reset_device -h
 
 There is an installation available for the following devices:
 
-- KNX virtual Switching Actuator (serial number 0004000)
-- KNX virtual Push Button (serial number 0003000)
+- KNX virtual Switching Actuator (serial number 00FA10010700)
+- KNX virtual Push Button (serial number 00FA10010400)
 
 Note this can be the GUI or the PI versions of the apps
 
 The installation should be configured with:
 
-- config_0.0.1.json for the Switching actuator device with serial number 0004000
-- config_0.0.2.json for the Push Button device serial number 0003000
+- config_0.0.1.json for the Switching actuator device with serial number 00FA10010700
+- config_0.0.2.json for the Push Button device serial number 00FA10010400
 
 These files contain contents for:
 
@@ -490,9 +490,9 @@ Installation is executed with the following commands:
 
 ```bash
 # push button 
-./install_config.exe -sn 0003000 -file config_0.0.2.json -ia 5
+./install_config.exe -sn 00FA10010400 -file config_0.0.2.json -ia 5
 # switch actuator
-./install_config.exe -sn 0004000 -file config_0.0.1.json -ia 6
+./install_config.exe -sn 00FA10010700 -file config_0.0.1.json -ia 6
 ```
 
 Note: both config files are manually created.
@@ -501,8 +501,8 @@ Note: both config files are manually created.
 
 The installation should be configured with:
 
-- config_0.0.1_grpid.json to the Switching actuator device with serial number 0004000
-- config_0.0.2_gripd.json to the Push Button device serial number 0003000
+- config_0.0.1_grpid.json to the Switching actuator device with serial number 00FA10010700
+- config_0.0.2_gripd.json to the Push Button device serial number 00FA10010400
 
 These files contains contents for:
 
@@ -517,9 +517,9 @@ Installation is executed with the following commands:
 
 ```bash
 # push button 
-./install_config.exe -sn 0003000 -file config_0.0.2_grpid.json -ia 5
+./install_config.exe -sn 00FA10010400 -file config_0.0.2_grpid.json -ia 5
 # switch actuator
-./install_config.exe -sn 0004000 -file config_0.0.1_gripid.json -ia 6
+./install_config.exe -sn 00FA10010700 -file config_0.0.1_gripid.json -ia 6
 ```
 
 Note: both config files are manually created.

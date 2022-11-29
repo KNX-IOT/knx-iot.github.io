@@ -65,9 +65,10 @@ Since the function to send an s-mode message is generic, one of the arguments of
 
 ![s-mode send](https://github.com/KNX-IOT/KNX-IOT-STACK/raw/master/images/sequence_send_s-mode.png)
 
-The device that implements an actuator (e.g. receives messages) will have have to implement the data point as resources with the function POST.
+The device that implements an actuator (e.g. receives messages) will have have to implement the data point as resources with the function PUT.
 The stack will translate the group address via the group object table to the url of the datapoint.
-The POST of the datapoint implementation is called with the actual value of the s-mode message. The implementation of the POST needs to do the actual actuation of the hardware (e.g. turn on/off a light).
+The PUT of the datapoint implementation is called with the actual value of the s-mode message.
+The implementation of the PUT needs to do the actual actuation of the hardware (e.g. turn on/off a light).
 
 
 

@@ -22,7 +22,7 @@ The stack implements as much functionality as possible, and abstracts it away.
 This way the code that a manufacturer needs to write should be as small as possible.
 Hence the stack has an API to create a device and add resources to the device.
 Each resource represents a datapoint belonging to a function block.
-A resource will have a GET (read) and a POST (write/update) handler.
+A resource will have a GET (read) and a PUT (write/update) handler.
 The resources will be used to send or receive s-mode messages and the unicast publish/subscribe messages.
 
 
@@ -65,7 +65,7 @@ The resources will be used to send or receive s-mode messages and the unicast pu
     API to create a data point in a functional block
 
     * GET callback
-    * POST callback (if needed)
+    * PUT callback (if needed)
     * Setting DPT (Data Point Type) and DPA (Data Point Annotation)
 
 * Application callbacks: When there is specific functionality that needs a manufacturer implementation, callbacks are implemented in the stack.
