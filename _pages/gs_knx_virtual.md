@@ -38,7 +38,7 @@ More info on the applications can be found in the [KNX IoT Virtual repository](h
 
 ## Requirements for KNX IoT Virtual
 
-Windows PC: [see information about building on Windows](building_windows).
+Windows PC: [see information about building on Windows](/building_windows).
 
 ## Steps
 
