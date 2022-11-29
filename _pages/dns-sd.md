@@ -34,9 +34,9 @@ package manager: `choco install bonjour`
 The KNX-IoT specification mandates that the hostname of a KNX device must be in
 the format {serialnumber}.knx.local. However, modifying the hostname of a
 computer from within a C program is highly intrusive and it requires superuser
-privileges, so the KNX-IoT stack does not do this by default. 
+privileges, so the KNX IoT stack does not do this by default. 
 
-In order to be KNX-IoT compliant, products must ensure that their hostname
+In order to be KNX IoT compliant, products must ensure that their hostname
 obeys the {serialnumber}.knx.local format. On Ubuntu & Debian based systems,
 this can be done by overwriting the contents of the /etc/hostname - the change
 will take place upon the next reboot.

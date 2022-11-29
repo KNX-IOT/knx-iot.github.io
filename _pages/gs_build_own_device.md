@@ -56,15 +56,15 @@ The example application consists of a single datapoint for a push button. To cha
 
 - Resource type, e.g. what the resource exposes.
 - Interfaces, what access control is wanted.
-- GET/POST callbacks: functionality of the resource.
-- Whether the resource can be read or written to via GET or POST.
+- GET/PUT callbacks: functionality of the resource.
+- Whether the resource can be read or written to via GET or PUT.
 
 ### Adding additional resources
 
 Additional resources are setup in the `register_resources()` function.
 Each new resource will have:
 
-1. Callbacks for handling GET and (optionally) POST.
+1. Callbacks for handling GET and (optionally) PUT.
 2. Global varialbes: to handle incoming and outgoing data via the callbacks.
 3. Some logic that interacts with the underlying hardware (out of scope of this document).
 4. The option to store data persistently.
@@ -98,7 +98,7 @@ The following diagram illustrates the hierarchical relationship between function
   |        |--- p/o_4_4    <-- data point 2 of fb 2
 ```
 
-The data point types dictate what kind of data will be exposed by the GET/POST functions.
+The data point types dictate what kind of data will be exposed by the GET/PUT functions.
 
 Example of mapping of data point types and C variables:
 
@@ -121,4 +121,4 @@ For data points, the following interfaces are defined:
 
 Data points typically only have one interface type defined.
 When the interface type `if.s` is implemented, the GET callback function has to be implemented.
-When the interface type `if.a` is implemented, the GET and POST callback functions have to be implemented.
+When the interface type `if.a` is implemented, the GET and PUT callback functions have to be implemented.
