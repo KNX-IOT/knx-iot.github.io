@@ -122,3 +122,9 @@ For data points, the following interfaces are defined:
 Data points typically only have one interface type defined.
 When the interface type `if.s` is implemented, the GET callback function has to be implemented.
 When the interface type `if.a` is implemented, the GET and PUT callback functions have to be implemented.
+
+### Serial numbers
+
+For development purposes one can use the KNX organisation prefix [00FA]
+The following prefix is used for KNX IoT : 00FA 1001
+The prefix is used by ETS so that ETS knows that it an KNX IoT device.
