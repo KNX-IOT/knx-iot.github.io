@@ -55,6 +55,7 @@ gs_nav:
           url: /gs_knx_config/
         - title: "Getting started with Thread"
           url: /getting_started_network/
-
+        - title: "KNX QR code"
+          url: /qr_codes/
 
  
