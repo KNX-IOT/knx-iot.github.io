@@ -54,7 +54,7 @@ https://www.wireshark.org/
 
 6. When the credentials are entered then the stream can be decoded.
    The contents of the stream can be made visible by pressing the ">" sign in the window at each level.
-   ![wireshark decoded](/assets/images/wiresshark_decoded.png)
+   ![wireshark decoded](/assets/images/wireshark_decoded.png)
    To make the OSCORE (decoded) payload visible one should press `Object Security for Constrained Restful Environments`.
    Toe make the CBOR content visible one should press the
    `Consise Binary Object Representation`. The CBOR has different levels and can be expanded further.
