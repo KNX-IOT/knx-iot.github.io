@@ -31,22 +31,28 @@ https://www.wireshark.org/
 
    This should now be an option in the start menu.
 
-   This should the following start screen.
+   This should open the following start screen:
    ![wireshark main](/assets/images/wireshark_main.png)
-   for communication on the same pc select the loop back adapter.
+   This shows the availble network interfaces.
+   For communication on the same pc select the loop back adapter.
    This can be used when the virtual devices are running on the same PC.
-2. The data is being captured
-   select a OSCORE communication. This is the security protocol used by KNX-IOT.
+
+   Note: For capturing traffic between PC and other (physical) devices other interfaces needs to be selected, this depends on the PC and network configuration.
+
+2. The data is being captured.
+3. When enough data is captured one can stop capturing by pressing the `red` button.
+4. To analyse the communication: 
+   select a packet with protocol `OSCORE`. This is the security protocol used by KNX-IOT.
    To be able to see the encrypted data one should add the OSCORE security keys. This can be done via the popup menu structure below:
    ![wireshark oscore](/assets/images/wireshark_oscore.png)
 
-3. The security credentials needs to be entered in the `Security Context` popup window.
+5. The security credentials needs to be entered in the `Security Context` popup window.
    ![wireshark credentials](/assets/images/wiresshark_securitycontexts.png)
    To add credentials press the `+` sign at the bottom of the window
    This action creates a new line and one can add the SenderID & Recipient id of the traffic (take the sender and recipient id from wireshark).
    The master secret needs to come from the application.
 
-4. When the credentials are entered then the stream can be decoded.
+6. When the credentials are entered then the stream can be decoded.
    The contents of the stream can be made visible by pressing the ">" sign in the window at each level.
    ![wireshark decoded](/assets/images/wiresshark_decoded.png)
    To make the OSCORE (decoded) payload visible one should press `Object Security for Constrained Restful Environments`.
