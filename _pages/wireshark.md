@@ -53,8 +53,10 @@ https://www.wireshark.org/
    The master secret needs to come from the application.
 
 6. When the credentials are entered then the stream can be decoded.
-   The contents of the stream can be made visible by pressing the ">" sign in the window at each level.
+   The contents of the stream is visualized as a tree in the packet window. The tree can be expanded by pressing the tree sign (`>`).
    ![wireshark decoded](/assets/images/wireshark_decoded.png)
    To make the OSCORE (decoded) payload visible one should press `Object Security for Constrained Restful Environments`.
    Toe make the CBOR content visible one should press the
    `Consise Binary Object Representation`. The CBOR has different levels and can be expanded further.
+
+   If the credentials are not correctly entered, then the stream can't be decrypted and message `[Expert Info (Warning/Undecoced): Security context not set - can't decrypt]` is shown instead.
