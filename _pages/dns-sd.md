@@ -26,15 +26,21 @@ be discoverable on the local network with essentially zero configuration.
 On Ubuntu & Debian systems, you must install `avahi-utils` package before DNS-SD
 will work within the KNX-IoT stack.
 
-On Windows, you will need to install Bonjour, which can be done using the Chocolatey
-package manager: `choco install bonjour`
+On Windows, you will need to install Bonjour:
+
+- via Chocolatey package manager: `choco install bonjour`
+  
+  Note: needs to be installed as administrator.
+- via apple download: search for "Download Bonjour Print Services for Windows" and download the installer & install the print services.
+  
+  The print services installs the needed services on the windows PC.
 
 ### Hostname
 
 The KNX-IoT specification mandates that the hostname of a KNX device must be in
 the format {serialnumber}.knx.local. However, modifying the hostname of a
 computer from within a C program is highly intrusive and it requires superuser
-privileges, so the KNX IoT stack does not do this by default. 
+privileges, so the KNX IoT stack does not do this by default.
 
 In order to be KNX IoT compliant, products must ensure that their hostname
 obeys the {serialnumber}.knx.local format. On Ubuntu & Debian based systems,
