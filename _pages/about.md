@@ -30,3 +30,5 @@ For more details see the [license](https://github.com/KNX-IOT/KNX-IOT-STACK/blob
 [KNX IoT: Part 2 – the advantages of Thread – KNXtoday](https://www.knxtoday.com/2023/03/46100/knx-iot-part-2-the-advantages-of-thread.html)
 
 [KNX IoT: Part 3 – the fundamentals of KNX IoT devices – KNXtoday](https://www.knxtoday.com/2023/04/46408/knx-iot-part-3-the-fundamentals-of-knx-iot-devices.html)
+
+[KNX IoT: Part 4 – the architecture of KNX IoT devices – KNXtoday](https://www.knxtoday.com/2023/05/46612/knx-iot-part-4-the-architecture-of-knx-iot-devices.html)
