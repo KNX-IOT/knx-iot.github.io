@@ -53,7 +53,7 @@ The ISO 15418 standard specifies sets of Data Identifiers and Application Identi
 - 31P: ASN (model) - planned to be removed to reduce print density for better scanning results
 - 2P: Functional State -- 2PFSA for COMFORT products
 - 16D: Production Date
-- 41S: Serial Number -- 812-character hexadecimal KNX serial number
+- 41S: Serial Number -- 12-character hexadecimal KNX serial number
 - 43S: Serial Number -- 10-character hexadecimal Siemens serial number
 - 3Z: Free Text -- for custom data; . as field separator
 - EUI: EUI-64
