@@ -23,9 +23,9 @@ Since KNX-IOT is all about IPV6 network traffic, wireshark can be used to analyz
 
 Download and install wireshark from:
 
-https://www.wireshark.org/
+[wireshark](https://www.wireshark.org/)
 
-## Usage
+## Usage (sniffing on PC)
 
 1. Start wireshark
 
@@ -58,9 +58,12 @@ https://www.wireshark.org/
    To make the OSCORE (decoded) payload visible one should press `Object Security for Constrained Restful Environments`.
    Toe make the CBOR content visible one should press the
    `Consise Binary Object Representation`. The CBOR has different levels and can be expanded further.
+   To understand CBOR, please take a look at [cbor.me](https://cbor.me/).
 
    If the credentials are not correctly entered, then the stream can't be decrypted and message `[Expert Info (Warning/Undecoced): Security context not set - can't decrypt]` is shown instead.
 
-more information on:
 
-   https://github.com/Cascoda/cascoda-sdk/blob/master/posix/app/sniffer/README.md#configuring-wireshark
+
+## Usage (sniffing on Thread)
+
+   [Thread sniffer](https://github.com/Cascoda/cascoda-sdk/blob/master/posix/app/sniffer/README.md#configuring-wireshark)
