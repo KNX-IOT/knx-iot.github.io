@@ -39,9 +39,11 @@ The Extended format then will be:
 
 v=1&&eui=0000b57fffe15d68&&cc=J01NU5&&KNX:S:serno;P:password
 
-- v : version of Thread QR code
-- eui : eui of the thread device
-- cc  : credential for onboarding
+additional conveyed information:
+
+- `v` : version of Thread QR code
+- `eui` : eui of the thread device
+- `cc`  : credential for onboarding
 
 ## KNX ISO format
 
