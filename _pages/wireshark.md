@@ -60,3 +60,7 @@ https://www.wireshark.org/
    `Consise Binary Object Representation`. The CBOR has different levels and can be expanded further.
 
    If the credentials are not correctly entered, then the stream can't be decrypted and message `[Expert Info (Warning/Undecoced): Security context not set - can't decrypt]` is shown instead.
+
+more information on:
+
+   https://github.com/Cascoda/cascoda-sdk/blob/master/posix/app/sniffer/README.md#configuring-wireshark
