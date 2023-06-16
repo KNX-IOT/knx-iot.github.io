@@ -66,10 +66,10 @@ Download and install wireshark from:
 
 ## Sniffing on Thread)
 
-    Since Thread is a wireless protocol, one needs hardware to receive packets.
-    This hardware is available:
-   [Thread sniffer](https://www.cascoda.com/products/packet-sniffer/)
+Since Thread is a wireless protocol, one needs hardware to receive packets.
+This hardware is available:
+Thread sniffer](https://www.cascoda.com/products/packet-sniffer/)
    
-### Dettailed Usage
+### Detailed Usage
 
-   [Thread usage](https://github.com/Cascoda/cascoda-sdk/blob/master/posix/app/sniffer/README.md#configuring-wireshark)
+[Thread usage](https://github.com/Cascoda/cascoda-sdk/blob/master/posix/app/sniffer/README.md#configuring-wireshark)
