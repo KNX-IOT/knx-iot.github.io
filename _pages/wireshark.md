@@ -25,7 +25,7 @@ Download and install wireshark from:
 
 [wireshark](https://www.wireshark.org/)
 
-## Usage (sniffing on PC)
+## sniffing on PC (wired/wifi)
 
 1. Start wireshark
 
@@ -64,6 +64,12 @@ Download and install wireshark from:
 
 
 
-## Usage (sniffing on Thread)
+## Sniffing on Thread)
 
-   [Thread sniffer](https://github.com/Cascoda/cascoda-sdk/blob/master/posix/app/sniffer/README.md#configuring-wireshark)
+    Since Thread is a wireless protocol, one needs hardware to receive packets.
+    This hardware is available:
+   [Thread sniffer](https://www.cascoda.com/products/packet-sniffer/)
+   
+### Dettailed Usage
+
+   [Thread usage](https://github.com/Cascoda/cascoda-sdk/blob/master/posix/app/sniffer/README.md#configuring-wireshark)
