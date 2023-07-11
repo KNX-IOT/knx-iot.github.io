@@ -37,6 +37,19 @@ Resulting in using large cabinets to hook up all the devices.
 The most interesting one is Thread, capable of creating a large area, wireless meshed IPv6 network.
 Using Thread-based devices will reduce the typical KNX bus wiring.
 
+
+## Articles on KNX today
+
+[KNX IoT: Part 1 – an introduction – KNXtoday](https://www.knxtoday.com/2023/01/45274/knx-iot-part-1-an-introduction.html)
+
+[KNX IoT: Part 2 – the advantages of Thread – KNXtoday](https://www.knxtoday.com/2023/03/46100/knx-iot-part-2-the-advantages-of-thread.html)
+
+[KNX IoT: Part 3 – the fundamentals of KNX IoT devices – KNXtoday](https://www.knxtoday.com/2023/04/46408/knx-iot-part-3-the-fundamentals-of-knx-iot-devices.html)
+
+[KNX IoT: Part 4 – the architecture of KNX IoT devices – KNXtoday](https://www.knxtoday.com/2023/05/46612/knx-iot-part-4-the-architecture-of-knx-iot-devices.html)
+
+[KNX IoT: Part 5 – creating a heterogeneous installation by using a KNX IoT Route](https://www.knxtoday.com/2023/07/47514/knx-iot-part-5-creating-a-heterogeneous-installation-by-using-a-knx-iot-router.html)
+
 ## Technical Background
 
 KNX IoT Point API is a new specification in the KNX system specifications group (see 3_10_5 KNX IoT Point API.)
@@ -95,8 +108,8 @@ Next to wired solutions, IPv6 can run over Wi-Fi and [Thread-based networks](htt
 
 ## How to combine KNX TP and KNX IoT Point API
 
-Since KNX IoT is semantically equivalent to another KNX transport layer, interworking between KNX IoT Point API and KNX/TP and KNXnet/IP is possible through an `iot router`.
-The `iot router` converts messages from KNX/TP (or KNXnet/IP) to KNX IoT Point API messages.
+Since KNX IoT is semantically equivalent to another KNX transport layer, interworking between KNX IoT Point API and KNX/TP and KNXnet/IP is possible through an `knx iot router`.
+The `knx iot router` converts messages from KNX/TP (or KNXnet/IP) to KNX IoT Point API messages.
 
 | ![Knx iot router ](/assets/images/iot-router.jpg) |
 |:--:|
