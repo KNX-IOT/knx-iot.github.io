@@ -32,3 +32,5 @@ For more details see the [license](https://github.com/KNX-IOT/KNX-IOT-STACK/blob
 [KNX IoT: Part 3 – the fundamentals of KNX IoT devices – KNXtoday](https://www.knxtoday.com/2023/04/46408/knx-iot-part-3-the-fundamentals-of-knx-iot-devices.html)
 
 [KNX IoT: Part 4 – the architecture of KNX IoT devices – KNXtoday](https://www.knxtoday.com/2023/05/46612/knx-iot-part-4-the-architecture-of-knx-iot-devices.html)
+
+[KNX IoT: Part 5 – creating a heterogeneous installation by using a KNX IoT Route](https://www.knxtoday.com/2023/07/47514/knx-iot-part-5-creating-a-heterogeneous-installation-by-using-a-knx-iot-router.html)
