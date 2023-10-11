@@ -47,19 +47,28 @@ additional conveyed information:
 
 ## KNX ISO format
 
-The ISO 15418 standard specifies sets of Data Identifiers and Application Identifiers for the purpose of identifying encoded data, for example, in DMC codes. The following example shows an ISO 15418 encoded string w/ a device ASN and EUI64:
-
- `1PS55812-Y100+31POCT100.BR+2PFSA+16D20220512+43S015C00002D+3ZEUI:8CF681FFFE000001.P:ABCDEF.PA:994AC`
+The ISO 15418 standard specifies sets of Data Identifiers and Application Identifiers for the purpose of identifying encoded data, for example, in DMC codes. 
 
 - 1P: SSN (order number)
 - 31P: ASN (model) - planned to be removed to reduce print density for better scanning results
 - 2P: Functional State -- 2PFSA for COMFORT products
 - 16D: Production Date
 - 41S: Serial Number -- 12-character hexadecimal KNX serial number
-- 43S: Serial Number -- 10-character hexadecimal Siemens serial number
 - 3Z: Free Text -- for custom data; . as field separator
 - EUI: EUI-64
 - P: Network Password (Thread joining Device Credential / default Commissioning Credential)
 - PA: Application Password for SPAKE2+
 
 In the case PA is absent, the Network Password is also used as Application Password (SPAKE2+)
+
+The following example shows an ISO 15418 encoded string w/ a device ASN and EUI64:
+
+ `1PS55812-Y100+31POCT100.BR+2PFSA+16D20220512+41S00015C00002D+3ZEUI:8CF681FFFE000001.P:ABCDEF.PA:994AC`
+
+ Example containing KNX & Thread information:
+
+ `41S029B00000100+3ZEUI:105F6E611D20F84C.P:0THJA352X8.PA:612SK3H38X`
+
+Note that a product not based on Thread can do without the Thread information, resulting in the minimal format:
+
+ `41S029B00000100+3ZPA:612SK3H38X`
