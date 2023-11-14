@@ -52,6 +52,8 @@ Using Thread-based devices will reduce the typical KNX bus wiring.
 
 [KNX IoT: Part 6 – Using Thread for KNX IoT](https://www.knxtoday.com/2023/09/47995/knx-iot-part-6-using-thread-for-knx-iot.html)
 
+[KNX IoT: Part 7 – the open-source KNX IoT stack](https://www.knxtoday.com/2023/11/48537/knx-iot-part-7-the-open-source-knx-iot-stack.html)
+
 ## Technical Background
 
 KNX IoT Point API is a new specification in the KNX system specifications group (see 3_10_5 KNX IoT Point API.)
